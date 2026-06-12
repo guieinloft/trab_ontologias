@@ -1,0 +1,221 @@
+18:50:29 │ INFO     │ ╔═══════════════════════════════════════════════════════════════╗
+18:50:29 │ INFO     │ ║  EXTRAÇÃO DE CONHECIMENTO — BANHADO DO TAIM			  ║
+18:50:29 │ INFO     │ ║  Domínio: Atropelamento de Fauna Silvestre			   ║
+18:50:29 │ INFO     │ ╚═══════════════════════════════════════════════════════════════╝
+18:50:29 │ INFO     │ =================================================================
+18:50:29 │ INFO     │   ETAPA 1: COLETA DE FONTES (MULTIMODAL)
+18:50:29 │ INFO     │ =================================================================
+18:50:29 │ INFO     │ 
+  --- Wikipedia (scraping HTML) ---
+18:50:29 │ INFO     │ GET https://pt.wikipedia.org/wiki/Esta%C3%A7%C3%A3o_Ecol%C3%B3gica_do_Taim
+18:50:30 │ INFO     │   ✓ 200 — 153,177 caracteres recebidos
+18:50:30 │ INFO     │   ✓ Wikipedia parseada: 'Estação Ecológica do Taim' — 12 parágrafos extraídos
+18:50:32 │ INFO     │ GET https://pt.wikipedia.org/wiki/Lagoa_Mirim
+18:50:32 │ INFO     │   ✓ 200 — 141,605 caracteres recebidos
+18:50:32 │ INFO     │   ✓ Wikipedia parseada: 'Lagoa Mirim' — 20 parágrafos extraídos
+18:50:34 │ INFO     │ GET https://pt.wikipedia.org/wiki/BR-471
+18:50:34 │ INFO     │   ✓ 200 — 233,883 caracteres recebidos
+18:50:34 │ INFO     │   ✓ Wikipedia parseada: 'BR-471' — 31 parágrafos extraídos
+18:50:36 │ INFO     │ GET https://pt.wikipedia.org/wiki/Banhado
+18:50:36 │ INFO     │   ✓ 200 — 148,080 caracteres recebidos
+18:50:36 │ INFO     │   ✓ Wikipedia parseada: 'Zona úmida' — 19 parágrafos extraídos
+18:50:38 │ INFO     │ GET https://pt.wikipedia.org/wiki/Cerdocyon_thous
+18:50:39 │ INFO     │   ✓ 200 — 392,018 caracteres recebidos
+18:50:39 │ INFO     │   ✓ Wikipedia parseada: 'Graxaim-do-mato' — 23 parágrafos extraídos
+18:50:41 │ INFO     │ GET https://pt.wikipedia.org/wiki/Caiman_latirostris
+18:50:41 │ INFO     │   ✓ 200 — 190,770 caracteres recebidos
+18:50:41 │ INFO     │   ✓ Wikipedia parseada: 'Jacaré-de-papo-amarelo' — 9 parágrafos extraídos
+18:50:43 │ INFO     │ GET https://pt.wikipedia.org/wiki/Hydrochoerus_hydrochaeris
+18:50:43 │ INFO     │   ✓ 200 — 452,508 caracteres recebidos
+18:50:44 │ INFO     │   ✓ Wikipedia parseada: 'Capivara' — 54 parágrafos extraídos
+18:50:44 │ INFO     │ 
+  --- Artigos Científicos ---
+18:50:45 │ INFO     │ GET https://periodicos.ufpel.edu.br/index.php/revbio/article/view/25384
+18:50:47 │ INFO     │   ✓ 200 — 6,339 caracteres recebidos
+18:50:47 │ INFO     │   ✓ Artigo parseado: '...' — 1 parágrafos
+18:50:47 │ INFO     │ 
+  --- Portais de Notícias Ambientais ---
+18:50:49 │ INFO     │ GET http://g1.globo.com/rs/rio-grande-do-sul/campo-e-lavoura/noticia/2013/10/estacao-do-taim-deve-ser-ampliada-ate-o-final-de-2014-no-rs-diz-icmbio.html
+18:50:50 │ INFO     │   ✓ 200 — 53,301 caracteres recebidos
+18:50:50 │ INFO     │   ✓ Artigo parseado: 'Estação do Taim deve ser ampliada até o final de 2014 no RS,...' — 26 parágrafos
+18:50:52 │ INFO     │ GET http://www.oeco.org.br/reportagens/henrique-horn-ampliacao-da-esec-de-taim-e-consenso/
+18:50:56 │ INFO     │   ✓ 200 — 259,900 caracteres recebidos
+18:50:56 │ INFO     │   ✓ Artigo parseado: 'Henrique Horn: “Ampliação da Esec de Taim é consenso”...' — 41 parágrafos
+18:50:56 │ INFO     │ 
+  --- Wikidata (SPARQL) ---
+18:50:56 │ INFO     │   Consultando Wikidata: Caiman latirostris
+18:51:00 │ INFO     │ 	✓ 1 resultado(s), 1 parágrafos gerados
+18:51:00 │ INFO     │   Consultando Wikidata: Hydrochoerus hydrochaeris
+18:51:03 │ INFO     │ 	✓ 1 resultado(s), 1 parágrafos gerados
+18:51:03 │ INFO     │   Consultando Wikidata: Cerdocyon thous
+18:51:05 │ INFO     │ 	✓ 1 resultado(s), 1 parágrafos gerados
+18:51:05 │ INFO     │   Consultando Wikidata: Athene cunicularia
+18:51:08 │ INFO     │ 	✓ 1 resultado(s), 1 parágrafos gerados
+18:51:08 │ INFO     │   Consultando Wikidata: Myocastor coypus
+18:51:11 │ INFO     │ 	✓ 1 resultado(s), 1 parágrafos gerados
+18:51:11 │ INFO     │   Consultando Wikidata: Cygnus melancoryphus
+18:51:13 │ INFO     │ 	✓ 1 resultado(s), 1 parágrafos gerados
+18:51:13 │ INFO     │ 
+  --- IBGE API (Localidades) ---
+18:51:13 │ INFO     │   Consultando IBGE: Rio Grande (RS)
+18:51:16 │ INFO     │ 	✓ Município: Rio Grande, 3 parágrafos gerados
+18:51:16 │ INFO     │   Consultando IBGE: Santa Vitória do Palmar (RS)
+18:51:18 │ INFO     │ 	✓ Município: Sant'Ana do Livramento, 3 parágrafos gerados
+18:51:18 │ INFO     │ 
+  Fontes coletadas: 18 sucesso, 0 falha(s)
+18:51:18 │ INFO     │   Detalhamento por tipo:
+18:51:18 │ INFO     │ 	Wikipedia:	 7
+18:51:18 │ INFO     │ 	Artigos:	   1
+18:51:18 │ INFO     │ 	Notícias:	  2
+18:51:18 │ INFO     │ 	Wikidata:	  6
+18:51:18 │ INFO     │ 	IBGE:		  2
+18:51:18 │ INFO     │ =================================================================
+18:51:18 │ INFO     │   ETAPA 2: INICIALIZAÇÃO DO PIPELINE NLP
+18:51:18 │ INFO     │ =================================================================
+18:51:19 │ INFO     │   ✓ Modelo spaCy carregado: pt_core_news_sm
+18:51:19 │ INFO     │ 	Pipeline: ['tok2vec', 'morphologizer', 'parser', 'lemmatizer', 'attribute_ruler', 'ner']
+18:51:19 │ INFO     │ 	EntityRuler configurado com 7 padrões
+18:51:19 │ INFO     │ 
+=================================================================
+18:51:19 │ INFO     │   ETAPA 3: EXTRAÇÃO DE ENTIDADES E RELAÇÕES
+18:51:19 │ INFO     │ =================================================================
+18:51:19 │ INFO     │ 
+  Processando: Estação Ecológica do Taim
+18:51:19 │ INFO     │   URL: https://pt.wikipedia.org/wiki/Esta%C3%A7%C3%A3o_Ecol%C3%B3gica_do_Taim
+18:51:19 │ INFO     │ 	→ 36 entidades extraídas
+18:51:19 │ INFO     │ 	→ 0 triplas (análise de dependência)
+18:51:19 │ INFO     │ 	→ 6 triplas (co-ocorrência)
+18:51:19 │ INFO     │ 
+  Processando: Lagoa Mirim
+18:51:19 │ INFO     │   URL: https://pt.wikipedia.org/wiki/Lagoa_Mirim
+18:51:19 │ INFO     │ 	→ 66 entidades extraídas
+18:51:19 │ INFO     │ 	→ 1 triplas (análise de dependência)
+18:51:19 │ INFO     │ 	→ 0 triplas (co-ocorrência)
+18:51:19 │ INFO     │ 
+  Processando: BR-471
+18:51:19 │ INFO     │   URL: https://pt.wikipedia.org/wiki/BR-471
+18:51:19 │ INFO     │ 	→ 135 entidades extraídas
+18:51:19 │ INFO     │ 	→ 0 triplas (análise de dependência)
+18:51:19 │ INFO     │ 	→ 13 triplas (co-ocorrência)
+18:51:19 │ INFO     │ 
+  Processando: Zona úmida
+18:51:19 │ INFO     │   URL: https://pt.wikipedia.org/wiki/Banhado
+18:51:19 │ INFO     │ 	→ 36 entidades extraídas
+18:51:19 │ INFO     │ 	→ 0 triplas (análise de dependência)
+18:51:19 │ INFO     │ 	→ 0 triplas (co-ocorrência)
+18:51:19 │ INFO     │ 
+  Processando: Graxaim-do-mato
+18:51:19 │ INFO     │   URL: https://pt.wikipedia.org/wiki/Cerdocyon_thous
+18:51:20 │ INFO     │ 	→ 72 entidades extraídas
+18:51:20 │ INFO     │ 	→ 0 triplas (análise de dependência)
+18:51:20 │ INFO     │ 	→ 1 triplas (co-ocorrência)
+18:51:20 │ INFO     │ 
+  Processando: Jacaré-de-papo-amarelo
+18:51:20 │ INFO     │   URL: https://pt.wikipedia.org/wiki/Caiman_latirostris
+18:51:20 │ INFO     │ 	→ 54 entidades extraídas
+18:51:20 │ INFO     │ 	→ 0 triplas (análise de dependência)
+18:51:20 │ INFO     │ 	→ 0 triplas (co-ocorrência)
+18:51:20 │ INFO     │ 
+  Processando: Capivara
+18:51:20 │ INFO     │   URL: https://pt.wikipedia.org/wiki/Hydrochoerus_hydrochaeris
+18:51:20 │ INFO     │ 	→ 139 entidades extraídas
+18:51:21 │ INFO     │ 	→ 1 triplas (análise de dependência)
+18:51:21 │ INFO     │ 	→ 6 triplas (co-ocorrência)
+18:51:21 │ INFO     │ 
+  Processando: 
+18:51:21 │ INFO     │   URL: https://periodicos.ufpel.edu.br/index.php/revbio/article/view/25384
+18:51:21 │ INFO     │ 	→ 0 entidades extraídas
+18:51:21 │ INFO     │ 	→ 0 triplas (análise de dependência)
+18:51:21 │ INFO     │ 	→ 0 triplas (co-ocorrência)
+18:51:21 │ INFO     │ 
+  Processando: Estação do Taim deve ser ampliada até o final de 2014 no RS, diz ICMBio
+18:51:21 │ INFO     │   URL: http://g1.globo.com/rs/rio-grande-do-sul/campo-e-lavoura/noticia/2013/10/estacao-do-taim-deve-ser-ampliada-ate-o-final-de-2014-no-rs-diz-icmbio.html
+18:51:21 │ INFO     │ 	→ 51 entidades extraídas
+18:51:21 │ INFO     │ 	→ 0 triplas (análise de dependência)
+18:51:21 │ INFO     │ 	→ 0 triplas (co-ocorrência)
+18:51:21 │ INFO     │ 
+  Processando: Henrique Horn: “Ampliação da Esec de Taim é consenso”
+18:51:21 │ INFO     │   URL: http://www.oeco.org.br/reportagens/henrique-horn-ampliacao-da-esec-de-taim-e-consenso/
+18:51:21 │ INFO     │ 	→ 54 entidades extraídas
+18:51:21 │ INFO     │ 	→ 0 triplas (análise de dependência)
+18:51:21 │ INFO     │ 	→ 0 triplas (co-ocorrência)
+18:51:21 │ INFO     │ 
+  Processando: Wikidata — Caiman latirostris
+18:51:21 │ INFO     │   URL: wikidata:sparql:Caiman latirostris
+18:51:21 │ INFO     │ 	→ 7 entidades extraídas
+18:51:21 │ INFO     │ 	→ 0 triplas (análise de dependência)
+18:51:21 │ INFO     │ 	→ 1 triplas (co-ocorrência)
+18:51:21 │ INFO     │ 
+  Processando: Wikidata — Hydrochoerus hydrochaeris
+18:51:21 │ INFO     │   URL: wikidata:sparql:Hydrochoerus hydrochaeris
+18:51:21 │ INFO     │ 	→ 6 entidades extraídas
+18:51:21 │ INFO     │ 	→ 0 triplas (análise de dependência)
+18:51:21 │ INFO     │ 	→ 1 triplas (co-ocorrência)
+18:51:21 │ INFO     │ 
+  Processando: Wikidata — Cerdocyon thous
+18:51:21 │ INFO     │   URL: wikidata:sparql:Cerdocyon thous
+18:51:21 │ INFO     │ 	→ 7 entidades extraídas
+18:51:21 │ INFO     │ 	→ 0 triplas (análise de dependência)
+18:51:21 │ INFO     │ 	→ 1 triplas (co-ocorrência)
+18:51:21 │ INFO     │ 
+  Processando: Wikidata — Athene cunicularia
+18:51:21 │ INFO     │   URL: wikidata:sparql:Athene cunicularia
+18:51:21 │ INFO     │ 	→ 7 entidades extraídas
+18:51:21 │ INFO     │ 	→ 0 triplas (análise de dependência)
+18:51:21 │ INFO     │ 	→ 1 triplas (co-ocorrência)
+18:51:21 │ INFO     │ 
+  Processando: Wikidata — Myocastor coypus
+18:51:21 │ INFO     │   URL: wikidata:sparql:Myocastor coypus
+18:51:21 │ INFO     │ 	→ 8 entidades extraídas
+18:51:21 │ INFO     │ 	→ 0 triplas (análise de dependência)
+18:51:21 │ INFO     │ 	→ 2 triplas (co-ocorrência)
+18:51:21 │ INFO     │ 
+  Processando: Wikidata — Cygnus melancoryphus
+18:51:21 │ INFO     │   URL: wikidata:sparql:Cygnus melancoryphus
+18:51:21 │ INFO     │ 	→ 6 entidades extraídas
+18:51:21 │ INFO     │ 	→ 0 triplas (análise de dependência)
+18:51:21 │ INFO     │ 	→ 1 triplas (co-ocorrência)
+18:51:21 │ INFO     │ 
+  Processando: IBGE — Rio Grande (RS)
+18:51:21 │ INFO     │   URL: https://servicodados.ibge.gov.br/api/v1/localidades/municipios/4315602
+18:51:21 │ INFO     │ 	→ 13 entidades extraídas
+18:51:21 │ INFO     │ 	→ 0 triplas (análise de dependência)
+18:51:21 │ INFO     │ 	→ 2 triplas (co-ocorrência)
+18:51:21 │ INFO     │ 
+  Processando: IBGE — Santa Vitória do Palmar (RS)
+18:51:21 │ INFO     │   URL: https://servicodados.ibge.gov.br/api/v1/localidades/municipios/4317103
+18:51:21 │ INFO     │ 	→ 14 entidades extraídas
+18:51:21 │ INFO     │ 	→ 0 triplas (análise de dependência)
+18:51:21 │ INFO     │ 	→ 2 triplas (co-ocorrência)
+18:51:21 │ INFO     │ 
+=================================================================
+18:51:21 │ INFO     │   ETAPA 4: CONSOLIDAÇÃO E EXPORTAÇÃO
+18:51:21 │ INFO     │ =================================================================
+18:51:21 │ INFO     │   Deduplicação: 39 → 27 triplas únicas
+18:51:21 │ INFO     │   Filtragem: 27 triplas com mapeamento ontológico (de 27 totais)
+18:51:21 │ INFO     │   ✓ JSON exportado: resultados_extracao/conhecimento_extraido.json
+18:51:21 │ INFO     │   ✓ CSV exportado: resultados_extracao/triplas_extraidas.csv
+18:51:21 │ INFO     │ 
+  Pipeline concluído com sucesso.
+19:07:10 - INFO - === EXTRACAO DE CONHECIMENTO - BANHADO DO TAIM ===
+19:07:10 - INFO - === ETAPA 1: COLETA DE FONTES (MULTIMODAL) ===
+19:07:10 - INFO - 
+  --- Wikipedia (scraping HTML) ---
+19:07:10 - INFO - GET https://pt.wikipedia.org/wiki/Esta%C3%A7%C3%A3o_Ecol%C3%B3gica_do_Taim
+19:07:12 - INFO -   OK 200 - 153,177 caracteres recebidos
+19:07:12 - INFO -   OK Wikipedia parseada: 'Estação Ecológica do Taim' - 12 parágrafos extraídos
+19:07:14 - INFO - GET https://pt.wikipedia.org/wiki/Lagoa_Mirim
+19:07:14 - INFO -   OK 200 - 141,605 caracteres recebidos
+19:07:14 - INFO -   OK Wikipedia parseada: 'Lagoa Mirim' - 20 parágrafos extraídos
+19:07:16 - INFO - GET https://pt.wikipedia.org/wiki/BR-471
+19:07:16 - INFO -   OK 200 - 233,883 caracteres recebidos
+19:07:16 - INFO -   OK Wikipedia parseada: 'BR-471' - 31 parágrafos extraídos
+19:07:18 - INFO - GET https://pt.wikipedia.org/wiki/Banhado
+19:07:18 - INFO -   OK 200 - 148,080 caracteres recebidos
+19:07:18 - INFO -   OK Wikipedia parseada: 'Zona úmida' - 19 parágrafos extraídos
+19:07:20 - INFO - GET https://pt.wikipedia.org/wiki/Cerdocyon_thous
+19:07:20 - INFO -   OK 200 - 392,018 caracteres recebidos
+19:07:21 - INFO -   OK Wikipedia parseada: 'Graxaim-do-mato' - 23 parágrafos extraídos
+19:07:22 - INFO - GET https://pt.wikipedia.org/wiki/Caiman_latirostris
+19:07:23 - INFO -   OK 200 - 190,770 caracteres recebidos
+19:07:23 - INFO -   OK Wikipedia parseada: 'Jacaré-de-papo-amarelo' - 9 parágrafos extraídos

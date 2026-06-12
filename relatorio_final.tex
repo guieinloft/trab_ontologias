@@ -1,0 +1,655 @@
+
+%==========================================
+%
+% SIBGRAPI 2026 paper template
+% Example of IEEEtran.cls
+%
+%==========================================
+
+% *** Authors should verify (and, if needed, correct) their LaTeX system  ***
+% *** with the testflow diagnostic prior to trusting their LaTeX platform ***
+% *** with prodUCB1ion work. The IEEE's font choices and paper sizes can   ***
+% *** trigger bugs that do not appear when using other class files.       ***                          ***
+% The testflow support page is at:
+% http://www.michaelshell.org/tex/testflow/
+
+\documentclass[10pt,conference]{IEEEtran}
+
+
+% Some very useful LaTeX packages include:
+% (uncomment the ones you want to load)
+
+
+% *** MISC UTILITY PACKAGES ***
+%
+%\usepackage{ifpdf}
+% Heiko Oberdiek's ifpdf.sty is very useful if you need conditional
+% compilation based on whether the output is pdf or dvi.
+% usage:
+% \ifpdf
+%   % pdf code
+% \else
+%   % dvi code
+% \fi
+% The latest version of ifpdf.sty can be obtained from:
+% http://www.ctan.org/pkg/ifpdf
+% Also, note that IEEEtran.cls V1.7 and later provides a builtin
+% \ifCLASSINFOpdf conditional that works the same way.
+% When switching from latex to pdflatex and vice-versa, the compiler may
+% have to be run twice to clear warning/error messages.
+
+
+
+
+
+
+% *** CITATION PACKAGES ***
+%
+\usepackage{cite}
+% cite.sty was written by Donald Arseneau
+% V1.6 and later of IEEEtran pre-defines the format of the cite.sty package
+% \cite{} output to follow that of the IEEE. Loading the cite package will
+% result in citation numbers being automatically sorted and properly
+% "compressed/ranged". e.g., [1], [9], [2], [7], [5], [6] without using
+% cite.sty will become [1], [2], [5]--[7], [9] using cite.sty. cite.sty's
+% \cite will automatically add leading space, if needed. Use cite.sty's
+% noadjust option (cite.sty V3.8 and later) if you want to turn this off
+% such as if a citation ever needs to be enclosed in parenthesis.
+% cite.sty is already installed on most LaTeX systems. Be sure and use
+% version 5.0 (2009-03-20) and later if using hyperref.sty.
+% The latest version can be obtained at:
+% http://www.ctan.org/pkg/cite
+% The documentation is contained in the cite.sty file itself.
+
+
+
+
+
+
+% *** GRAPHICS RELATED PACKAGES ***
+%
+\ifCLASSINFOpdf
+   \usepackage[pdftex]{graphicx}
+  % declare the path(s) where your graphic files are
+   \graphicspath{{figs/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+   \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+\else
+  % or other class option (dvipsone, dvipdf, if not using dvips). graphicx
+  % will default to the driver specified in the system graphics.cfg if no
+  % driver is specified.
+   \usepackage[dvips]{graphicx}
+  % declare the path(s) where your graphic files are
+   \graphicspath{{../figs/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+   \DeclareGraphicsExtensions{.eps}
+\fi
+% graphicx was written by David Carlisle and Sebastian Rahtz. It is
+% required if you want graphics, photos, etc. graphicx.sty is already
+% installed on most LaTeX systems. The latest version and documentation
+% can be obtained at: 
+% http://www.ctan.org/pkg/graphicx
+% Another good source of documentation is "Using Imported Graphics in
+% LaTeX2e" by Keith Reckdahl which can be found at:
+% http://www.ctan.org/pkg/epslatex
+%
+% latex, and pdflatex in dvi mode, support graphics in encapsulated
+% postscript (.eps) format. pdflatex in pdf mode supports graphics
+% in .pdf, .jpeg, .png and .mps (metapost) formats. Users should ensure
+% that all non-photo figures use a vector format (.eps, .pdf, .mps) and
+% not a bitmapped formats (.jpeg, .png). The IEEE frowns on bitmapped formats
+% which can result in "jaggedy"/blurry rendering of lines and letters as
+% well as large increases in file sizes.
+%
+% You can find documentation about the pdfTeX application at:
+% http://www.tug.org/applications/pdftex
+
+
+
+
+
+% *** MATH PACKAGES ***
+%
+\usepackage[cmex10]{amsmath}
+% A popular package from the American Mathematical Society that provides
+% many useful and powerful commands for dealing with mathematics.
+%
+% Note that the amsmath package sets \interdisplaylinepenalty to 10000
+% thus preventing page breaks from occurring within multiline equations. Use:
+\interdisplaylinepenalty=2500
+% after loading amsmath to restore such page breaks as IEEEtran.cls normally
+% does. amsmath.sty is already installed on most LaTeX systems. The latest
+% version and documentation can be obtained at:
+% http://www.ctan.org/pkg/amsmath
+\usepackage{amsthm}
+\newtheorem{definition}{Definition}
+
+
+
+
+% *** SPECIALIZED LIST PACKAGES ***
+%
+\usepackage{algorithmic}
+% algorithmic.sty was written by Peter Williams and Rogerio Brito.
+% This package provides an algorithmic environment fo describing algorithms.
+% You can use the algorithmic environment in-text or within a figure
+% environment to provide for a floating algorithm. Do NOT use the algorithm
+% floating environment provided by algorithm.sty (by the same authors) or
+% algorithm2e.sty (by Christophe Fiorio) as the IEEE does not use dedicated
+% algorithm float types and packages that provide these will not provide
+% correct IEEE style captions. The latest version and documentation of
+% algorithmic.sty can be obtained at:
+% http://www.ctan.org/pkg/algorithms
+% Also of interest may be the (relatively newer and more customizable)
+% algorithmicx.sty package by Szasz Janos:
+% http://www.ctan.org/pkg/algorithmicx
+
+
+
+
+% *** ALIGNMENT PACKAGES ***
+%
+\usepackage{array}
+% Frank Mittelbach's and David Carlisle's array.sty patches and improves
+% the standard LaTeX2e array and tabular environments to provide better
+% appearance and additional user controls. As the default LaTeX2e table
+% generation code is lacking to the point of almost being broken with
+% respect to the quality of the end results, all users are strongly
+% advised to use an enhanced (at the very least that provided by array.sty)
+% set of table tools. array.sty is already installed on most systems. The
+% latest version and documentation can be obtained at:
+% http://www.ctan.org/pkg/array
+
+
+% IEEEtran contains the IEEEeqnarray family of commands that can be used to
+% generate multiline equations as well as matrices, tables, etc., of high
+% quality.
+
+
+
+
+% *** SUBFIGURE PACKAGES ***
+\ifCLASSOPTIONcompsoc
+  \usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}
+\else
+  \usepackage[caption=false,font=footnotesize]{subfig}
+\fi
+% subfig.sty, written by Steven Douglas Cochran, is the modern replacement
+% for subfigure.sty, the latter of which is no longer maintained and is
+% incompatible with some LaTeX packages including fixltx2e. However,
+% subfig.sty requires and automatically loads Axel Sommerfeldt's caption.sty
+% which will override IEEEtran.cls' handling of captions and this will result
+% in non-IEEE style figure/table captions. To prevent this problem, be sure
+% and invoke subfig.sty's "caption=false" package option (available since
+% subfig.sty version 1.3, 2005/06/28) as this is will preserve IEEEtran.cls
+% handling of captions.
+% Note that the Computer Society format requires a larger sans serif font
+% than the serif footnote size font used in traditional IEEE formatting
+% and thus the need to invoke different subfig.sty package options depending
+% on whether compsoc mode has been enabled.
+%
+% The latest version and documentation of subfig.sty can be obtained at:
+% http://www.ctan.org/pkg/subfig
+
+\usepackage[utf8]{inputenc}
+\usepackage{listingsutf8}
+
+% *** FLOAT PACKAGES ***
+%
+%\usepackage{fixltx2e}
+% fixltx2e, the successor to the earlier fix2col.sty, was written by
+% Frank Mittelbach and David Carlisle. This package corrects a few problems
+% in the LaTeX2e kernel, the most notable of which is that in current
+% LaTeX2e releases, the ordering of single and double column floats is not
+% guaranteed to be preserved. Thus, an unpatched LaTeX2e can allow a
+% single column figure to be placed prior to an earlier double column
+% figure.
+% Be aware that LaTeX2e kernels dated 2015 and later have fixltx2e.sty's
+% corrections already built into the system in which case a warning will
+% be issued if an attempt is made to load fixltx2e.sty as it is no longer
+% needed.
+% The latest version and documentation can be found at:
+% http://www.ctan.org/pkg/fixltx2e
+
+
+%\usepackage{stfloats}
+% stfloats.sty was written by Sigitas Tolusis. This package gives LaTeX2e
+% the ability to do double column floats at the bottom of the page as well
+% as the top. (e.g., "\begin{figure*}[!b]" is not normally possible in
+% LaTeX2e). It also provides a command:
+%\fnbelowfloat
+% to enable the placement of footnotes below bottom floats (the standard
+% LaTeX2e kernel puts them above bottom floats). This is an invasive package
+% which rewrites many portions of the LaTeX2e float routines. It may not work
+% with other packages that modify the LaTeX2e float routines. The latest
+% version and documentation can be obtained at:
+% http://www.ctan.org/pkg/stfloats
+% Do not use the stfloats baselinefloat ability as the IEEE does not allow
+% \baselineskip to stretch. Authors submitting work to the IEEE should note
+% that the IEEE rarely uses double column equations and that authors should try
+% to avoid such use. Do not be tempted to use the cuted.sty or midfloat.sty
+% packages (also by Sigitas Tolusis) as the IEEE does not format its papers in
+% such ways.
+% Do not attempt to use stfloats with fixltx2e as they are incompatible.
+% Instead, use Morten Hogholm'a dblfloatfix which combines the features
+% of both fixltx2e and stfloats:
+%
+% \usepackage{dblfloatfix}
+% The latest version can be found at:
+% http://www.ctan.org/pkg/dblfloatfix
+\usepackage{float}
+
+
+
+\usepackage{tikz}
+\usepackage{tabularx}
+\usepackage{booktabs}
+
+
+% *** PDF, URL AND HYPERLINK PACKAGES ***
+%
+\usepackage{url}
+% url.sty was written by Donald Arseneau. It provides better support for
+% handling and breaking URLs. url.sty is already installed on most LaTeX
+% systems. The latest version and documentation can be obtained at:
+% http://www.ctan.org/pkg/url
+% Basically, \url{my_url_here}.
+
+
+
+
+% *** Do not adjust lengths that control margins, column widths, etc. ***
+% *** Do not use packages that alter fonts (such as pslatex).         ***
+% There should be no need to do such things with IEEEtran.cls V1.6 and later.
+% (Unless specifically asked to do so by the journal or conference you plan
+% to submit to, of course. )
+
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+\lstset{
+    inputencoding=utf8,
+    extendedchars=true,
+    literate=
+      % Minúsculas acentuadas
+      {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+      {à}{{\`a}}1 {è}{{\`e}}1 {ì}{{\`i}}1 {ò}{{\`o}}1 {ù}{{\`u}}1
+      {â}{{\^a}}1 {ê}{{\^e}}1 {î}{{\^i}}1 {ô}{{\^o}}1 {û}{{\^u}}1
+      {ã}{{\~a}}1 {õ}{{\~o}}1
+      {ç}{{\c{c}}}1
+      % Maiúsculas acentuadas
+      {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+      {À}{{\`A}}1 {È}{{\`E}}1 {Ì}{{\`I}}1 {Ò}{{\`O}}1 {Ù}{{\`U}}1
+      {Â}{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
+      {Ã}{{\~A}}1 {Õ}{{\~O}}1
+      {Ç}{{\c{C}}}1
+}
+
+%------------------------------------------------------------------------- 
+% change the % on next lines to produce the final camera-ready version 
+\newif\iffinal
+%\finalfalse
+\finaltrue
+\newcommand{\cmtid}{99999}
+%------------------------------------------------------------------------- 
+
+\iffinal
+\else
+\usepackage[switch]{lineno}
+\fi
+
+\begin{document}
+%
+% paper title
+% Titles are generally capitalized except for words such as a, an, and, as,
+% at, but, by, for, in, nor, of, on, or, the, to and up, which are usually
+% not capitalized unless they are the first or last word of the title.
+% Linebreaks \\ can be used within to get better formatting as desired.
+% Do not put math or special symbols in the title.
+\title{Modelagem Ontológica e Processamento Semântico para Ecologia de Estradas no Banhado do Taim}
+
+
+% author names and affiliations
+% use a multiple column layout for up to two different
+% affiliations
+
+\iffinal
+
+% author names and affiliations
+% use a multiple column layout for up to three different
+% affiliations
+\author{\IEEEauthorblockN{Guilherme M. Einloft and Gabriel Stiegemeier}
+\IEEEauthorblockA{Ciência da Computação\\
+Universidade Federal de Santa Maria\\
+Santa Maria, RS, Brazil 97105-900\\
+Email: gmeinloft@inf.ufsm.br and gstiegemeier@inf.ufsm.br}}
+
+% conference papers do not typically use \thanks and this command
+% is locked out in conference mode. If really needed, such as for
+% the acknowledgment of grants, issue a \IEEEoverridecommandlockouts
+% after \documentclass
+
+% for over three affiliations, or if they all won't fit within the width
+% of the page, use this alternative format:
+% 
+%\author{\IEEEauthorblockN{Michael Shell\IEEEauthorrefmark{1},
+%Homer Simpson\IEEEauthorrefmark{2},
+%James Kirk\IEEEauthorrefmark{3}, 
+%Montgomery Scott\IEEEauthorrefmark{3} and
+%Eldon Tyrell\IEEEauthorrefmark{4}}
+%\IEEEauthorblockA{\IEEEauthorrefmark{1}School of Electrical and Computer Engineering\\
+%Georgia Institute of Technology,
+%Atlanta, Georgia 30332--0250\\ Email: see http://www.michaelshell.org/contact.html}
+%\IEEEauthorblockA{\IEEEauthorrefmark{2}Twentieth Century Fox, Springfield, USA\\
+%Email: homer@thesimpsons.com}
+%\IEEEauthorblockA{\IEEEauthorrefmark{3}Starfleet Academy, San Francisco, California 96678-2391\\
+%Telephone: (800) 555--1212, Fax: (888) 555--1212}
+%\IEEEauthorblockA{\IEEEauthorrefmark{4}Tyrell Inc., 123 Replicant Street, Los Angeles, California 90210--4321}}
+
+\else
+  \author{SIBGRAPI Paper ID: \cmtid \\ }
+  \linenumbers
+\fi
+
+
+% make the title area
+\maketitle
+
+% As a general rule, do not put math, special symbols or citations
+% in the abstract
+
+
+% no keywords
+
+
+
+
+% For peerreview papers, this IEEEtran command inserts a page break and
+% creates the second title. It will be ignored for other modes.
+\IEEEpeerreviewmaketitle
+
+\begin{abstract}
+Este relatório descreve o desenvolvimento de uma base de conhecimento ontológica voltada para o domínio ecológico e operacional do Banhado do Taim, com foco na redução do atropelamento de fauna silvestre. A arquitetura foi construída no padrão formal OWL 2, estabelecendo uma representação focada nos eventos de atropelamento, nos animais afetados e nas características das rodovias locais. O projeto integrou a extração automática de informações a partir de múltiplas fontes de dados (como Wikipedia, Wikidata e IBGE), utilizando técnicas de Processamento de Linguagem Natural (PLN) para limpar, filtrar e transformar textos dispersos em relações estruturadas. Adicionalmente, desenvolveu-se um módulo de automação para o povoamento sintético da ontologia, alcançando um bom volume de instâncias interconectadas. O modelo gerado é validado por um conjunto de 30 consultas operacionais SPARQL e propõe-se uma base conceitual para a futura integração desse modelo com sistemas de Inteligência Artificial Explicável (XAI).
+
+\end{abstract}
+
+\section{Introdução e Contextualização do Problema}
+
+O atropelamento de fauna silvestre em estradas que cortam ecossistemas sensíveis representa um impacto humano negativo à biodiversidade local. A Estação Ecológica (ESEC) do Taim, localizada no bioma Pampa e recortada pela rodovia BR-471, configura-se como um cenário de vulnerabilidade ecológica. O tráfego interurbano dividindo o ecossistema causa a mortalidade de vertebrados, o efeito de barreira e a separação de habitats.
+
+Para diminuir esses problemas, é necessário adotar métodos de gestão baseados em dados que consigam prever riscos. Contudo, a variação e a dispersão dos dados ecológicos, espaciais e de trânsito dificultam as análises amplas em bancos de dados tradicionais. Nesse contexto, este projeto propõe o desenvolvimento de um \textit{Knowledge Graph} (Grafo de Conhecimento) baseado em uma ontologia de domínio (OWL 2), capaz de organizar as interações entre os habitats, os animais, o tráfego e o clima. O objetivo principal é criar um sistema computacional que ajude a formular medidas de proteção localizadas, baseadas em cenários de previsão.
+
+\section{Metodologia de Modelagem}
+
+A criação da ontologia seguiu os princípios recomendados pelo método NeOn, priorizando o reaproveitamento de vocabulários, o alinhamento lógico e a clareza nas descrições. O esquema da ontologia (\textit{TBox}) foi codificado utilizando a biblioteca Python \texttt{owlready2}. 
+
+A estrutura resultou em uma classificação organizada composta por mais de 20 classes principais (incluindo \texttt{Animal}, \texttt{Rodovia}, \texttt{EventoAtropelamento}, \texttt{CondicaoAmbiental}, \texttt{CaracteristicaHabitat} e \texttt{FatorRisco}), interligadas por 13 propriedades de objeto (\textit{Object Properties}) e 15 propriedades de dados (\textit{Data Properties}). Impôs-se rigor formal via declarações de regras matemáticas (como restrições existenciais e universais), separação clara entre grupos de classes e definição rigorosa dos pontos de partida e chegada (\textit{domain}/\textit{range}) para as relações. Duas categorias básicas, de ordem espacial (\texttt{localizadoEm}) e temporal (\texttt{ocorreDurantePeriodo}), foram modeladas explicitamente para garantir o suporte de tempo e espaço nas análises.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\columnwidth]{taim_classes.png}
+\caption{Hierarquia de classes da ontologia.}
+\label{fig:taim_classes}
+\end{figure}
+
+\subsection{Justificativas Teóricas para a Arquitetura}
+
+A decisão fundamental na modelagem foi a adoção de uma arquitetura baseada em eventos. A classe \texttt{EventoAtropelamento} foi criada como o ponto central da rede, conectando os itens parados (ex: habitat, rodovia) e os em movimento (ex: animal, veículos) como parte de um único acontecimento. Esse formato de estrela melhora o desempenho em consultas com muitas variáveis ao mesmo tempo (ex: cruzar tipo de animal, velocidade da via e temperatura local). As relações funcionais (\texttt{FunctionalProperty}) foram muito usadas para impedir que conexões incorretas ocorram e para reforçar a lógica do modelo, garantindo limite de um-para-um em atributos rígidos como \texttt{ocorreEmRodovia}.
+
+\subsection{Alternativas Arquiteturais Descartadas}
+
+Durante as fases de elicitação, duas abordagens alternativas foram metodologicamente ponderadas e descartadas mediante critérios de custo computacional e adequabilidade semântica:
+
+\begin{enumerate}
+    \item \textbf{Abordagem 4D-Fluent:} O padrão \textit{4D-Fluent} sugere a divisão dos objetos em "fatias de tempo" para lidar com características que mudam. Isso foi rejeitado pelo aumento no número de dados gerados e pelo maior tempo nas buscas do sistema. Como a rodovia e a espécie não mudam de sentido ao longo do tempo no escopo de um atropelamento, a abordagem focada no evento (onde o próprio evento guarda a informação de tempo) mostrou-se mais simples e eficiente.
+    
+    \item \textbf{Reutilização da Ontologia SSN/SOSA:} A ideia inicial era usar a ontologia \textit{SOSA} para lidar com os dados de clima. No entanto, o excesso de detalhes dessa ontologia (que obriga a criação de sensores, atuadores e procedimentos) criava uma complexidade desnecessária para o nosso projeto prático. Optou-se pela criação direta da classe \texttt{CondicaoClimatica} ligada ao evento, o que diminui o tamanho do modelo sem perder informações importantes.
+\end{enumerate}
+
+\section{Extração e Povoamento da Ontologia}
+
+\subsection{Fontes de Informação}
+
+O planejamento inicial buscou várias fontes de informação para o povoamento da ontologia, categorizadas como: bases estruturadas (Wikidata, DBpedia, IBGE), fontes textuais não estruturadas (Wikipedia, artigos científicos, relatórios ambientais), dados geográficos (OpenStreetMap) e Modelos de Linguagem (LLMs). Aplicou-se uma etapa de testes de viabilidade sobre cada fonte candidata, avaliando-se a \textbf{acessibilidade técnica} (disponibilidade de APIs, ausência de \textit{paywalls}, conformidade de \textit{scraping}) e o \textbf{rendimento semântico} (volume de entidades e relações extraíveis para o domínio de atropelamento de fauna e ecologia do Taim).
+
+As fontes que foram \textbf{aprovadas} e efetivamente integradas ao \textit{pipeline} de extração são:
+
+\begin{enumerate}[label=\textbf{\arabic*.}]
+    \item \textbf{Wikipedia} (fontes textuais não estruturadas): Páginas enciclopédicas sobre a Estação Ecológica do Taim, Lagoa Mirim, rodovia BR-471, zonas úmidas (banhados) e fichas de espécies (\textit{Cerdocyon thous}, \textit{Caiman latirostris}, \textit{Hydrochoerus hydrochaeris}). Foi a fonte responsável pela maioria das triplas extraídas via PLN.
+
+    \item \textbf{Wikidata} (base estruturada via SPARQL): Consultas ao \textit{endpoint} SPARQL do Wikidata para obtenção de dados estruturados sobre espécies faunísticas relevantes — nome científico, nome vernáculo, status de conservação IUCN e habitat. Os dados foram convertidos em parágrafos textuais e integrados ao \textit{pipeline} NLP unificado.
+
+    \item \textbf{IBGE — API de Localidades} (base governamental estruturada): Consultas à API REST do IBGE para extração de dados geográfico-administrativos dos municípios de Rio Grande e Santa Vitória do Palmar (RS), incluindo microrregião, mesorregião e região imediata. Estes dados contextuais foram textualizados e processados para enriquecimento das entidades de localização geográfica.
+
+    \item \textbf{Portais de Notícias Ambientais} (fontes textuais não estruturadas): Reportagens do portal G1 (Globo) e do jornalísmo ambiental O Eco, que apresentaram conteúdo textual rico sobre a ESEC Taim, políticas de conservação, eventos de atropelamento e medidas de mitigação.
+\end{enumerate}
+
+As fontes \textbf{rejeitadas} na triagem, com suas respectivas justificativas:
+
+\begin{itemize}
+    \item \textbf{Remoção por Inacessibilidade:} A DBpedia apresentou indisponibilidade persistente (erro HTTP 503 — \textit{Service Unavailable}) em todas as consultas SPARQL. O OpenStreetMap (Overpass API) retornou erro HTTP 406 (\textit{Not Acceptable}), bloqueando as rotinas automatizadas. Repositórios acadêmicos como o SciELO e o LUME/UFRGS retornaram erros 404 (\textit{Not Found}) para os artigos prospectados. LLMs (Modelos de Linguagem) foram descartados por ausência de API pública gratuita configurada no ambiente de execução.
+
+    \item \textbf{Remoção por Baixo Rendimento Semântico:} O periódico universitário da UFPEL, embora acessível (HTTP 200), apresentou rendimento semântico insuficiente: durante a extração de teste, gerou apenas 1 termo de domínio e zero triplas ontológicas relevantes, inviabilizando sua inclusão no \textit{pipeline} frente ao custo computacional.
+\end{itemize}
+
+\subsection{Protocolos de Raspagem e Processamento de Linguagem Natural (PLN)}
+
+A fase de ingestão empregou a biblioteca \texttt{requests} aliada ao \texttt{BeautifulSoup} para parsing de HTML. Como a obtenção de dados de portais públicos e enciclopédias requer práticas responsáveis, o sistema incluiu o tratamento automático de erros de conexão (como \texttt{HTTPError} e \texttt{Timeout}) e respeitou intervalos amigáveis entre os acessos (\textit{politeness delay}) para não sobrecarregar os servidores alvo.
+
+\subsubsection{Reconhecimento de Entidades e Refinamento}
+
+Em seguida, o processamento dos textos foi feito usando a biblioteca \texttt{spaCy} e o modelo linguístico pré-treinado \texttt{pt\_core\_news\_sm}. Devido à falta de palavras específicas de ecologia neste modelo geral, uma solução mista foi implementada. O modelo foi expandido com um componente \texttt{EntityRuler}, contendo um vocabulário controlado com os nomes taxonômicos da região (ex: \textit{Caiman latirostris}, \textit{Cerdocyon thous}) e os jargões locais do Banhado do Taim.
+
+Para garantir que a extração resultasse em nomes de entidades limpos e padronizados, a árvore sintática (\textit{dependency tree}) de cada frase foi analisada. O algoritmo foi programado para varrer os nós das palavras e ativamente ignorar classes morfológicas indesejadas, como determinantes (artigos "o", "a", "um") e adposições (preposições "de", "em", "para"). Adicionalmente, aplicou-se uma limpeza por Expressões Regulares (RegEx) para remover qualquer sufixo ou prefixo residual, assegurando que o nome final da entidade estivesse gramaticalmente isolado (e.g., convertendo "da Lagoa Mirim" para "Lagoa Mirim").
+
+\subsection{Regras de Extração e Instanciação}
+
+O \textit{pipeline} consolidou a extração de triplas (Sujeito, Relação, Objeto) mediante duas vias complementares:
+\begin{itemize}
+    \item \textbf{Parsing de Dependência Sintática (\textit{Dependency Parsing}):} Reconhecimento dos padrões sintáticos (ex: sujeito nominal $\leftarrow$ verbo $\rightarrow$ objeto direto) e mapeamento explícito dos verbos para as propriedades ontológicas, como as propriedades \texttt{atravessaHabitat} e \texttt{possuiHabitat}.
+    \item \textbf{Co-ocorrência Contextual:} Dedução heurística de relações baseada na adjacência sentencial de entidades de classes predefinidas, obedecendo às restrições de \textit{domain} e \textit{range} impostas pela \textit{TBox}.
+\end{itemize}
+
+Durante a construção do \textit{pipeline}, foi necessário aplicar regras de refinamento de linguagem natural: exigiu-se a correspondência correta de classe ontológica em ambas as extremidades das relações (sujeito e objeto) para evitar a formação de pares sem sentido. Além disso, o motor de leitura (\textit{tokens}) foi programado para rejeitar palavras irrelevantes (como artigos e preposições) e termos de domínio genéricos (e.g., ``trecho'', ``morte''), garantindo a extração de entidades nominais úteis.
+
+Este artefato de extração deduplicado gerou 27 triplas, derivadas de 711 menções a entidades processadas e persistidas nos formatos JSON e CSV. A Tabela \ref{tab:triplas} ilustra um subconjunto destas triplas, demonstrando a precisão do mapeamento das entidades nativas para as classes ontológicas.
+
+\begin{table*}[h]
+\centering
+\caption{Exemplos de triplas semânticas extraídas com sucesso pelo pipeline de PLN.}
+\label{tab:triplas}
+\begin{tabular}{@{}llll@{}}
+\toprule
+\textbf{Entidade Origem} & \textbf{Relação Ontológica} & \textbf{Entidade Destino} & \textbf{Classes Mapeadas} \\ \midrule
+capivara & \texttt{possuiHabitat} & banhado & \texttt{Mamifero $\rightarrow$ TipoVegetacao} \\
+atropelamentos & \texttt{envolveAnimal} & aves & \texttt{EventoAtropelamento $\rightarrow$ Ave} \\
+br 471 & \texttt{atravessaHabitat} & banhado & \texttt{Rodovia $\rightarrow$ TipoVegetacao} \\
+Lagoa Mirim & \texttt{ligado} & Lagoa Patos & \texttt{CorpoHidrico $\rightarrow$ CorpoHidrico} \\ 
+jacaré & \texttt{possuiHabitat} & banhado & \texttt{Reptil $\rightarrow$ TipoVegetacao} \\ \bottomrule
+\end{tabular}
+\end{table*}
+
+\subsection{Povoamento Automatizado da Ontologia}
+
+Visando atingir a massa crítica e a expressividade necessárias para as consultas complexas, o requisito de instanciação de indivíduos (população da \textit{ABox}) foi preenchido através do desenvolvimento de um script automatizado em Python (\texttt{owlready2}). 
+
+Esse script encarregou-se de gerar e relacionar 125 instâncias adicionais, simulando \texttt{EventosAtropelamento}, \texttt{Mamiferos}, \texttt{Aves}, \texttt{Répteis}, \texttt{TrechosRodoviarios} e \texttt{TiposVegetacao}. Ao final do processo, unindo o conhecimento básico extraído e a rotina de população sintética, a base (\texttt{ontologia\_taim\_povoada.owl}) totalizou 152 indivíduos devidamente interligados pelas relações da \textit{TBox} (como \texttt{envolveAnimal}, \texttt{ocorreEmTrecho} e \texttt{possuiHabitat}), formando a base de dados pronta para as etapas de análise seguintes.
+
+A Tabela \ref{tab:distribuicao} quantifica a distribuição dos novos indivíduos criados automaticamente pelo script Python, garantindo o volume necessário de instâncias (\textit{ABox}) para simular um ambiente de banco de dados robusto.
+
+\begin{table}[h]
+\centering
+\caption{Distribuição dos indivíduos sintéticos gerados pelo script de população.}
+\label{tab:distribuicao}
+\begin{tabular}{@{}lc@{}}
+\toprule
+\textbf{Classe Ontológica} & \textbf{Quantidade de Instâncias Geradas} \\ \midrule
+\texttt{EventoAtropelamento} & 40 \\
+\texttt{Mamifero} & 30 \\
+\texttt{TrechoRodoviario} & 15 \\
+\texttt{Reptil} & 15 \\
+\texttt{Ave} & 15 \\
+\texttt{TipoVegetacao} & 10 \\ \midrule
+\textbf{Total Gerado} & \textbf{125} \\ \bottomrule
+\end{tabular}
+\end{table}
+
+\section{Execução e Validação Semântica}
+
+A validação do conhecimento inferido foi conduzida sistematicamente sobre a infraestrutura da linguagem \textit{SPARQL Protocol and RDF Query Language}. Formulou-se um corpus composto por 30 consultas, segmentadas rigidamente em cinco escopos funcionais, executadas e transacionadas via motor \texttt{rdflib}:
+
+\begin{enumerate}
+    \item \textbf{Consultas Simples (Filtragem por Classe):} Inventário matricial do domínio, e.g., quantificação das espécies avaliadas quanto aos status IUCN, atributos estáticos de rodovias e taxonomia animal subjacente.
+    \item \textbf{Consultas Complexas (Grafo Polidimensional):} Buscas que atravessam vários relacionamentos ao mesmo tempo. Destacou-se o cruzamento de cadeias completas relacionando a Espécie $\rightarrow$ Animal $\rightarrow$ Evento $\rightarrow$ TrechoRodoviário $\rightarrow$ Habitat $\rightarrow$ Coordenadas Geográficas.
+    \item \textbf{Filtros Operacionais:} Introdução de delimitadores condicionais. Exemplificam-se os mapeamentos noturnos e a convergência de variáveis (pista $< 7.5$m convergindo com alta volumetria veicular).
+    \item \textbf{Consultas Analíticas de Agregação:} Operações envolvendo \texttt{GROUP BY}, \texttt{MAX}, \texttt{AVG} e \texttt{COUNT}. Essenciais para calcular as estatísticas gerais do modelo, como descobrir a diversidade de habitats das espécies ou identificar a faixa de temperatura em que mais ocorrem atropelamentos de répteis (e.g. 20-30$^\circ$C).
+    \item \textbf{Cenários Operacionais Reais:} Resoluções aplicadas a demandas decisórias de gestores ambientais. Mapeou-se a prioridade prática para a instalação de estruturas de proteção (passagens inferiores), identificando locais onde existem fatores de risco mas não há nenhuma \texttt{MedidaMitigacao} cadastrada (\texttt{FILTER NOT EXISTS}).
+\end{enumerate}
+
+O comportamento empírico do protocolo atestou a ausência de ambiguidades formais, provando que o modelo ontológico é aderente à lógica de Primeira Ordem (\textit{FOL - First-Order Logic}) contida em seus metadados semânticos.
+
+\section{Integração Preditiva e Explicabilidade}
+
+Embora a ontologia funcione principalmente como um banco de dados organizado de forma inteligente, a sua estrutura permite a criação de soluções inovadoras usando inteligência artificial.
+
+O modelo de previsão pode ser construído integrando a base \textit{OWL/SPARQL} com ferramentas de \textit{Machine Learning} probabilístico ou abordagens baseadas em regras (\textit{SWRL - Semantic Web Rule Language}). Utilizando o histórico de dados (\textit{features} como km da via, período sazonal, umidade e largura de pista), as redes neurais podem estimar um coeficiente de risco de novos atropelamentos nos "Hotspots" identificados.
+
+Uma vantagem dessa abordagem, no entanto, está na capacidade de explicar as próprias conclusões (XAI - \textit{eXplainable Artificial Intelligence}). Enquanto modelos estatísticos agem como caixas-pretas (\textit{Black-Box}), a base ontológica permite a geração automática de justificativas, explicando as causas a partir dos dados estruturados. O sistema não apenas prevê de forma matemática onde ocorrerá um atropelamento; ele explica essa previsão mostrando como se cruzam a rota de migração do \textit{Cerdocyon thous} (fator ecológico), o habitat de área alagada (\textit{CorpoHidrico}) e a falta de barreiras de proteção no tráfego local (fatores humanos e métricas da rodovia).
+
+\section{Conclusões}
+O sistema computacional desenvolvido atende a todos os requisitos propostos, comprovando que o uso de tecnologias de Web Semântica é viável para organizar cenários ecológicos e problemas reais do meio ambiente. Através da construção de uma arquitetura ontológica no padrão OWL 2, tornou-se possível mapear as interações entre a fauna silvestre que habita a região do Banhado do Taim, os atributos espaciais da rodovia BR-471 e os vários fatores de risco operacionais que causam os atropelamentos. O trabalho superou a fase puramente teórica ao implementar soluções de código para alimentar a base ativamente.
+
+O uso combinado de rotinas de coleta de dados (Web Scraping) e Processamento de Linguagem Natural (PLN) mostrou ser uma ferramenta poderosa para extrair informações soltas na internet e convertê-las de modo automático em um Grafo de Conhecimento útil e estruturado. A execução adicional de um script focado no povoamento rápido de novos indivíduos garantiu que o ambiente final não ficasse vazio, permitindo que a infraestrutura lógica do projeto fosse comprovadamente validada na prática por meio das consultas SPARQL. 
+
+Como resultado de todas essas fases, modelagem, busca, refinamento gramatical e instânciação automatizada, entregamos um produto computacional sólido. A estrutura desse banco de dados pavimenta o caminho para a união com sistemas modernos de aprendizado de máquina, promovendo uma inteligência artificial capaz de prever ameaças e explicar cientificamente as suas próprias previsões com base nos relacionamentos do habitat.
+
+
+
+
+
+% An example of a floating figure using the graphicx package.
+% Note that \label must occur AFTER (or within) \caption.
+% For figures, \caption should occur after the \includegraphics.
+% Note that IEEEtran v1.7 and later has special internal code that
+% is designed to preserve the operation of \label within \caption
+% even when the captionsoff option is in effect. However, because
+% of issues like this, it may be the safest practice to put all your
+% \label just after \caption rather than within \caption{}.
+%
+% Reminder: the "draftcls" or "draftclsnofoot", not "draft", class
+% option should be used if it is desired that the figures are to be
+% displayed while in draft mode.
+%
+% Note that the IEEE typically puts floats only at the top, even when this
+% results in a large percentage of a column being occupied by floats.
+
+
+% An example of a double column floating figure using two subfigures.
+% (The subfig.sty package must be loaded for this to work.)
+% The subfigure \label commands are set within each subfloat command,
+% and the \label for the overall figure must come after \caption.
+% \hfil is used as a separator to get equal spacing.
+% Watch out that the combined width of all the subfigures on a 
+% line do not exceed the text width or a line break will occur.
+%
+%\begin{figure*}[!t]
+%\centering
+%\subfloat[Case I]{\includegraphics[width=2.4in]{figs/sibgrapi-2026.png}%
+%\label{fig_first_case}}
+%\hfil
+%\subfloat[Case II]{\includegraphics[width=2.4in]{figs/sibgrapi-2026.png}%
+%\label{fig_second_case}}
+%\caption{SIBGRAPI - Conference on Graphics, Patterns and Images.}
+%\label{fig_sim2}
+%\end{figure*}
+%
+% Note that often IEEE papers with subfigures do not employ subfigure
+% captions (using the optional argument to \subfloat[]), but instead will
+% reference/describe all of them (a), (b), etc., within the main caption.
+% Be aware that for subfig.sty to generate the (a), (b), etc., subfigure
+% labels, the optional argument to \subfloat must be present. If a
+% subcaption is not desired, just leave its contents blank,
+% e.g., \subfloat[].
+
+
+% An example of a floating table. Note that, for IEEE style tables, the
+% \caption command should come BEFORE the table and, given that table
+% captions serve much like titles, are usually capitalized except for words
+% such as a, an, and, as, at, but, by, for, in, nor, of, on, or, the, to
+% and up, which are usually not capitalized unless they are the first or
+% last word of the caption. Table text will default to \footnotesize as
+% the IEEE normally uses this smaller font for tables.
+% The \label must come after \caption as always.
+%
+%\begin{table}[]
+%% increase table row spacing, adjust to taste
+%\renewcommand{\arraystretch}{1.3}
+% if using array.sty, it might be a good idea to tweak the value of
+% \extrarowheight as needed to properly center the text within the cells
+%\caption{An Example of a Table}
+%\label{table_example}
+%\centering
+%% Some packages, such as MDW tools, offer better commands for making tables
+%% than the plain LaTeX2e tabular which is used here.
+%\begin{tabular}{|c||c|}
+%\hline
+%One & Two\\
+%\hline
+%Three & Four\\
+%\hline
+%\end{tabular}
+%\end{table}
+
+
+% Note that the IEEE does not put floats in the very first column
+% - or typically anywhere on the first page for that matter. Also,
+% in-text middle ("here") positioning is typically not used, but it
+% is allowed and encouraged for Computer Society conferences (but
+% not Computer Society journals). Most IEEE journals/conferences use
+% top floats exclusively. 
+% Note that, LaTeX2e, unlike IEEE journals/conferences, places
+% footnotes above bottom floats. This can be corrected via the
+% \fnbelowfloat command of the stfloats package.
+
+
+
+% trigger a \newpage just before the given reference
+% number - used to balance the columns on the last page
+% adjust value as needed - may need to be readjusted if
+% the document is modified later
+%\IEEEtriggeratref{8}
+% The "triggered" command can be changed if desired:
+%\IEEEtriggercmd{\enlargethispage{-5in}}
+
+% references section
+
+% can use a bibliography generated by BibTeX as a .bbl file
+% BibTeX documentation can be easily obtained at:
+% http://mirror.ctan.org/biblio/bibtex/contrib/doc/
+% The IEEEtran BibTeX style support page is at:
+% http://www.michaelshell.org/tex/ieeetran/bibtex/
+%\bibliographystyle{IEEEtran}
+% argument is your BibTeX string definitions and bibliography database(s)
+%\bibliography{example}
+%
+% <OR> manually copy in the resultant .bbl file
+% set second argument of \begin to the number of references
+% (used to reserve space for the reference number labels box)
+%\begin{thebibliography}{1}
+%
+%\bibitem{IEEEhowto:kopka}
+%H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
+%  0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
+
+%\end{thebibliography}
+
+
+
+
+% that's all folks
+\end{document}
+
+
