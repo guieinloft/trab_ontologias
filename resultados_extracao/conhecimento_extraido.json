@@ -1,0 +1,6109 @@
+{
+  "metadados": {
+    "dominio": "Banhado do Taim - Atropelamento de Fauna",
+    "ontologia_iri": "http://www.semanticweb.org/ontologias/banhado-do-taim/atropelamento-fauna",
+    "total_fontes": 18,
+    "fontes_sucesso": 18,
+    "total_entidades": 711,
+    "total_triplas": 27
+  },
+  "fontes": [
+    {
+      "url": "https://pt.wikipedia.org/wiki/Esta%C3%A7%C3%A3o_Ecol%C3%B3gica_do_Taim",
+      "titulo": "Estação Ecológica do Taim",
+      "paragrafos_extraidos": 12,
+      "erro": null
+    },
+    {
+      "url": "https://pt.wikipedia.org/wiki/Lagoa_Mirim",
+      "titulo": "Lagoa Mirim",
+      "paragrafos_extraidos": 20,
+      "erro": null
+    },
+    {
+      "url": "https://pt.wikipedia.org/wiki/BR-471",
+      "titulo": "BR-471",
+      "paragrafos_extraidos": 31,
+      "erro": null
+    },
+    {
+      "url": "https://pt.wikipedia.org/wiki/Banhado",
+      "titulo": "Zona úmida",
+      "paragrafos_extraidos": 19,
+      "erro": null
+    },
+    {
+      "url": "https://pt.wikipedia.org/wiki/Cerdocyon_thous",
+      "titulo": "Graxaim-do-mato",
+      "paragrafos_extraidos": 23,
+      "erro": null
+    },
+    {
+      "url": "https://pt.wikipedia.org/wiki/Caiman_latirostris",
+      "titulo": "Jacaré-de-papo-amarelo",
+      "paragrafos_extraidos": 9,
+      "erro": null
+    },
+    {
+      "url": "https://pt.wikipedia.org/wiki/Hydrochoerus_hydrochaeris",
+      "titulo": "Capivara",
+      "paragrafos_extraidos": 54,
+      "erro": null
+    },
+    {
+      "url": "https://periodicos.ufpel.edu.br/index.php/revbio/article/view/25384",
+      "titulo": "",
+      "paragrafos_extraidos": 1,
+      "erro": null
+    },
+    {
+      "url": "http://g1.globo.com/rs/rio-grande-do-sul/campo-e-lavoura/noticia/2013/10/estacao-do-taim-deve-ser-ampliada-ate-o-final-de-2014-no-rs-diz-icmbio.html",
+      "titulo": "Estação do Taim deve ser ampliada até o final de 2014 no RS, diz ICMBio",
+      "paragrafos_extraidos": 26,
+      "erro": null
+    },
+    {
+      "url": "http://www.oeco.org.br/reportagens/henrique-horn-ampliacao-da-esec-de-taim-e-consenso/",
+      "titulo": "Henrique Horn: “Ampliação da Esec de Taim é consenso”",
+      "paragrafos_extraidos": 41,
+      "erro": null
+    },
+    {
+      "url": "wikidata:sparql:Caiman latirostris",
+      "titulo": "Wikidata - Caiman latirostris",
+      "paragrafos_extraidos": 1,
+      "erro": null
+    },
+    {
+      "url": "wikidata:sparql:Hydrochoerus hydrochaeris",
+      "titulo": "Wikidata - Hydrochoerus hydrochaeris",
+      "paragrafos_extraidos": 1,
+      "erro": null
+    },
+    {
+      "url": "wikidata:sparql:Cerdocyon thous",
+      "titulo": "Wikidata - Cerdocyon thous",
+      "paragrafos_extraidos": 1,
+      "erro": null
+    },
+    {
+      "url": "wikidata:sparql:Athene cunicularia",
+      "titulo": "Wikidata - Athene cunicularia",
+      "paragrafos_extraidos": 1,
+      "erro": null
+    },
+    {
+      "url": "wikidata:sparql:Myocastor coypus",
+      "titulo": "Wikidata - Myocastor coypus",
+      "paragrafos_extraidos": 1,
+      "erro": null
+    },
+    {
+      "url": "wikidata:sparql:Cygnus melancoryphus",
+      "titulo": "Wikidata - Cygnus melancoryphus",
+      "paragrafos_extraidos": 1,
+      "erro": null
+    },
+    {
+      "url": "https://servicodados.ibge.gov.br/api/v1/localidades/municipios/4315602",
+      "titulo": "IBGE - Rio Grande (RS)",
+      "paragrafos_extraidos": 3,
+      "erro": null
+    },
+    {
+      "url": "https://servicodados.ibge.gov.br/api/v1/localidades/municipios/4317103",
+      "titulo": "IBGE - Santa Vitória do Palmar (RS)",
+      "paragrafos_extraidos": 3,
+      "erro": null
+    }
+  ],
+  "entidades": [
+    {
+      "texto": "Estação Ecológica do Taim",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 2,
+      "fim": 27,
+      "confianca": 0.4
+    },
+    {
+      "texto": "ESEC Taim",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 29,
+      "fim": 38,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Rio Grande do Sul",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 133,
+      "fim": 150,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Rio Grande",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 219,
+      "fim": 229,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Santa Vitória do Palmar",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 242,
+      "fim": 265,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Estação está atualmente",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 287,
+      "fim": 310,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Instituto Chico Mendes de Conservação da Biodiversidade",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 322,
+      "fim": 377,
+      "confianca": 0.4
+    },
+    {
+      "texto": "ICMBio",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 379,
+      "fim": 385,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Ministério do Meio Ambiente",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 415,
+      "fim": 442,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Decreto nº 92.963",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 495,
+      "fim": 512,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Técnicos",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 705,
+      "fim": 713,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Estação está situada",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 947,
+      "fim": 967,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Oceano Atlântico",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 1005,
+      "fim": 1021,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Lagoa Mirim",
+      "label_spacy": "LOC",
+      "classe_ontologia": "CorpoHidrico",
+      "inicio": 1026,
+      "fim": 1037,
+      "confianca": 0.8
+    },
+    {
+      "texto": "Brasil",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 1157,
+      "fim": 1163,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Taim",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 1222,
+      "fim": 1226,
+      "confianca": 0.4
+    },
+    {
+      "texto": "BR-471",
+      "label_spacy": "LOC",
+      "classe_ontologia": "Rodovia",
+      "inicio": 1541,
+      "fim": 1547,
+      "confianca": 0.8
+    },
+    {
+      "texto": "jacaré-de-papo-amarelo",
+      "label_spacy": "MISC",
+      "classe_ontologia": "Reptil",
+      "inicio": 2012,
+      "fim": 2034,
+      "confianca": 0.8
+    },
+    {
+      "texto": "Reportagem especial sobre",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 2203,
+      "fim": 2228,
+      "confianca": 0.4
+    },
+    {
+      "texto": "mamíferos",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "Mamifero",
+      "inicio": 1655,
+      "fim": 1664,
+      "confianca": 0.9
+    },
+    {
+      "texto": "capivara",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "Mamifero",
+      "inicio": 1942,
+      "fim": 1950,
+      "confianca": 0.9
+    },
+    {
+      "texto": "ratão-do-banhado",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "Mamifero",
+      "inicio": 1953,
+      "fim": 1969,
+      "confianca": 0.9
+    },
+    {
+      "texto": "lontra",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "Mamifero",
+      "inicio": 1991,
+      "fim": 1997,
+      "confianca": 0.9
+    },
+    {
+      "texto": "jacaré",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "Reptil",
+      "inicio": 2012,
+      "fim": 2018,
+      "confianca": 0.9
+    },
+    {
+      "texto": "tartaruga",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "Reptil",
+      "inicio": 1930,
+      "fim": 1939,
+      "confianca": 0.9
+    },
+    {
+      "texto": "aves",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "Ave",
+      "inicio": 1671,
+      "fim": 1675,
+      "confianca": 0.9
+    },
+    {
+      "texto": "cisne",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "Ave",
+      "inicio": 1825,
+      "fim": 1830,
+      "confianca": 0.9
+    },
+    {
+      "texto": "marreca",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "Ave",
+      "inicio": 1873,
+      "fim": 1880,
+      "confianca": 0.9
+    },
+    {
+      "texto": "garça",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "Ave",
+      "inicio": 1757,
+      "fim": 1762,
+      "confianca": 0.9
+    },
+    {
+      "texto": "biguá",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "Ave",
+      "inicio": 1724,
+      "fim": 1729,
+      "confianca": 0.9
+    },
+    {
+      "texto": "joão-de-barro",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "Ave",
+      "inicio": 1708,
+      "fim": 1721,
+      "confianca": 0.9
+    },
+    {
+      "texto": "seca",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "CondicaoClimatica",
+      "inicio": 1778,
+      "fim": 1782,
+      "confianca": 0.9
+    },
+    {
+      "texto": "banhado",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "TipoVegetacao",
+      "inicio": 1962,
+      "fim": 1969,
+      "confianca": 0.9
+    },
+    {
+      "texto": "banhados",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "TipoVegetacao",
+      "inicio": 1210,
+      "fim": 1218,
+      "confianca": 0.9
+    },
+    {
+      "texto": "lagoa",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "CorpoHidrico",
+      "inicio": 1026,
+      "fim": 1031,
+      "confianca": 0.9
+    },
+    {
+      "texto": "lagoas",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "CorpoHidrico",
+      "inicio": 1321,
+      "fim": 1327,
+      "confianca": 0.9
+    },
+    {
+      "texto": "Lagoa Mirim",
+      "label_spacy": "LOC",
+      "classe_ontologia": "CorpoHidrico",
+      "inicio": 0,
+      "fim": 11,
+      "confianca": 0.8
+    },
+    {
+      "texto": "Laguna Merín",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 27,
+      "fim": 39,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Nheengatu",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 45,
+      "fim": 54,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Ipawa",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 57,
+      "fim": 62,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Rio Grande do Sul",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 134,
+      "fim": 151,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Brasil",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 172,
+      "fim": 178,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Uruguai",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 185,
+      "fim": 192,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Lagoa dos Patos",
+      "label_spacy": "LOC",
+      "classe_ontologia": "CorpoHidrico",
+      "inicio": 248,
+      "fim": 263,
+      "confianca": 0.8
+    },
+    {
+      "texto": "Lagoa dos",
+      "label_spacy": "LOC",
+      "classe_ontologia": "CorpoHidrico",
+      "inicio": 369,
+      "fim": 378,
+      "confianca": 0.8
+    },
+    {
+      "texto": "Patos como laguna",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 379,
+      "fim": 396,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Tratado de Limites",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 740,
+      "fim": 758,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Tratado da",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 783,
+      "fim": 793,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Universidade de Pelotas",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 1310,
+      "fim": 1333,
+      "confianca": 0.4
+    },
+    {
+      "texto": "São Gonçalo",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 1537,
+      "fim": 1548,
+      "confianca": 0.4
+    },
+    {
+      "texto": "rio Piratini",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 1590,
+      "fim": 1602,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Arroio Grande",
+      "label_spacy": "LOC",
+      "classe_ontologia": "CorpoHidrico",
+      "inicio": 1616,
+      "fim": 1629,
+      "confianca": 0.8
+    },
+    {
+      "texto": "Arroio Chasqueiro",
+      "label_spacy": "LOC",
+      "classe_ontologia": "CorpoHidrico",
+      "inicio": 1701,
+      "fim": 1718,
+      "confianca": 0.8
+    },
+    {
+      "texto": "Litoral",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 1733,
+      "fim": 1740,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Banhado do Taim",
+      "label_spacy": "LOC",
+      "classe_ontologia": "TipoVegetacao",
+      "inicio": 1779,
+      "fim": 1794,
+      "confianca": 0.8
+    },
+    {
+      "texto": "Lagoa Mangueira",
+      "label_spacy": "LOC",
+      "classe_ontologia": "CorpoHidrico",
+      "inicio": 1799,
+      "fim": 1814,
+      "confianca": 0.8
+    },
+    {
+      "texto": "Tacuarí",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 1862,
+      "fim": 1869,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Cebollatí",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 1894,
+      "fim": 1903,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Sarandí",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 1929,
+      "fim": 1936,
+      "confianca": 0.4
+    },
+    {
+      "texto": "San Miguel",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 1963,
+      "fim": 1973,
+      "confianca": 0.4
+    },
+    {
+      "texto": "rio Jaguarão",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 2123,
+      "fim": 2135,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Mirim está ligada",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 2369,
+      "fim": 2386,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Canal de São Gonçalo",
+      "label_spacy": "LOC",
+      "classe_ontologia": "CorpoHidrico",
+      "inicio": 2416,
+      "fim": 2436,
+      "confianca": 0.8
+    },
+    {
+      "texto": "Jaguarão pelo lado",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 2515,
+      "fim": 2533,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Tacuarí pelo lado",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 2569,
+      "fim": 2586,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Mirim pertencia integralmente",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 2632,
+      "fim": 2661,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Barão do Rio Branco",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 2779,
+      "fim": 2798,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Tratado de Condomínio da",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 2824,
+      "fim": 2848,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Brasil cedeu voluntariamente",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 2900,
+      "fim": 2928,
+      "confianca": 0.4
+    },
+    {
+      "texto": "República Oriental do Uruguai",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 3031,
+      "fim": 3060,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Lei nº 5.330",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 3099,
+      "fim": 3111,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Villa Artigas",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 3160,
+      "fim": 3173,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Rio Branco",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 3219,
+      "fim": 3229,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Barão",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 3248,
+      "fim": 3253,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Brasília",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 3294,
+      "fim": 3302,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Tratado da Bacia da",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 3305,
+      "fim": 3324,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Comissão Mista Uruguaio-Brasileira para o Desenvolvimento da Bacia da",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 3341,
+      "fim": 3410,
+      "confianca": 0.4
+    },
+    {
+      "texto": "CLM",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 3424,
+      "fim": 3427,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Treinta y Tres",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 3530,
+      "fim": 3544,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Porto Alegre",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 3556,
+      "fim": 3568,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Lago Merín",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 4108,
+      "fim": 4118,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Melo",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 4158,
+      "fim": 4162,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Rota 8",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 4179,
+      "fim": 4185,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Montevidéu",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 4246,
+      "fim": 4256,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Kitesurfing",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 4422,
+      "fim": 4433,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Estação Ecológica do Taim",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 4765,
+      "fim": 4790,
+      "confianca": 0.4
+    },
+    {
+      "texto": "UNESCO",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 4968,
+      "fim": 4974,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Reserva da Biosfera",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 4980,
+      "fim": 4999,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Universidade Federal de",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 5003,
+      "fim": 5026,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Pelotas concentra recursos",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 5027,
+      "fim": 5053,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Agência de Desenvolvimento da",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 5104,
+      "fim": 5133,
+      "confianca": 0.4
+    },
+    {
+      "texto": "aves",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "Ave",
+      "inicio": 4845,
+      "fim": 4849,
+      "confianca": 0.9
+    },
+    {
+      "texto": "vento",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "CondicaoClimatica",
+      "inicio": 4468,
+      "fim": 4473,
+      "confianca": 0.9
+    },
+    {
+      "texto": "seca",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "CondicaoClimatica",
+      "inicio": 2727,
+      "fim": 2731,
+      "confianca": 0.9
+    },
+    {
+      "texto": "inverno",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "CondicaoClimatica",
+      "inicio": 2217,
+      "fim": 2224,
+      "confianca": 0.9
+    },
+    {
+      "texto": "primavera",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "CondicaoClimatica",
+      "inicio": 4489,
+      "fim": 4498,
+      "confianca": 0.9
+    },
+    {
+      "texto": "banhado",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "TipoVegetacao",
+      "inicio": 1779,
+      "fim": 1786,
+      "confianca": 0.9
+    },
+    {
+      "texto": "banhados",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "TipoVegetacao",
+      "inicio": 1280,
+      "fim": 1288,
+      "confianca": 0.9
+    },
+    {
+      "texto": "lagoa",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "CorpoHidrico",
+      "inicio": 0,
+      "fim": 5,
+      "confianca": 0.9
+    },
+    {
+      "texto": "arroio",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "CorpoHidrico",
+      "inicio": 1616,
+      "fim": 1622,
+      "confianca": 0.9
+    },
+    {
+      "texto": "canal",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "CorpoHidrico",
+      "inicio": 2416,
+      "fim": 2421,
+      "confianca": 0.9
+    },
+    {
+      "texto": "bacia hidrográfica",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "CorpoHidrico",
+      "inicio": 401,
+      "fim": 419,
+      "confianca": 0.9
+    },
+    {
+      "texto": "BR-471",
+      "label_spacy": "LOC",
+      "classe_ontologia": "Rodovia",
+      "inicio": 2,
+      "fim": 8,
+      "confianca": 0.8
+    },
+    {
+      "texto": "Brasil",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 34,
+      "fim": 40,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Rio Grande do Sul",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 89,
+      "fim": 106,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Quinta",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 228,
+      "fim": 234,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Município",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 248,
+      "fim": 257,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Rio Grande",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 261,
+      "fim": 271,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Município de Chuí",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 280,
+      "fim": 297,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Soledade",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 318,
+      "fim": 326,
+      "confianca": 0.4
+    },
+    {
+      "texto": "BR-153",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 347,
+      "fim": 353,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Rodovia Transbrasiliana",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 364,
+      "fim": 387,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Barros Cassal",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 402,
+      "fim": 415,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Herveiras",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 418,
+      "fim": 427,
+      "confianca": 0.4
+    },
+    {
+      "texto": "RST",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 471,
+      "fim": 474,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Municípios de Sinimbu",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 517,
+      "fim": 538,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Rio Pardinho",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 541,
+      "fim": 553,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Santa Cruz do Sul",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 556,
+      "fim": 573,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Rio Pardo",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 576,
+      "fim": 585,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Pantano Grande",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 588,
+      "fim": 602,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Encruzilhada do Sul",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 605,
+      "fim": 624,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Canguçu",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 627,
+      "fim": 634,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Coxilha do Fogo",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 639,
+      "fim": 654,
+      "confianca": 0.4
+    },
+    {
+      "texto": "BR-392",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 694,
+      "fim": 700,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Pelotas",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 705,
+      "fim": 712,
+      "confianca": 0.4
+    },
+    {
+      "texto": "BR-116",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 735,
+      "fim": 741,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Povo Novo",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 793,
+      "fim": 802,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Rodovia Brigadeiro José da Silva Pais",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 874,
+      "fim": 911,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Santa Vitória do Palmar",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 965,
+      "fim": 988,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Chuí",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 1019,
+      "fim": 1023,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Estação Ecológica do Taim",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 1195,
+      "fim": 1220,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Decreto nº 92.963/86",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 1287,
+      "fim": 1307,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Ramsar",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 1325,
+      "fim": 1331,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Taim",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 1375,
+      "fim": 1379,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Ministério Público",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 1584,
+      "fim": 1602,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Governo do Estado do Rio Grande do Sul",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 1682,
+      "fim": 1720,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Governo",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 1923,
+      "fim": 1930,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Rio Grande do Sul Transitória",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 2041,
+      "fim": 2070,
+      "confianca": 0.4
+    },
+    {
+      "texto": "BRs",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 2183,
+      "fim": 2186,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Sul",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 2331,
+      "fim": 2334,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Estado",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 2361,
+      "fim": 2367,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Produção",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 2628,
+      "fim": 2636,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Porto de Rio Grande",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 2641,
+      "fim": 2660,
+      "confianca": 0.4
+    },
+    {
+      "texto": "DAER",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 2776,
+      "fim": 2780,
+      "confianca": 0.4
+    },
+    {
+      "texto": "DNIT",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 2811,
+      "fim": 2815,
+      "confianca": 0.4
+    },
+    {
+      "texto": "ERS",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 2961,
+      "fim": 2964,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Estado do Rio Grande do Sul",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 2987,
+      "fim": 3014,
+      "confianca": 0.4
+    },
+    {
+      "texto": "RSC",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 3018,
+      "fim": 3021,
+      "confianca": 0.4
+    },
+    {
+      "texto": "RSC-471",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 3352,
+      "fim": 3359,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Ano do Senhor",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 3561,
+      "fim": 3574,
+      "confianca": 0.4
+    },
+    {
+      "texto": "DNER",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 3605,
+      "fim": 3609,
+      "confianca": 0.4
+    },
+    {
+      "texto": "rodovia Pelotas",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 3630,
+      "fim": 3645,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Santa Vitória",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 3670,
+      "fim": 3683,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Departamento",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 4218,
+      "fim": 4230,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Banco Interamericano de Desenvolvimento",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 4444,
+      "fim": 4483,
+      "confianca": 0.4
+    },
+    {
+      "texto": "BID",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 4485,
+      "fim": 4488,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Banco Mundial",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 4562,
+      "fim": 4575,
+      "confianca": 0.4
+    },
+    {
+      "texto": "BIRD",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 4577,
+      "fim": 4581,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Lei",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 5003,
+      "fim": 5006,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Soledade ficou denominado",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 5170,
+      "fim": 5195,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Rodovia Hainsi Gralow",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 5196,
+      "fim": 5217,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Hainsi Gralow",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 5264,
+      "fim": 5277,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Associação dos Fumicultores do Brasil",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 5296,
+      "fim": 5333,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Associação Internacional dos Produtores de Fumo",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 5347,
+      "fim": 5394,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Câmara Setorial do Fumo do Brasil",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 5400,
+      "fim": 5433,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Paraíso",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 5813,
+      "fim": 5820,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Grêmio Esportivo Brasil",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 5902,
+      "fim": 5925,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Porto Alegre",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 5957,
+      "fim": 5969,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Claudio Milar",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 6027,
+      "fim": 6040,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Régis Gouveia Alves",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 6125,
+      "fim": 6144,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Giovane Guimarães",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 6175,
+      "fim": 6192,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Vale do Sol",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 6291,
+      "fim": 6302,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Futebol Clube Santa Cruz",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 6326,
+      "fim": 6350,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Outros dois atletas",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 6362,
+      "fim": 6381,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Xuxa",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 6396,
+      "fim": 6400,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Edu",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 6403,
+      "fim": 6406,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Paulo Roberto",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 6430,
+      "fim": 6443,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Polícia Rodoviária Federal",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 6515,
+      "fim": 6541,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Marcopolo modelo Paradiso",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 6637,
+      "fim": 6662,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Bosembecker",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 6696,
+      "fim": 6707,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Exames",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 6817,
+      "fim": 6823,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Vale",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 7208,
+      "fim": 7212,
+      "confianca": 0.4
+    },
+    {
+      "texto": "RSC 471",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 7246,
+      "fim": 7253,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Yeda Crusius",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 7375,
+      "fim": 7387,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Noroeste Rio Grandense",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 7492,
+      "fim": 7514,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Planalto Médio",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 7517,
+      "fim": 7531,
+      "confianca": 0.4
+    },
+    {
+      "texto": "BR 471",
+      "label_spacy": "LOC",
+      "classe_ontologia": "Rodovia",
+      "inicio": 7752,
+      "fim": 7758,
+      "confianca": 0.8
+    },
+    {
+      "texto": "Ministério Público Federal",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 7799,
+      "fim": 7825,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Inquérito Civil",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 7872,
+      "fim": 7887,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Portaria",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 7911,
+      "fim": 7919,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Diário da Justiça de 23",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 7958,
+      "fim": 7981,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Seção\nI",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 8003,
+      "fim": 8010,
+      "confianca": 0.4
+    },
+    {
+      "texto": "banhado do Taim",
+      "label_spacy": "LOC",
+      "classe_ontologia": "TipoVegetacao",
+      "inicio": 8119,
+      "fim": 8134,
+      "confianca": 0.8
+    },
+    {
+      "texto": "Correio do Povo",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 8163,
+      "fim": 8178,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Zero Hora",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 8221,
+      "fim": 8230,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Ouvido",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 8295,
+      "fim": 8301,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Chefe",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 8320,
+      "fim": 8325,
+      "confianca": 0.4
+    },
+    {
+      "texto": "ESEC Taim",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 8329,
+      "fim": 8338,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Engº Florestal Márcio Luiz Barragana Fernandes",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 8340,
+      "fim": 8386,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Relatou",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 8992,
+      "fim": 8999,
+      "confianca": 0.4
+    },
+    {
+      "texto": "ESEC",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 9065,
+      "fim": 9069,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Rodovia Pan-Americana",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 9761,
+      "fim": 9782,
+      "confianca": 0.4
+    },
+    {
+      "texto": "IBAMA",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 10489,
+      "fim": 10494,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Técnico pelo Centro",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 10704,
+      "fim": 10723,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Departamento Autônomo de Estradas de Rodagem",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 11056,
+      "fim": 11100,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Jornal Agora",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 11135,
+      "fim": 11147,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Diário Popular",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 11178,
+      "fim": 11192,
+      "confianca": 0.4
+    },
+    {
+      "texto": "DP Regional",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 11202,
+      "fim": 11213,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Diário Popular de 24 de dezembro de 1998",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 11297,
+      "fim": 11337,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Referido sistema levou",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 11666,
+      "fim": 11688,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Chefia",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 12614,
+      "fim": 12620,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Federal para instar",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 12680,
+      "fim": 12699,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Ônus",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 13224,
+      "fim": 13228,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Jornal Agora de 30 de agosto de 2002",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 13466,
+      "fim": 13502,
+      "confianca": 0.4
+    },
+    {
+      "texto": "estado do",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 14173,
+      "fim": 14182,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Encruzilhada",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 14493,
+      "fim": 14505,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Mapas",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 14734,
+      "fim": 14739,
+      "confianca": 0.4
+    },
+    {
+      "texto": "PDF",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 14786,
+      "fim": 14789,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Informações detalhadas sobre",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 14807,
+      "fim": 14835,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Sistema Nacional de Viação",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 14838,
+      "fim": 14864,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Visualizador de Informações Geográficas do DNIT",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 14871,
+      "fim": 14918,
+      "confianca": 0.4
+    },
+    {
+      "texto": "mamíferos",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "Mamifero",
+      "inicio": 1464,
+      "fim": 1473,
+      "confianca": 0.9
+    },
+    {
+      "texto": "capivaras",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "Mamifero",
+      "inicio": 8146,
+      "fim": 8155,
+      "confianca": 0.9
+    },
+    {
+      "texto": "furão",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "Mamifero",
+      "inicio": 11892,
+      "fim": 11897,
+      "confianca": 0.9
+    },
+    {
+      "texto": "lagartos",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "Reptil",
+      "inicio": 12074,
+      "fim": 12082,
+      "confianca": 0.9
+    },
+    {
+      "texto": "aves",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "Ave",
+      "inicio": 1492,
+      "fim": 1496,
+      "confianca": 0.9
+    },
+    {
+      "texto": "atropelamento",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "EventoAtropelamento",
+      "inicio": 12003,
+      "fim": 12016,
+      "confianca": 0.9
+    },
+    {
+      "texto": "atropelamentos",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "EventoAtropelamento",
+      "inicio": 8630,
+      "fim": 8644,
+      "confianca": 0.9
+    },
+    {
+      "texto": "atropelados",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "EventoAtropelamento",
+      "inicio": 10013,
+      "fim": 10024,
+      "confianca": 0.9
+    },
+    {
+      "texto": "seca",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "CondicaoClimatica",
+      "inicio": 9200,
+      "fim": 9204,
+      "confianca": 0.9
+    },
+    {
+      "texto": "banhado",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "TipoVegetacao",
+      "inicio": 8119,
+      "fim": 8126,
+      "confianca": 0.9
+    },
+    {
+      "texto": "velocidade",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "FatorAntropico",
+      "inicio": 7080,
+      "fim": 7090,
+      "confianca": 0.9
+    },
+    {
+      "texto": "tráfego",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "FatorAntropico",
+      "inicio": 12228,
+      "fim": 12235,
+      "confianca": 0.9
+    },
+    {
+      "texto": "veículos",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "FatorAntropico",
+      "inicio": 8571,
+      "fim": 8579,
+      "confianca": 0.9
+    },
+    {
+      "texto": "sinalização",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "FatorAntropico",
+      "inicio": 14418,
+      "fim": 14429,
+      "confianca": 0.9
+    },
+    {
+      "texto": "acostamento",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "FatorAntropico",
+      "inicio": 14570,
+      "fim": 14581,
+      "confianca": 0.9
+    },
+    {
+      "texto": "década",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "PeriodoTemporal",
+      "inicio": 3740,
+      "fim": 3746,
+      "confianca": 0.9
+    },
+    {
+      "texto": "Brasil",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 98,
+      "fim": 104,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Convenção de Ramsar",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 1040,
+      "fim": 1059,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Irã",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 1065,
+      "fim": 1068,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Dia Mundial das Zonas Úmidas",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 1323,
+      "fim": 1351,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Algumas espécies características",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 2196,
+      "fim": 2228,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Muitas destas populações",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 2381,
+      "fim": 2405,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Outro importante papel",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 2886,
+      "fim": 2908,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Durante muitos anos",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 3139,
+      "fim": 3158,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Todos estes fatores",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 3655,
+      "fim": 3674,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Convenção sobre as Zonas Húmidas de Importância Internacional",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 4061,
+      "fim": 4122,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Habitat",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 4148,
+      "fim": 4155,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Aves Aquáticas",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 4160,
+      "fim": 4174,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Parque Nacional do Pantanal Matogrossense",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 4438,
+      "fim": 4479,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Abriga pelo menos",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 4525,
+      "fim": 4542,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Patrimônio Nacional",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 4779,
+      "fim": 4798,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Constituição brasileira",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 4806,
+      "fim": 4829,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Reserva da",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 4851,
+      "fim": 4861,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Biosfera pela Organização",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 4862,
+      "fim": 4887,
+      "confianca": 0.4
+    },
+    {
+      "texto": "ONU",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 4907,
+      "fim": 4910,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Pantanal",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 4921,
+      "fim": 4929,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Reserva de Desenvolvimento",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 4950,
+      "fim": 4976,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Estado",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 5003,
+      "fim": 5009,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Reentrâncias Maranhenses",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 5022,
+      "fim": 5046,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Maranhão",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 5052,
+      "fim": 5060,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Área de Proteção Ambiental da Baixada Maranhense",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 5061,
+      "fim": 5109,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Parque Estadual Marinho do Parcel de Manoel Luz",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 5124,
+      "fim": 5171,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Lagoa do Peixe",
+      "label_spacy": "LOC",
+      "classe_ontologia": "CorpoHidrico",
+      "inicio": 5186,
+      "fim": 5200,
+      "confianca": 0.8
+    },
+    {
+      "texto": "Rio Grande do Sul\nReserva Particular do Patrimônio Natural SESC Pantanal",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 5206,
+      "fim": 5278,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Mato Grosso\nEmissões",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 5284,
+      "fim": 5304,
+      "confianca": 0.4
+    },
+    {
+      "texto": "mamíferos",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "Mamifero",
+      "inicio": 1770,
+      "fim": 1779,
+      "confianca": 0.9
+    },
+    {
+      "texto": "répteis",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "Reptil",
+      "inicio": 4712,
+      "fim": 4719,
+      "confianca": 0.9
+    },
+    {
+      "texto": "aves",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "Ave",
+      "inicio": 2252,
+      "fim": 2256,
+      "confianca": 0.9
+    },
+    {
+      "texto": "anfíbios",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "Anfibio",
+      "inicio": 4699,
+      "fim": 4707,
+      "confianca": 0.9
+    },
+    {
+      "texto": "banhados",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "TipoVegetacao",
+      "inicio": 3645,
+      "fim": 3653,
+      "confianca": 0.9
+    },
+    {
+      "texto": "lagoa",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "CorpoHidrico",
+      "inicio": 5186,
+      "fim": 5191,
+      "confianca": 0.9
+    },
+    {
+      "texto": "reprodução",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "FatorEcologico",
+      "inicio": 2148,
+      "fim": 2158,
+      "confianca": 0.9
+    },
+    {
+      "texto": "Graxaim-do-mato",
+      "label_spacy": "MISC",
+      "classe_ontologia": "Mamifero",
+      "inicio": 0,
+      "fim": 15,
+      "confianca": 0.8
+    },
+    {
+      "texto": "Cerdocyon",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 133,
+      "fim": 142,
+      "confianca": 0.4
+    },
+    {
+      "texto": "América do Sul",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 188,
+      "fim": 202,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Habita",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 205,
+      "fim": 211,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Brasil",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 371,
+      "fim": 377,
+      "confianca": 0.4
+    },
+    {
+      "texto": "C. t. azarae",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 450,
+      "fim": 462,
+      "confianca": 0.4
+    },
+    {
+      "texto": "C. t. thous",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 493,
+      "fim": 504,
+      "confianca": 0.4
+    },
+    {
+      "texto": "guaraxaim",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 581,
+      "fim": 590,
+      "confianca": 0.4
+    },
+    {
+      "texto": "fox",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 819,
+      "fim": 822,
+      "confianca": 0.4
+    },
+    {
+      "texto": "common zorro",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 845,
+      "fim": 857,
+      "confianca": 0.4
+    },
+    {
+      "texto": "cuazá",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 1162,
+      "fim": 1167,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Lineu",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 1217,
+      "fim": 1222,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Guiana",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 1241,
+      "fim": 1247,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Guiana Francesa",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 1250,
+      "fim": 1265,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Suriname",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 1268,
+      "fim": 1276,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Bangs",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 1293,
+      "fim": 1298,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Colômbia",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 1308,
+      "fim": 1316,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Venezuela",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 1319,
+      "fim": 1328,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Wied-Neuwied",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 1354,
+      "fim": 1366,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Burmeister",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 1402,
+      "fim": 1412,
+      "confianca": 0.4
+    },
+    {
+      "texto": "G. M. Allen",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 1445,
+      "fim": 1456,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Uruguai",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 1474,
+      "fim": 1481,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Bolívia",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 1484,
+      "fim": 1491,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Paraguai",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 1494,
+      "fim": 1502,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Argentina",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 1505,
+      "fim": 1514,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Possui pernas curtas",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 1735,
+      "fim": 1755,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Possuem patas escuras",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 1990,
+      "fim": 2011,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Vários sons característicos",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 2473,
+      "fim": 2500,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Amazônia",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 3092,
+      "fim": 3100,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Andes",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 3200,
+      "fim": 3205,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Panamá",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 3344,
+      "fim": 3350,
+      "confianca": 0.4
+    },
+    {
+      "texto": "rio Amazonas",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 3400,
+      "fim": 3412,
+      "confianca": 0.4
+    },
+    {
+      "texto": "rio Negro",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 3415,
+      "fim": 3424,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Araguaia",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 3453,
+      "fim": 3461,
+      "confianca": 0.4
+    },
+    {
+      "texto": "rio Beni",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 3499,
+      "fim": 3507,
+      "confianca": 0.4
+    },
+    {
+      "texto": "figueira",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 3941,
+      "fim": 3949,
+      "confianca": 0.4
+    },
+    {
+      "texto": "baguaçu",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 3952,
+      "fim": 3959,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Caatinga",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 4304,
+      "fim": 4312,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Cerdocyon thous ocorre",
+      "label_spacy": "MISC",
+      "classe_ontologia": "EspecieAnimal",
+      "inicio": 4920,
+      "fim": 4942,
+      "confianca": 0.8
+    },
+    {
+      "texto": "C5–C7",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 5242,
+      "fim": 5247,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Esses achados evidenciam",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 6355,
+      "fim": 6379,
+      "confianca": 0.4
+    },
+    {
+      "texto": "apêndice II da Convenção sobre o Comércio Internacional das Espécies da",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 6894,
+      "fim": 6965,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Fauna",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 6966,
+      "fim": 6971,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Flora Silvestres Ameaçadas de Extinção",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 6977,
+      "fim": 7015,
+      "confianca": 0.4
+    },
+    {
+      "texto": "CITES",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 7017,
+      "fim": 7022,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Outros fatores como",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 7201,
+      "fim": 7220,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Menos Preocupante",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 7510,
+      "fim": 7527,
+      "confianca": 0.4
+    },
+    {
+      "texto": "União Internacional para a Conservação da Natureza",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 7561,
+      "fim": 7611,
+      "confianca": 0.4
+    },
+    {
+      "texto": "UICN",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 7613,
+      "fim": 7617,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Paraná",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 7827,
+      "fim": 7833,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Santa Catarina",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 7836,
+      "fim": 7850,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Rio Grande do Sul",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 7853,
+      "fim": 7870,
+      "confianca": 0.4
+    },
+    {
+      "texto": "São Paulo",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 7874,
+      "fim": 7883,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Lista Vermelha",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 7913,
+      "fim": 7927,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Cruzeiro do Oeste",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 8173,
+      "fim": 8190,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Instituto Brasileiro do Meio Ambiente",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 8395,
+      "fim": 8432,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Recursos Naturais Renováveis",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 8439,
+      "fim": 8467,
+      "confianca": 0.4
+    },
+    {
+      "texto": "IBAMA",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 8469,
+      "fim": 8474,
+      "confianca": 0.4
+    },
+    {
+      "texto": "mamíferos",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "Mamifero",
+      "inicio": 3656,
+      "fim": 3665,
+      "confianca": 0.9
+    },
+    {
+      "texto": "graxaim",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "Mamifero",
+      "inicio": 0,
+      "fim": 7,
+      "confianca": 0.9
+    },
+    {
+      "texto": "raposa",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "Mamifero",
+      "inicio": 37,
+      "fim": 43,
+      "confianca": 0.9
+    },
+    {
+      "texto": "cachorro-do-mato",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "Mamifero",
+      "inicio": 18,
+      "fim": 34,
+      "confianca": 0.9
+    },
+    {
+      "texto": "répteis",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "Reptil",
+      "inicio": 3646,
+      "fim": 3653,
+      "confianca": 0.9
+    },
+    {
+      "texto": "anfíbios",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "Anfibio",
+      "inicio": 3635,
+      "fim": 3643,
+      "confianca": 0.9
+    },
+    {
+      "texto": "cerdocyon thous",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "EspecieAnimal",
+      "inicio": 133,
+      "fim": 148,
+      "confianca": 0.9
+    },
+    {
+      "texto": "atropelamento",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "EventoAtropelamento",
+      "inicio": 7221,
+      "fim": 7234,
+      "confianca": 0.9
+    },
+    {
+      "texto": "atropelamentos",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "EventoAtropelamento",
+      "inicio": 4101,
+      "fim": 4115,
+      "confianca": 0.9
+    },
+    {
+      "texto": "atropeladas",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "EventoAtropelamento",
+      "inicio": 7341,
+      "fim": 7352,
+      "confianca": 0.9
+    },
+    {
+      "texto": "atropelados",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "EventoAtropelamento",
+      "inicio": 4054,
+      "fim": 4065,
+      "confianca": 0.9
+    },
+    {
+      "texto": "seca",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "CondicaoClimatica",
+      "inicio": 2829,
+      "fim": 2833,
+      "confianca": 0.9
+    },
+    {
+      "texto": "noturna",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "CondicaoLuminosidade",
+      "inicio": 2187,
+      "fim": 2194,
+      "confianca": 0.9
+    },
+    {
+      "texto": "dispersão",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "FatorEcologico",
+      "inicio": 4245,
+      "fim": 4254,
+      "confianca": 0.9
+    },
+    {
+      "texto": "jacaré-de-papo-amarelo",
+      "label_spacy": "MISC",
+      "classe_ontologia": "Reptil",
+      "inicio": 2,
+      "fim": 24,
+      "confianca": 0.8
+    },
+    {
+      "texto": "Caiman latirostris",
+      "label_spacy": "PER",
+      "classe_ontologia": "EspecieAnimal",
+      "inicio": 45,
+      "fim": 63,
+      "confianca": 0.8
+    },
+    {
+      "texto": "Alligatoridae",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 130,
+      "fim": 143,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Caiman",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 153,
+      "fim": 159,
+      "confianca": 0.4
+    },
+    {
+      "texto": "América do Sul",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 203,
+      "fim": 217,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Paraná",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 291,
+      "fim": 297,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Paraguai",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 300,
+      "fim": 308,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Uruguai",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 311,
+      "fim": 318,
+      "confianca": 0.4
+    },
+    {
+      "texto": "São Francisco",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 321,
+      "fim": 334,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Brasil",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 374,
+      "fim": 380,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Mede",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 842,
+      "fim": 846,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Animais adultos tendem",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 951,
+      "fim": 973,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Machos geralmente possuem",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 1292,
+      "fim": 1317,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Estes animais possuem",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 1480,
+      "fim": 1501,
+      "confianca": 0.4
+    },
+    {
+      "texto": "UNESP",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 2050,
+      "fim": 2055,
+      "confianca": 0.4
+    },
+    {
+      "texto": "São Paulo",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 2061,
+      "fim": 2070,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Philodendron bipinnatifidum",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 2157,
+      "fim": 2184,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Tupinambis merianae",
+      "label_spacy": "MISC",
+      "classe_ontologia": "EspecieAnimal",
+      "inicio": 2283,
+      "fim": 2302,
+      "confianca": 0.8
+    },
+    {
+      "texto": "Agosto a Janeiro",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 2523,
+      "fim": 2539,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Janeiro",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 2554,
+      "fim": 2561,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Março",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 2588,
+      "fim": 2593,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Argentina",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 2597,
+      "fim": 2606,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Existem fatores mais",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 3582,
+      "fim": 3602,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Bolívia",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 4714,
+      "fim": 4721,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Rio Grande do Norte",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 4853,
+      "fim": 4872,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Recife",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 4875,
+      "fim": 4881,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Bacia do São Francisco",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 4886,
+      "fim": 4908,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Mato Grosso",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 4928,
+      "fim": 4939,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Rio Paraguai",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 4952,
+      "fim": 4964,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Rio Madidi",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 5017,
+      "fim": 5027,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Rio Pilcomayo",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 5066,
+      "fim": 5079,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Bacia do Paraná",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 5084,
+      "fim": 5099,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Lagoa dos Patos",
+      "label_spacy": "LOC",
+      "classe_ontologia": "CorpoHidrico",
+      "inicio": 5166,
+      "fim": 5181,
+      "confianca": 0.8
+    },
+    {
+      "texto": "Lagoa Mirim",
+      "label_spacy": "LOC",
+      "classe_ontologia": "CorpoHidrico",
+      "inicio": 5184,
+      "fim": 5195,
+      "confianca": 0.8
+    },
+    {
+      "texto": "Rio Grande do Sul",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 5199,
+      "fim": 5216,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Bacia do Uruguai",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 5239,
+      "fim": 5255,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Rio de Janeiro",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 5377,
+      "fim": 5391,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Belo Horizonte",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 5393,
+      "fim": 5407,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Florianópolis",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 5410,
+      "fim": 5423,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Também foram avistados",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 5425,
+      "fim": 5447,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Porto Alegre",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 5471,
+      "fim": 5483,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Caraguatatuba",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 5486,
+      "fim": 5499,
+      "confianca": 0.4
+    },
+    {
+      "texto": "quati",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "Mamifero",
+      "inicio": 3373,
+      "fim": 3378,
+      "confianca": 0.9
+    },
+    {
+      "texto": "réptil",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "Reptil",
+      "inicio": 99,
+      "fim": 105,
+      "confianca": 0.9
+    },
+    {
+      "texto": "répteis",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "Reptil",
+      "inicio": 1634,
+      "fim": 1641,
+      "confianca": 0.9
+    },
+    {
+      "texto": "jacaré",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "Reptil",
+      "inicio": 2,
+      "fim": 8,
+      "confianca": 0.9
+    },
+    {
+      "texto": "teiú",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "Reptil",
+      "inicio": 3366,
+      "fim": 3370,
+      "confianca": 0.9
+    },
+    {
+      "texto": "aves",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "Ave",
+      "inicio": 1588,
+      "fim": 1592,
+      "confianca": 0.9
+    },
+    {
+      "texto": "temperatura",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "CondicaoClimatica",
+      "inicio": 3418,
+      "fim": 3429,
+      "confianca": 0.9
+    },
+    {
+      "texto": "vegetação",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "TipoVegetacao",
+      "inicio": 4363,
+      "fim": 4372,
+      "confianca": 0.9
+    },
+    {
+      "texto": "floresta",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "TipoVegetacao",
+      "inicio": 2793,
+      "fim": 2801,
+      "confianca": 0.9
+    },
+    {
+      "texto": "vegetação aquática",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "TipoVegetacao",
+      "inicio": 4363,
+      "fim": 4381,
+      "confianca": 0.9
+    },
+    {
+      "texto": "lagoa",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "CorpoHidrico",
+      "inicio": 5166,
+      "fim": 5171,
+      "confianca": 0.9
+    },
+    {
+      "texto": "reprodução",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "FatorEcologico",
+      "inicio": 2707,
+      "fim": 2717,
+      "confianca": 0.9
+    },
+    {
+      "texto": "Hydrochoerus hydrochaeris",
+      "label_spacy": "PER",
+      "classe_ontologia": "EspecieAnimal",
+      "inicio": 42,
+      "fim": 67,
+      "confianca": 0.8
+    },
+    {
+      "texto": "Caviidae",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 114,
+      "fim": 122,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Hydrochoerinae",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 136,
+      "fim": 150,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Alguns autores consideram",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 153,
+      "fim": 178,
+      "confianca": 0.4
+    },
+    {
+      "texto": "América do Sul",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 365,
+      "fim": 379,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Andes",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 393,
+      "fim": 398,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Brasil",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 1557,
+      "fim": 1563,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Rio Grande do Sul",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 1569,
+      "fim": 1586,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Amazonas",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 1666,
+      "fim": 1674,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Ilha de Marajó",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 1705,
+      "fim": 1719,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Pará",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 1725,
+      "fim": 1729,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Bahia",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 1883,
+      "fim": 1888,
+      "confianca": 0.4
+    },
+    {
+      "texto": "estado de Goiás",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 1991,
+      "fim": 2006,
+      "confianca": 0.4
+    },
+    {
+      "texto": "George Marcgraf",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 2087,
+      "fim": 2102,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Capy-bara Brasiliensus",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 2117,
+      "fim": 2139,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Carolus Linnaeus",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 2257,
+      "fim": 2273,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Mus",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 2323,
+      "fim": 2326,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Linnaeus",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 2355,
+      "fim": 2363,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Sus hydrochaeris",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 2412,
+      "fim": 2428,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Mathurin Jacques Brisson",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 2431,
+      "fim": 2455,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Hydrochoerus",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 2497,
+      "fim": 2509,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Brisson",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 2536,
+      "fim": 2543,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Regnun Animale",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 2545,
+      "fim": 2559,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Hydrochoeris",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 2691,
+      "fim": 2703,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Zoologiae Fundamenta",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 2725,
+      "fim": 2745,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Brünnich",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 2750,
+      "fim": 2758,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Bulletin of Zoological",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 2837,
+      "fim": 2859,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Nomenclature oficialmente reconheceu",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 2860,
+      "fim": 2896,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Mammal Species of the World",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 2940,
+      "fim": 2967,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Hidrochoeris",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 3092,
+      "fim": 3104,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Hydrochoeridae",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 3379,
+      "fim": 3393,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Alguns estudos apontam",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 3531,
+      "fim": 3553,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Kerodon",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 3554,
+      "fim": 3561,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Hystricognathi",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 4011,
+      "fim": 4025,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Novo Mundo",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 4029,
+      "fim": 4039,
+      "confianca": 0.4
+    },
+    {
+      "texto": "mara",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 4076,
+      "fim": 4080,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Hydrochoerus isthmius",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 4241,
+      "fim": 4262,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Panamá",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 4279,
+      "fim": 4285,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Colômbia",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 4297,
+      "fim": 4305,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Venezuela",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 4308,
+      "fim": 4317,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Mioceno",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 4492,
+      "fim": 4499,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Argentina",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 4540,
+      "fim": 4549,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Cavioidea",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 4583,
+      "fim": 4592,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Patagônia",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 4622,
+      "fim": 4631,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Cardiatherium chasioense",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 4892,
+      "fim": 4916,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Buenos Aires",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 4958,
+      "fim": 4970,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Plioceno",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 4988,
+      "fim": 4996,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Phugatherium",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 5055,
+      "fim": 5067,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Plioceno na América do Sul",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 5143,
+      "fim": 5169,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Antilhas",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 5237,
+      "fim": 5245,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Pleistoceno",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 5258,
+      "fim": 5269,
+      "confianca": 0.4
+    },
+    {
+      "texto": "América do Norte",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 5327,
+      "fim": 5343,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Essas espécies fósseis",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 5372,
+      "fim": 5394,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Algumas espécies muito",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 5450,
+      "fim": 5472,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Chapalmatherium",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 5519,
+      "fim": 5534,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Neochoerus",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 5537,
+      "fim": 5547,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Chile",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 5984,
+      "fim": 5989,
+      "confianca": 0.4
+    },
+    {
+      "texto": "rio da Prata",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 6036,
+      "fim": 6048,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Apesar dessa ampla",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 6066,
+      "fim": 6084,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Caatinga",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 6237,
+      "fim": 6245,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Nordeste Brasileiro",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 6302,
+      "fim": 6321,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Rio Grande do Norte",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 6332,
+      "fim": 6351,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Ceará",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 6356,
+      "fim": 6361,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Estados Unidos",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 6425,
+      "fim": 6439,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Flórida",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 6493,
+      "fim": 6500,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Paraná",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 6816,
+      "fim": 6822,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Araguaia",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 6825,
+      "fim": 6833,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Pantanal",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 6839,
+      "fim": 6847,
+      "confianca": 0.4
+    },
+    {
+      "texto": "estado de São Paulo",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 7548,
+      "fim": 7567,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Uruguai",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 7620,
+      "fim": 7627,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Cavia",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 8055,
+      "fim": 8060,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Firmicutes",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 9209,
+      "fim": 9219,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Proteobacteria",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 9222,
+      "fim": 9236,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Assim como outros",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 12053,
+      "fim": 12070,
+      "confianca": 0.4
+    },
+    {
+      "texto": "subordem Hystricomorpha",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 12194,
+      "fim": 12217,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Fêmeas",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 12528,
+      "fim": 12534,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Foram registradas associações",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 13500,
+      "fim": 13529,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Caracara",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 13627,
+      "fim": 13635,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Furnarius",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 13665,
+      "fim": 13674,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Machetornis",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 13706,
+      "fim": 13717,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Milvago chimachima",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 13753,
+      "fim": 13771,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Molothrus bonariensis",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 13787,
+      "fim": 13808,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Essas espécies utilizam",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 13840,
+      "fim": 13863,
+      "confianca": 0.4
+    },
+    {
+      "texto": "poleiro",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 14357,
+      "fim": 14364,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Jacana jacana",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 14379,
+      "fim": 14392,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Caviomorpha",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 14454,
+      "fim": 14465,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Panthera",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 14841,
+      "fim": 14849,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Filhotes",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 14902,
+      "fim": 14910,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Leopardus",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 14980,
+      "fim": 14989,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Cerdocyon",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 15023,
+      "fim": 15032,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Boidae",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 15060,
+      "fim": 15066,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Eunectes",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 15085,
+      "fim": 15093,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Coragyps",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 15208,
+      "fim": 15216,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Amazônia",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 15728,
+      "fim": 15736,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Colômbia foram reportadas",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 17856,
+      "fim": 17881,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Vocalizações",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 19494,
+      "fim": 19506,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Filhotes emitem guinchos",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 19703,
+      "fim": 19727,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Cyperaceae",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 20736,
+      "fim": 20746,
+      "confianca": 0.4
+    },
+    {
+      "texto": "rio Paraná",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 21004,
+      "fim": 21014,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Entre Ríos",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 21284,
+      "fim": 21294,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Vale",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 21619,
+      "fim": 21623,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Hymenachne",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 21979,
+      "fim": 21989,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Eleocharis",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 22110,
+      "fim": 22120,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Paratheria",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 22136,
+      "fim": 22146,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Esses dados foram",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 24084,
+      "fim": 24101,
+      "confianca": 0.4
+    },
+    {
+      "texto": "genitália",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 24258,
+      "fim": 24267,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Fêmeas mais velhas",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 25341,
+      "fim": 25359,
+      "confianca": 0.4
+    },
+    {
+      "texto": "União Internacional para a Conservação da Natureza",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 26283,
+      "fim": 26333,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Recursos Naturais",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 26340,
+      "fim": 26357,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Igreja",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 27864,
+      "fim": 27870,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Outra razão para",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 28471,
+      "fim": 28487,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Contagens",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 29183,
+      "fim": 29192,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Llanos",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 29245,
+      "fim": 29251,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Existem estudos para",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 29735,
+      "fim": 29755,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Amblyomma",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 30126,
+      "fim": 30135,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Rickettsia",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 30191,
+      "fim": 30201,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Febre Maculosa Brasileira",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 30242,
+      "fim": 30267,
+      "confianca": 0.4
+    },
+    {
+      "texto": "em inglês",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 30777,
+      "fim": 30786,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Animal Diversity Web",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 30788,
+      "fim": 30808,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Hydrochoerus hydrochaeris Capybara",
+      "label_spacy": "MISC",
+      "classe_ontologia": "EspecieAnimal",
+      "inicio": 30813,
+      "fim": 30847,
+      "confianca": 0.8
+    },
+    {
+      "texto": "mamífero",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "Mamifero",
+      "inicio": 87,
+      "fim": 95,
+      "confianca": 0.9
+    },
+    {
+      "texto": "mamíferos",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "Mamifero",
+      "inicio": 12071,
+      "fim": 12080,
+      "confianca": 0.9
+    },
+    {
+      "texto": "capivara",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "Mamifero",
+      "inicio": 0,
+      "fim": 8,
+      "confianca": 0.9
+    },
+    {
+      "texto": "capivaras",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "Mamifero",
+      "inicio": 3447,
+      "fim": 3456,
+      "confianca": 0.9
+    },
+    {
+      "texto": "cachorro-do-mato",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "Mamifero",
+      "inicio": 15004,
+      "fim": 15020,
+      "confianca": 0.9
+    },
+    {
+      "texto": "aves",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "Ave",
+      "inicio": 13571,
+      "fim": 13575,
+      "confianca": 0.9
+    },
+    {
+      "texto": "gavião",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "Ave",
+      "inicio": 13731,
+      "fim": 13737,
+      "confianca": 0.9
+    },
+    {
+      "texto": "joão-de-barro",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "Ave",
+      "inicio": 13649,
+      "fim": 13662,
+      "confianca": 0.9
+    },
+    {
+      "texto": "cerdocyon thous",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "EspecieAnimal",
+      "inicio": 15023,
+      "fim": 15038,
+      "confianca": 0.9
+    },
+    {
+      "texto": "temperatura",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "CondicaoClimatica",
+      "inicio": 24197,
+      "fim": 24208,
+      "confianca": 0.9
+    },
+    {
+      "texto": "seca",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "CondicaoClimatica",
+      "inicio": 13432,
+      "fim": 13436,
+      "confianca": 0.9
+    },
+    {
+      "texto": "amanhecer",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "CondicaoLuminosidade",
+      "inicio": 13297,
+      "fim": 13306,
+      "confianca": 0.9
+    },
+    {
+      "texto": "vegetação",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "TipoVegetacao",
+      "inicio": 13922,
+      "fim": 13931,
+      "confianca": 0.9
+    },
+    {
+      "texto": "banhados",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "TipoVegetacao",
+      "inicio": 14264,
+      "fim": 14272,
+      "confianca": 0.9
+    },
+    {
+      "texto": "sinalização",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "FatorAntropico",
+      "inicio": 18449,
+      "fim": 18460,
+      "confianca": 0.9
+    },
+    {
+      "texto": "termorregulação",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "FatorEcologico",
+      "inicio": 13154,
+      "fim": 13169,
+      "confianca": 0.9
+    },
+    {
+      "texto": "forrageamento",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "FatorEcologico",
+      "inicio": 13184,
+      "fim": 13197,
+      "confianca": 0.9
+    },
+    {
+      "texto": "sazonalidade",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "FatorEcologico",
+      "inicio": 15836,
+      "fim": 15848,
+      "confianca": 0.9
+    },
+    {
+      "texto": "década",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "PeriodoTemporal",
+      "inicio": 20565,
+      "fim": 20571,
+      "confianca": 0.9
+    },
+    {
+      "texto": "Estação do Taim",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 50,
+      "fim": 65,
+      "confianca": 0.4
+    },
+    {
+      "texto": "ICMBio",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 115,
+      "fim": 121,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Estação Ecológica do Taim",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 280,
+      "fim": 305,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Região Sul do Rio Grande do Sul",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 321,
+      "fim": 352,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Instituto Chico Mendes de Conservação da Biodiversidade",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 420,
+      "fim": 475,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Campo e Lavoura",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 509,
+      "fim": 524,
+      "confianca": 0.4
+    },
+    {
+      "texto": "RBS TV",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 529,
+      "fim": 535,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Henrique Ilha",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 602,
+      "fim": 615,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Rio Grande",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 658,
+      "fim": 668,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Santa Vitória do Palmar",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 671,
+      "fim": 694,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Unidades de Conservação",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 847,
+      "fim": 870,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Marcelo Cavallini",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 882,
+      "fim": 899,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Estação Ecológica",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 1058,
+      "fim": 1075,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Reserva do Taim",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 1297,
+      "fim": 1312,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Foto: Reprodução/",
+      "label_spacy": "MISC",
+      "classe_ontologia": "FatorEcologico",
+      "inicio": 1356,
+      "fim": 1373,
+      "confianca": 0.8
+    },
+    {
+      "texto": "Segundo proposta apresentada",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 1463,
+      "fim": 1491,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Ilha",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 1496,
+      "fim": 1500,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Meio Ambiente",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 1638,
+      "fim": 1651,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Casa Civil",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 1657,
+      "fim": 1667,
+      "confianca": 0.4
+    },
+    {
+      "texto": "presidente Dilma",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 1704,
+      "fim": 1720,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Convênio apoiará novas",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 2296,
+      "fim": 2318,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Reserva Ecológica do Taim",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 2332,
+      "fim": 2357,
+      "confianca": 0.4
+    },
+    {
+      "texto": "RS Reserva do Taim",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 2359,
+      "fim": 2377,
+      "confianca": 0.4
+    },
+    {
+      "texto": "RS Incêndio",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 2417,
+      "fim": 2428,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Taim",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 2461,
+      "fim": 2465,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Forte chuva ajuda",
+      "label_spacy": "MISC",
+      "classe_ontologia": "CondicaoClimatica",
+      "inicio": 2491,
+      "fim": 2508,
+      "confianca": 0.8
+    },
+    {
+      "texto": "RS\nReserva do Taim",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 2623,
+      "fim": 2641,
+      "confianca": 0.4
+    },
+    {
+      "texto": "RS\nIncêndio",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 2681,
+      "fim": 2692,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Rio Grande do Sul",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 2837,
+      "fim": 2854,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Santa Vitória do Palmar\nMortes",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 2857,
+      "fim": 2887,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Reserva do Taim Sat Dec",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 2934,
+      "fim": 2957,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Sat Dec",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 2992,
+      "fim": 2999,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Final do Freio de Ouro",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 3034,
+      "fim": 3056,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Expointer",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 3092,
+      "fim": 3101,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Sun Aug",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 3150,
+      "fim": 3157,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Câmara Thu Jun",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 3247,
+      "fim": 3261,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Thu Jun",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 3296,
+      "fim": 3303,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Wed Apr",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 3407,
+      "fim": 3414,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Santa Vitória do",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 3491,
+      "fim": 3507,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Palmar veja tudo",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 3508,
+      "fim": 3524,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Globo.com g1",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 3533,
+      "fim": 3545,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Globo Notícias ©",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 3601,
+      "fim": 3617,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Copyright 2000-2015 Globo Comunicação",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 3618,
+      "fim": 3655,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Participações S.A.",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 3658,
+      "fim": 3676,
+      "confianca": 0.4
+    },
+    {
+      "texto": "assine",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 3731,
+      "fim": 3737,
+      "confianca": 0.4
+    },
+    {
+      "texto": "globo.com anuncie",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 3740,
+      "fim": 3757,
+      "confianca": 0.4
+    },
+    {
+      "texto": "chuva",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "CondicaoClimatica",
+      "inicio": 2497,
+      "fim": 2502,
+      "confianca": 0.9
+    },
+    {
+      "texto": "clima",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "CondicaoClimatica",
+      "inicio": 3061,
+      "fim": 3066,
+      "confianca": 0.9
+    },
+    {
+      "texto": "vegetação",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "TipoVegetacao",
+      "inicio": 2097,
+      "fim": 2106,
+      "confianca": 0.9
+    },
+    {
+      "texto": "banhado",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "TipoVegetacao",
+      "inicio": 1927,
+      "fim": 1934,
+      "confianca": 0.9
+    },
+    {
+      "texto": "reprodução",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "FatorEcologico",
+      "inicio": 1362,
+      "fim": 1372,
+      "confianca": 0.9
+    },
+    {
+      "texto": "Congresso Brasileiro de Unidades de Conservação\nCBUC 2015",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 0,
+      "fim": 57,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Congresso Brasileiro de Unidades de Conservação",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 58,
+      "fim": 105,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Brasil consiga chegar",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 366,
+      "fim": 387,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Convenção sobre Diversidade",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 419,
+      "fim": 446,
+      "confianca": 0.4
+    },
+    {
+      "texto": "CDB",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 458,
+      "fim": 461,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Henrique Horn",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 565,
+      "fim": 578,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Taim",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 610,
+      "fim": 614,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Rio Grande",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 645,
+      "fim": 655,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Santa Vitória do Palmar",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 658,
+      "fim": 681,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Rio Grande do Sul",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 686,
+      "fim": 703,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Fique",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 836,
+      "fim": 841,
+      "confianca": 0.4
+    },
+    {
+      "texto": "eco",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 928,
+      "fim": 931,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Brasil",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 998,
+      "fim": 1004,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Horn",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 1784,
+      "fim": 1788,
+      "confianca": 0.4
+    },
+    {
+      "texto": "José Truda",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 2239,
+      "fim": 2249,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Esec do Taim",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 2279,
+      "fim": 2291,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Leia",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 2293,
+      "fim": 2297,
+      "confianca": 0.4
+    },
+    {
+      "texto": "João Lara Mesquita",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 2305,
+      "fim": 2323,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Policiamento ambiental deve",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 2384,
+      "fim": 2411,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Maria Teresa Jorge Pádua",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 2433,
+      "fim": 2457,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Marcio Isensee",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 2504,
+      "fim": 2518,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Sá Marcio Isensee",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 2521,
+      "fim": 2538,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Produzir jornalismo independente",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 2786,
+      "fim": 2818,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Campanha de Membros",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 2953,
+      "fim": 2972,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Escolha",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 3191,
+      "fim": 3198,
+      "confianca": 0.4
+    },
+    {
+      "texto": "SNUC",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 3298,
+      "fim": 3302,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Eduardo Pegurier",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 3409,
+      "fim": 3425,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Curso treina policiais",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 3448,
+      "fim": 3470,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Rio",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 3644,
+      "fim": 3647,
+      "confianca": 0.4
+    },
+    {
+      "texto": "São Paulo",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 3650,
+      "fim": 3659,
+      "confianca": 0.4
+    },
+    {
+      "texto": "“Mar",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 3735,
+      "fim": 3739,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Notícias “",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 3752,
+      "fim": 3762,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Paul Watson\nSalada Verde",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 3819,
+      "fim": 3843,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Mata Atlântica\nNotícias",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 3921,
+      "fim": 3944,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Iniciativa internacional quer",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 3945,
+      "fim": 3974,
+      "confianca": 0.4
+    },
+    {
+      "texto": "América do Sul\nSalada Verde",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 4023,
+      "fim": 4050,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Colunas Temer",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 4139,
+      "fim": 4152,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Salada Verde",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 4187,
+      "fim": 4199,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Cientistas assinam carta",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 4200,
+      "fim": 4224,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Salada Verde Sebastião Salgado",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 4280,
+      "fim": 4310,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Análises",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 4363,
+      "fim": 4371,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Reportagens",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 4462,
+      "fim": 4473,
+      "confianca": 0.4
+    },
+    {
+      "texto": "CBUC",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 4486,
+      "fim": 4490,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Notícias Vídeo",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 4527,
+      "fim": 4541,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Fernando Fernandez\nNotícias Vídeo",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 4619,
+      "fim": 4652,
+      "confianca": 0.4
+    },
+    {
+      "texto": "John Amos\nNotícias Vídeo",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 4728,
+      "fim": 4752,
+      "confianca": 0.4
+    },
+    {
+      "texto": "John Amos\nReportagens CBUC 2015",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 4804,
+      "fim": 4835,
+      "confianca": 0.4
+    },
+    {
+      "texto": "ONGs",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 4857,
+      "fim": 4861,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Reportagens Fabio Scarano",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 4916,
+      "fim": 4941,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Reportagens Marina Silva",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 4987,
+      "fim": 5011,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Reportagens Guilherme Dutra",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 5070,
+      "fim": 5097,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Áreas protegidas podem",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 5100,
+      "fim": 5122,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Akismet para reduzir",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 5182,
+      "fim": 5202,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Saiba como seus",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 5209,
+      "fim": 5224,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Caiman latirostris",
+      "label_spacy": "PER",
+      "classe_ontologia": "EspecieAnimal",
+      "inicio": 10,
+      "fim": 28,
+      "confianca": 0.8
+    },
+    {
+      "texto": "IUCN",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 84,
+      "fim": 88,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Estação Ecológica do Taim",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 137,
+      "fim": 162,
+      "confianca": 0.4
+    },
+    {
+      "texto": "BR-471",
+      "label_spacy": "LOC",
+      "classe_ontologia": "Rodovia",
+      "inicio": 209,
+      "fim": 215,
+      "confianca": 0.8
+    },
+    {
+      "texto": "jacaré",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "Reptil",
+      "inicio": 30,
+      "fim": 36,
+      "confianca": 0.9
+    },
+    {
+      "texto": "jacaré-de-papo-amarelo",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "Reptil",
+      "inicio": 30,
+      "fim": 52,
+      "confianca": 0.9
+    },
+    {
+      "texto": "atropelamento",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "EventoAtropelamento",
+      "inicio": 184,
+      "fim": 197,
+      "confianca": 0.9
+    },
+    {
+      "texto": "Hydrochoerus hydrochaeris",
+      "label_spacy": "PER",
+      "classe_ontologia": "EspecieAnimal",
+      "inicio": 10,
+      "fim": 35,
+      "confianca": 0.8
+    },
+    {
+      "texto": "IUCN",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 77,
+      "fim": 81,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Estação Ecológica do Taim",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 130,
+      "fim": 155,
+      "confianca": 0.4
+    },
+    {
+      "texto": "BR-471",
+      "label_spacy": "LOC",
+      "classe_ontologia": "Rodovia",
+      "inicio": 202,
+      "fim": 208,
+      "confianca": 0.8
+    },
+    {
+      "texto": "capivara",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "Mamifero",
+      "inicio": 37,
+      "fim": 45,
+      "confianca": 0.9
+    },
+    {
+      "texto": "atropelamento",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "EventoAtropelamento",
+      "inicio": 177,
+      "fim": 190,
+      "confianca": 0.9
+    },
+    {
+      "texto": "Cerdocyon",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 10,
+      "fim": 19,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Guaraxaim",
+      "label_spacy": "PER",
+      "classe_ontologia": "",
+      "inicio": 27,
+      "fim": 36,
+      "confianca": 0.4
+    },
+    {
+      "texto": "IUCN",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 68,
+      "fim": 72,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Estação Ecológica do Taim",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 121,
+      "fim": 146,
+      "confianca": 0.4
+    },
+    {
+      "texto": "BR-471",
+      "label_spacy": "LOC",
+      "classe_ontologia": "Rodovia",
+      "inicio": 193,
+      "fim": 199,
+      "confianca": 0.8
+    },
+    {
+      "texto": "cerdocyon thous",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "EspecieAnimal",
+      "inicio": 10,
+      "fim": 25,
+      "confianca": 0.9
+    },
+    {
+      "texto": "atropelamento",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "EventoAtropelamento",
+      "inicio": 168,
+      "fim": 181,
+      "confianca": 0.9
+    },
+    {
+      "texto": "Coruja-buraqueira",
+      "label_spacy": "LOC",
+      "classe_ontologia": "Ave",
+      "inicio": 30,
+      "fim": 47,
+      "confianca": 0.8
+    },
+    {
+      "texto": "IUCN",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 79,
+      "fim": 83,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Estação Ecológica do Taim",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 132,
+      "fim": 157,
+      "confianca": 0.4
+    },
+    {
+      "texto": "BR-471",
+      "label_spacy": "LOC",
+      "classe_ontologia": "Rodovia",
+      "inicio": 204,
+      "fim": 210,
+      "confianca": 0.8
+    },
+    {
+      "texto": "coruja",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "Ave",
+      "inicio": 30,
+      "fim": 36,
+      "confianca": 0.9
+    },
+    {
+      "texto": "athene cunicularia",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "EspecieAnimal",
+      "inicio": 10,
+      "fim": 28,
+      "confianca": 0.9
+    },
+    {
+      "texto": "atropelamento",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "EventoAtropelamento",
+      "inicio": 179,
+      "fim": 192,
+      "confianca": 0.9
+    },
+    {
+      "texto": "Myocastor",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 10,
+      "fim": 19,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Ratão-do-banhado",
+      "label_spacy": "MISC",
+      "classe_ontologia": "Mamifero",
+      "inicio": 28,
+      "fim": 44,
+      "confianca": 0.8
+    },
+    {
+      "texto": "IUCN",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 76,
+      "fim": 80,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Estação Ecológica do Taim",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 129,
+      "fim": 154,
+      "confianca": 0.4
+    },
+    {
+      "texto": "BR-471",
+      "label_spacy": "LOC",
+      "classe_ontologia": "Rodovia",
+      "inicio": 201,
+      "fim": 207,
+      "confianca": 0.8
+    },
+    {
+      "texto": "myocastor coypus",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "EspecieAnimal",
+      "inicio": 10,
+      "fim": 26,
+      "confianca": 0.9
+    },
+    {
+      "texto": "atropelamento",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "EventoAtropelamento",
+      "inicio": 176,
+      "fim": 189,
+      "confianca": 0.9
+    },
+    {
+      "texto": "banhado",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "TipoVegetacao",
+      "inicio": 37,
+      "fim": 44,
+      "confianca": 0.9
+    },
+    {
+      "texto": "Cygnus melancoryphus",
+      "label_spacy": "PER",
+      "classe_ontologia": "EspecieAnimal",
+      "inicio": 10,
+      "fim": 30,
+      "confianca": 0.8
+    },
+    {
+      "texto": "IUCN",
+      "label_spacy": "ORG",
+      "classe_ontologia": "",
+      "inicio": 86,
+      "fim": 90,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Estação Ecológica do Taim",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 139,
+      "fim": 164,
+      "confianca": 0.4
+    },
+    {
+      "texto": "BR-471",
+      "label_spacy": "LOC",
+      "classe_ontologia": "Rodovia",
+      "inicio": 211,
+      "fim": 217,
+      "confianca": 0.8
+    },
+    {
+      "texto": "cisne",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "Ave",
+      "inicio": 32,
+      "fim": 37,
+      "confianca": 0.9
+    },
+    {
+      "texto": "atropelamento",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "EventoAtropelamento",
+      "inicio": 186,
+      "fim": 199,
+      "confianca": 0.9
+    },
+    {
+      "texto": "Grande está localizado",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 19,
+      "fim": 41,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Rio Grande do Sul",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 52,
+      "fim": 69,
+      "confianca": 0.4
+    },
+    {
+      "texto": "microrregião de Litoral Lagunar",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 74,
+      "fim": 105,
+      "confianca": 0.4
+    },
+    {
+      "texto": "mesorregião Sudeste Rio-grandense",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 107,
+      "fim": 140,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Rio Grande",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 142,
+      "fim": 152,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Pelotas",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 183,
+      "fim": 190,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Estação Ecológica do Taim",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 230,
+      "fim": 255,
+      "confianca": 0.4
+    },
+    {
+      "texto": "BR-471",
+      "label_spacy": "LOC",
+      "classe_ontologia": "Rodovia",
+      "inicio": 288,
+      "fim": 294,
+      "confianca": 0.8
+    },
+    {
+      "texto": "Pampa",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 388,
+      "fim": 393,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Banhado do Taim",
+      "label_spacy": "LOC",
+      "classe_ontologia": "TipoVegetacao",
+      "inicio": 475,
+      "fim": 490,
+      "confianca": 0.8
+    },
+    {
+      "texto": "atropelamento",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "EventoAtropelamento",
+      "inicio": 429,
+      "fim": 442,
+      "confianca": 0.9
+    },
+    {
+      "texto": "banhado",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "TipoVegetacao",
+      "inicio": 322,
+      "fim": 329,
+      "confianca": 0.9
+    },
+    {
+      "texto": "lagoas",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "CorpoHidrico",
+      "inicio": 332,
+      "fim": 338,
+      "confianca": 0.9
+    },
+    {
+      "texto": "Sant'Ana do",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 15,
+      "fim": 26,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Livramento está localizado",
+      "label_spacy": "MISC",
+      "classe_ontologia": "",
+      "inicio": 27,
+      "fim": 53,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Rio Grande do Sul",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 64,
+      "fim": 81,
+      "confianca": 0.4
+    },
+    {
+      "texto": "microrregião de Campanha Central",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 86,
+      "fim": 118,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Sudoeste Rio-grandense",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 132,
+      "fim": 154,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Sant'Ana do Livramento",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 156,
+      "fim": 178,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Santana do Livramento",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 209,
+      "fim": 230,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Estação Ecológica do Taim",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 270,
+      "fim": 295,
+      "confianca": 0.4
+    },
+    {
+      "texto": "BR-471",
+      "label_spacy": "LOC",
+      "classe_ontologia": "Rodovia",
+      "inicio": 328,
+      "fim": 334,
+      "confianca": 0.8
+    },
+    {
+      "texto": "Pampa",
+      "label_spacy": "LOC",
+      "classe_ontologia": "",
+      "inicio": 440,
+      "fim": 445,
+      "confianca": 0.4
+    },
+    {
+      "texto": "Banhado do Taim",
+      "label_spacy": "LOC",
+      "classe_ontologia": "TipoVegetacao",
+      "inicio": 527,
+      "fim": 542,
+      "confianca": 0.8
+    },
+    {
+      "texto": "atropelamento",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "EventoAtropelamento",
+      "inicio": 481,
+      "fim": 494,
+      "confianca": 0.9
+    },
+    {
+      "texto": "banhado",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "TipoVegetacao",
+      "inicio": 362,
+      "fim": 369,
+      "confianca": 0.9
+    },
+    {
+      "texto": "lagoas",
+      "label_spacy": "DOMAIN",
+      "classe_ontologia": "CorpoHidrico",
+      "inicio": 372,
+      "fim": 378,
+      "confianca": 0.9
+    }
+  ],
+  "triplas": [
+    {
+      "entidade1": "capivara",
+      "relacao": "possuiHabitat",
+      "entidade2": "banhado",
+      "classe_entidade1": "Mamifero",
+      "classe_entidade2": "TipoVegetacao",
+      "propriedade_ontologia": "possuiHabitat",
+      "sentenca_origem": "Entre os bichos de maior porte estão: tartaruga , capivara , ratão-do-banhado , cachorro do mato , lontra , tuco-tuco e jacaré-de-papo-amarelo .",
+      "fonte_url": "https://pt.wikipedia.org/wiki/Esta%C3%A7%C3%A3o_Ecol%C3%B3gica_do_Taim",
+      "metodo_extracao": "coocorrencia"
+    },
+    {
+      "entidade1": "ratão-do-banhado",
+      "relacao": "possuiHabitat",
+      "entidade2": "banhado",
+      "classe_entidade1": "Mamifero",
+      "classe_entidade2": "TipoVegetacao",
+      "propriedade_ontologia": "possuiHabitat",
+      "sentenca_origem": "Entre os bichos de maior porte estão: tartaruga , capivara , ratão-do-banhado , cachorro do mato , lontra , tuco-tuco e jacaré-de-papo-amarelo .",
+      "fonte_url": "https://pt.wikipedia.org/wiki/Esta%C3%A7%C3%A3o_Ecol%C3%B3gica_do_Taim",
+      "metodo_extracao": "coocorrencia"
+    },
+    {
+      "entidade1": "lontra",
+      "relacao": "possuiHabitat",
+      "entidade2": "banhado",
+      "classe_entidade1": "Mamifero",
+      "classe_entidade2": "TipoVegetacao",
+      "propriedade_ontologia": "possuiHabitat",
+      "sentenca_origem": "Entre os bichos de maior porte estão: tartaruga , capivara , ratão-do-banhado , cachorro do mato , lontra , tuco-tuco e jacaré-de-papo-amarelo .",
+      "fonte_url": "https://pt.wikipedia.org/wiki/Esta%C3%A7%C3%A3o_Ecol%C3%B3gica_do_Taim",
+      "metodo_extracao": "coocorrencia"
+    },
+    {
+      "entidade1": "jacaré",
+      "relacao": "possuiHabitat",
+      "entidade2": "banhado",
+      "classe_entidade1": "Reptil",
+      "classe_entidade2": "TipoVegetacao",
+      "propriedade_ontologia": "possuiHabitat",
+      "sentenca_origem": "Entre os bichos de maior porte estão: tartaruga , capivara , ratão-do-banhado , cachorro do mato , lontra , tuco-tuco e jacaré-de-papo-amarelo .",
+      "fonte_url": "https://pt.wikipedia.org/wiki/Esta%C3%A7%C3%A3o_Ecol%C3%B3gica_do_Taim",
+      "metodo_extracao": "coocorrencia"
+    },
+    {
+      "entidade1": "jacaré-de-papo-amarelo",
+      "relacao": "possuiHabitat",
+      "entidade2": "banhado",
+      "classe_entidade1": "Reptil",
+      "classe_entidade2": "TipoVegetacao",
+      "propriedade_ontologia": "possuiHabitat",
+      "sentenca_origem": "Entre os bichos de maior porte estão: tartaruga , capivara , ratão-do-banhado , cachorro do mato , lontra , tuco-tuco e jacaré-de-papo-amarelo .",
+      "fonte_url": "https://pt.wikipedia.org/wiki/Esta%C3%A7%C3%A3o_Ecol%C3%B3gica_do_Taim",
+      "metodo_extracao": "coocorrencia"
+    },
+    {
+      "entidade1": "tartaruga",
+      "relacao": "possuiHabitat",
+      "entidade2": "banhado",
+      "classe_entidade1": "Reptil",
+      "classe_entidade2": "TipoVegetacao",
+      "propriedade_ontologia": "possuiHabitat",
+      "sentenca_origem": "Entre os bichos de maior porte estão: tartaruga , capivara , ratão-do-banhado , cachorro do mato , lontra , tuco-tuco e jacaré-de-papo-amarelo .",
+      "fonte_url": "https://pt.wikipedia.org/wiki/Esta%C3%A7%C3%A3o_Ecol%C3%B3gica_do_Taim",
+      "metodo_extracao": "coocorrencia"
+    },
+    {
+      "entidade1": "Lagoa Mirim",
+      "relacao": "ligado",
+      "entidade2": "Lagoa Patos",
+      "classe_entidade1": "CorpoHidrico",
+      "classe_entidade2": "CorpoHidrico",
+      "propriedade_ontologia": "",
+      "sentenca_origem": "A Lagoa Mirim está ligada à Lagoa dos Patos através do Canal de São Gonçalo , com uma extensão de 76 km.",
+      "fonte_url": "https://pt.wikipedia.org/wiki/Lagoa_Mirim",
+      "metodo_extracao": "dep_parse"
+    },
+    {
+      "entidade1": "capivaras",
+      "relacao": "possuiHabitat",
+      "entidade2": "banhado",
+      "classe_entidade1": "Mamifero",
+      "classe_entidade2": "TipoVegetacao",
+      "propriedade_ontologia": "possuiHabitat",
+      "sentenca_origem": "As mortes de animais silvestres no leito da rodovia BR 471, nesse trecho, são objeto de atuação do Ministério Público Federal desde o ano de 1991 , quando foi instaurado\no Inquérito Civil nº 08119.000",
+      "fonte_url": "https://pt.wikipedia.org/wiki/BR-471",
+      "metodo_extracao": "coocorrencia"
+    },
+    {
+      "entidade1": "br 471",
+      "relacao": "atravessaHabitat",
+      "entidade2": "banhado",
+      "classe_entidade1": "Rodovia",
+      "classe_entidade2": "TipoVegetacao",
+      "propriedade_ontologia": "atravessaHabitat",
+      "sentenca_origem": "As mortes de animais silvestres no leito da rodovia BR 471, nesse trecho, são objeto de atuação do Ministério Público Federal desde o ano de 1991 , quando foi instaurado\no Inquérito Civil nº 08119.000",
+      "fonte_url": "https://pt.wikipedia.org/wiki/BR-471",
+      "metodo_extracao": "coocorrencia"
+    },
+    {
+      "entidade1": "atropelamentos",
+      "relacao": "envolveAnimal",
+      "entidade2": "capivaras",
+      "classe_entidade1": "EventoAtropelamento",
+      "classe_entidade2": "Mamifero",
+      "propriedade_ontologia": "envolveAnimal",
+      "sentenca_origem": "Ouvido, à época, o então Chefe da ESEC Taim, Engº Florestal Márcio Luiz Barragana Fernandes, relatou que tal fenômeno remonta à construção da estrada, havendo-se agravado com seu asfaltamento, na déca",
+      "fonte_url": "https://pt.wikipedia.org/wiki/BR-471",
+      "metodo_extracao": "coocorrencia"
+    },
+    {
+      "entidade1": "atropelamentos",
+      "relacao": "envolveAnimal",
+      "entidade2": "aves",
+      "classe_entidade1": "EventoAtropelamento",
+      "classe_entidade2": "Ave",
+      "propriedade_ontologia": "envolveAnimal",
+      "sentenca_origem": "Ouvido, à época, o então Chefe da ESEC Taim, Engº Florestal Márcio Luiz Barragana Fernandes, relatou que tal fenômeno remonta à construção da estrada, havendo-se agravado com seu asfaltamento, na déca",
+      "fonte_url": "https://pt.wikipedia.org/wiki/BR-471",
+      "metodo_extracao": "coocorrencia"
+    },
+    {
+      "entidade1": "aves",
+      "relacao": "possuiHabitat",
+      "entidade2": "banhado",
+      "classe_entidade1": "Ave",
+      "classe_entidade2": "TipoVegetacao",
+      "propriedade_ontologia": "possuiHabitat",
+      "sentenca_origem": "Ouvido, à época, o então Chefe da ESEC Taim, Engº Florestal Márcio Luiz Barragana Fernandes, relatou que tal fenômeno remonta à construção da estrada, havendo-se agravado com seu asfaltamento, na déca",
+      "fonte_url": "https://pt.wikipedia.org/wiki/BR-471",
+      "metodo_extracao": "coocorrencia"
+    },
+    {
+      "entidade1": "atropelamentos",
+      "relacao": "ocorreDurantePeriodo",
+      "entidade2": "década",
+      "classe_entidade1": "EventoAtropelamento",
+      "classe_entidade2": "PeriodoTemporal",
+      "propriedade_ontologia": "ocorreDurantePeriodo",
+      "sentenca_origem": "Ouvido, à época, o então Chefe da ESEC Taim, Engº Florestal Márcio Luiz Barragana Fernandes, relatou que tal fenômeno remonta à construção da estrada, havendo-se agravado com seu asfaltamento, na déca",
+      "fonte_url": "https://pt.wikipedia.org/wiki/BR-471",
+      "metodo_extracao": "coocorrencia"
+    },
+    {
+      "entidade1": "atropelamentos",
+      "relacao": "temCondicaoAmbiental",
+      "entidade2": "seca",
+      "classe_entidade1": "EventoAtropelamento",
+      "classe_entidade2": "CondicaoClimatica",
+      "propriedade_ontologia": "temCondicaoAmbiental",
+      "sentenca_origem": "Relatou, ainda, que a oscilação do nível hídrico do banhado que compõe a ESEC contribui para que os animais subam no talude da rodovia: na época de cheia, por ali encontrarem refúgio das águas e, na é",
+      "fonte_url": "https://pt.wikipedia.org/wiki/BR-471",
+      "metodo_extracao": "coocorrencia"
+    },
+    {
+      "entidade1": "atropelados",
+      "relacao": "envolveAnimal",
+      "entidade2": "capivaras",
+      "classe_entidade1": "EventoAtropelamento",
+      "classe_entidade2": "Mamifero",
+      "propriedade_ontologia": "envolveAnimal",
+      "sentenca_origem": "Permanecendo inalterada a situação em 1993, consoante dá conta notícia publicada na edição de 4 de agosto de 1993 do jornal Zero Hora, segundo a qual “o trecho da BR-471 que corta a reserva virou cemi",
+      "fonte_url": "https://pt.wikipedia.org/wiki/BR-471",
+      "metodo_extracao": "coocorrencia"
+    },
+    {
+      "entidade1": "atropelados",
+      "relacao": "ocorreEmRodovia",
+      "entidade2": "br-471",
+      "classe_entidade1": "EventoAtropelamento",
+      "classe_entidade2": "Rodovia",
+      "propriedade_ontologia": "ocorreEmRodovia",
+      "sentenca_origem": "Permanecendo inalterada a situação em 1993, consoante dá conta notícia publicada na edição de 4 de agosto de 1993 do jornal Zero Hora, segundo a qual “o trecho da BR-471 que corta a reserva virou cemi",
+      "fonte_url": "https://pt.wikipedia.org/wiki/BR-471",
+      "metodo_extracao": "coocorrencia"
+    },
+    {
+      "entidade1": "atropelamento",
+      "relacao": "envolveAnimal",
+      "entidade2": "furão",
+      "classe_entidade1": "EventoAtropelamento",
+      "classe_entidade2": "Mamifero",
+      "propriedade_ontologia": "envolveAnimal",
+      "sentenca_origem": "Outros animais, contudo, por serem capazes de transpor o sistema por meio da escavação (tuco-tuco e furão), escalação (zorrilhos, gambás e pequenos roedores) e salto (felinos), permaneceram expostos a",
+      "fonte_url": "https://pt.wikipedia.org/wiki/BR-471",
+      "metodo_extracao": "coocorrencia"
+    },
+    {
+      "entidade1": "atropeladas",
+      "relacao": "envolveAnimal",
+      "entidade2": "mamíferos",
+      "classe_entidade1": "EventoAtropelamento",
+      "classe_entidade2": "Mamifero",
+      "propriedade_ontologia": "envolveAnimal",
+      "sentenca_origem": "é uma das espécies de mamíferos mais atropeladas em todo o Brasil.",
+      "fonte_url": "https://pt.wikipedia.org/wiki/Cerdocyon_thous",
+      "metodo_extracao": "coocorrencia"
+    },
+    {
+      "entidade1": "capivara",
+      "relacao": "chamar",
+      "entidade2": "porco-capivara",
+      "classe_entidade1": "Mamifero",
+      "classe_entidade2": "Mamifero",
+      "propriedade_ontologia": "",
+      "sentenca_origem": "Em alguns locais do interior da Bahia , a capivara é chamada de porco-capivara , no sudeste do Pará por cunum e de cubu em alguns locais do estado de Goiás .",
+      "fonte_url": "https://pt.wikipedia.org/wiki/Hydrochoerus_hydrochaeris",
+      "metodo_extracao": "dep_parse"
+    },
+    {
+      "entidade1": "capivara",
+      "relacao": "possuiHabitat",
+      "entidade2": "vegetação",
+      "classe_entidade1": "Mamifero",
+      "classe_entidade2": "TipoVegetacao",
+      "propriedade_ontologia": "possuiHabitat",
+      "sentenca_origem": "Essas espécies utilizam a capivara como poleiro ou como batedor (ao andar entre a vegetação, a capivara pode espantar insetos que são ingeridos pelas aves), e para se alimentar de ectoparasitas .",
+      "fonte_url": "https://pt.wikipedia.org/wiki/Hydrochoerus_hydrochaeris",
+      "metodo_extracao": "coocorrencia"
+    },
+    {
+      "entidade1": "aves",
+      "relacao": "possuiHabitat",
+      "entidade2": "vegetação",
+      "classe_entidade1": "Ave",
+      "classe_entidade2": "TipoVegetacao",
+      "propriedade_ontologia": "possuiHabitat",
+      "sentenca_origem": "Essas espécies utilizam a capivara como poleiro ou como batedor (ao andar entre a vegetação, a capivara pode espantar insetos que são ingeridos pelas aves), e para se alimentar de ectoparasitas .",
+      "fonte_url": "https://pt.wikipedia.org/wiki/Hydrochoerus_hydrochaeris",
+      "metodo_extracao": "coocorrencia"
+    },
+    {
+      "entidade1": "capivaras",
+      "relacao": "possuiHabitat",
+      "entidade2": "vegetação",
+      "classe_entidade1": "Mamifero",
+      "classe_entidade2": "TipoVegetacao",
+      "propriedade_ontologia": "possuiHabitat",
+      "sentenca_origem": "As interações entre aves e capivaras são observadas principalmente em áreas com muita vegetação, como banhados arbustivos, matas e campos úmidos.",
+      "fonte_url": "https://pt.wikipedia.org/wiki/Hydrochoerus_hydrochaeris",
+      "metodo_extracao": "coocorrencia"
+    },
+    {
+      "entidade1": "capivaras",
+      "relacao": "possuiHabitat",
+      "entidade2": "banhados",
+      "classe_entidade1": "Mamifero",
+      "classe_entidade2": "TipoVegetacao",
+      "propriedade_ontologia": "possuiHabitat",
+      "sentenca_origem": "As interações entre aves e capivaras são observadas principalmente em áreas com muita vegetação, como banhados arbustivos, matas e campos úmidos.",
+      "fonte_url": "https://pt.wikipedia.org/wiki/Hydrochoerus_hydrochaeris",
+      "metodo_extracao": "coocorrencia"
+    },
+    {
+      "entidade1": "aves",
+      "relacao": "possuiHabitat",
+      "entidade2": "banhados",
+      "classe_entidade1": "Ave",
+      "classe_entidade2": "TipoVegetacao",
+      "propriedade_ontologia": "possuiHabitat",
+      "sentenca_origem": "As interações entre aves e capivaras são observadas principalmente em áreas com muita vegetação, como banhados arbustivos, matas e campos úmidos.",
+      "fonte_url": "https://pt.wikipedia.org/wiki/Hydrochoerus_hydrochaeris",
+      "metodo_extracao": "coocorrencia"
+    },
+    {
+      "entidade1": "atropelamento",
+      "relacao": "ocorreEmRodovia",
+      "entidade2": "br-471",
+      "classe_entidade1": "EventoAtropelamento",
+      "classe_entidade2": "Rodovia",
+      "propriedade_ontologia": "ocorreEmRodovia",
+      "sentenca_origem": "e é encontrada na região da Estação Ecológica do Taim, onde está sujeita a atropelamento na rodovia BR-471.",
+      "fonte_url": "wikidata:sparql:Caiman latirostris",
+      "metodo_extracao": "coocorrencia"
+    },
+    {
+      "entidade1": "br-471",
+      "relacao": "atravessaHabitat",
+      "entidade2": "banhado",
+      "classe_entidade1": "Rodovia",
+      "classe_entidade2": "TipoVegetacao",
+      "propriedade_ontologia": "atravessaHabitat",
+      "sentenca_origem": "Rio Grande pertence à região imediata de Pelotas e encontra-se na área de influência da Estação Ecológica do Taim, sendo atravessado pela rodovia BR-471 que intercepta habitats de banhado e lagoas.",
+      "fonte_url": "https://servicodados.ibge.gov.br/api/v1/localidades/municipios/4315602",
+      "metodo_extracao": "coocorrencia"
+    },
+    {
+      "entidade1": "br-471",
+      "relacao": "atravessaHabitat",
+      "entidade2": "lagoas",
+      "classe_entidade1": "Rodovia",
+      "classe_entidade2": "CorpoHidrico",
+      "propriedade_ontologia": "atravessaHabitat",
+      "sentenca_origem": "Rio Grande pertence à região imediata de Pelotas e encontra-se na área de influência da Estação Ecológica do Taim, sendo atravessado pela rodovia BR-471 que intercepta habitats de banhado e lagoas.",
+      "fonte_url": "https://servicodados.ibge.gov.br/api/v1/localidades/municipios/4315602",
+      "metodo_extracao": "coocorrencia"
+    }
+  ]
+}
