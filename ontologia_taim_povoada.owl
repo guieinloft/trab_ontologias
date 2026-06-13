@@ -9,8 +9,8 @@
 <owl:Ontology rdf:about="http://www.semanticweb.org/ontologias/banhado-do-taim/atropelamento-fauna.owl"/>
 
 <owl:ObjectProperty rdf:about="#possuiHabitat">
-  <rdfs:domain rdf:resource="#EspecieAnimal"/>
   <rdfs:domain rdf:resource="#Animal"/>
+  <rdfs:domain rdf:resource="#EspecieAnimal"/>
   <rdfs:range rdf:resource="#CaracteristicaHabitat"/>
 </owl:ObjectProperty>
 
@@ -42,9 +42,9 @@
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:about="#mitigadoPor">
+  <rdfs:domain rdf:resource="#FatorRisco"/>
   <rdfs:domain rdf:resource="#EventoAtropelamento"/>
   <rdfs:domain rdf:resource="#TrechoRodoviario"/>
-  <rdfs:domain rdf:resource="#FatorRisco"/>
   <rdfs:range rdf:resource="#MedidaMitigacao"/>
 </owl:ObjectProperty>
 
@@ -81,12 +81,13 @@
   <rdfs:range rdf:resource="#CondicaoAmbiental"/>
 </owl:ObjectProperty>
 
-<owl:DatatypeProperty rdf:about="#temNomeComum">
+<owl:DatatypeProperty rdf:about="#nomeComum">
   <rdfs:domain rdf:resource="#Animal"/>
+  <rdfs:domain rdf:resource="#EspecieAnimal"/>
   <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 </owl:DatatypeProperty>
 
-<owl:DatatypeProperty rdf:about="#temNomeCientifico">
+<owl:DatatypeProperty rdf:about="#nomeCientifico">
   <rdfs:domain rdf:resource="#EspecieAnimal"/>
   <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 </owl:DatatypeProperty>
@@ -96,17 +97,17 @@
   <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 </owl:DatatypeProperty>
 
-<owl:DatatypeProperty rdf:about="#kmInicial">
+<owl:DatatypeProperty rdf:about="#quilometragemInicial">
   <rdfs:domain rdf:resource="#TrechoRodoviario"/>
   <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
 </owl:DatatypeProperty>
 
-<owl:DatatypeProperty rdf:about="#kmFinal">
+<owl:DatatypeProperty rdf:about="#quilometragemFinal">
   <rdfs:domain rdf:resource="#TrechoRodoviario"/>
   <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
 </owl:DatatypeProperty>
 
-<owl:DatatypeProperty rdf:about="#velocidadeMaxima">
+<owl:DatatypeProperty rdf:about="#velocidadeMaximaPermitida">
   <rdfs:domain rdf:resource="#Rodovia"/>
   <rdfs:domain rdf:resource="#TrechoRodoviario"/>
   <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -114,10 +115,16 @@
 
 <owl:DatatypeProperty rdf:about="#larguraPista">
   <rdfs:domain rdf:resource="#Rodovia"/>
+  <rdfs:domain rdf:resource="#TrechoRodoviario"/>
   <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
 </owl:DatatypeProperty>
 
-<owl:DatatypeProperty rdf:about="#temperaturaMedia">
+<owl:DatatypeProperty rdf:about="#volumeMedioTrafego">
+  <rdfs:domain rdf:resource="#TrechoRodoviario"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#temperaturaRegistrada">
   <rdfs:domain rdf:resource="#CondicaoClimatica"/>
   <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
 </owl:DatatypeProperty>
@@ -132,22 +139,27 @@
   <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
 </owl:DatatypeProperty>
 
-<owl:DatatypeProperty rdf:about="#dataRegistro">
+<owl:DatatypeProperty rdf:about="#dataEvento">
   <rdfs:domain rdf:resource="#EventoAtropelamento"/>
   <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 </owl:DatatypeProperty>
 
-<owl:DatatypeProperty rdf:about="#horaRegistro">
+<owl:DatatypeProperty rdf:about="#horaEvento">
   <rdfs:domain rdf:resource="#EventoAtropelamento"/>
   <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 </owl:DatatypeProperty>
 
-<owl:DatatypeProperty rdf:about="#latitude">
+<owl:DatatypeProperty rdf:about="#condicaoAnimalPosEvento">
+  <rdfs:domain rdf:resource="#EventoAtropelamento"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#coordenadaLatitude">
   <rdfs:domain rdf:resource="#LocalizacaoGeografica"/>
   <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
 </owl:DatatypeProperty>
 
-<owl:DatatypeProperty rdf:about="#longitude">
+<owl:DatatypeProperty rdf:about="#coordenadaLongitude">
   <rdfs:domain rdf:resource="#LocalizacaoGeografica"/>
   <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
 </owl:DatatypeProperty>
@@ -157,11 +169,11 @@
   <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
 </owl:DatatypeProperty>
 
-<owl:Class rdf:about="#EspecieAnimal">
+<owl:Class rdf:about="#Animal">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
 </owl:Class>
 
-<owl:Class rdf:about="#Animal">
+<owl:Class rdf:about="#EspecieAnimal">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
 </owl:Class>
 
@@ -295,21 +307,21 @@
   <rdf:type rdf:resource="#Rodovia"/>
   <atravessaHabitat rdf:resource="#banhado"/>
   <atravessaHabitat rdf:resource="#lagoas"/>
+  <compostoPorTrechos rdf:resource="#Trecho_Sintetico_12"/>
   <compostoPorTrechos rdf:resource="#Trecho_Sintetico_3"/>
   <compostoPorTrechos rdf:resource="#Trecho_Sintetico_8"/>
   <compostoPorTrechos rdf:resource="#Trecho_Sintetico_9"/>
+  <compostoPorTrechos rdf:resource="#Trecho_Sintetico_4"/>
+  <compostoPorTrechos rdf:resource="#Trecho_Sintetico_13"/>
+  <compostoPorTrechos rdf:resource="#Trecho_Sintetico_14"/>
   <compostoPorTrechos rdf:resource="#Trecho_Sintetico_1"/>
+  <compostoPorTrechos rdf:resource="#Trecho_Sintetico_7"/>
   <compostoPorTrechos rdf:resource="#Trecho_Sintetico_2"/>
-  <compostoPorTrechos rdf:resource="#Trecho_Sintetico_15"/>
   <compostoPorTrechos rdf:resource="#Trecho_Sintetico_6"/>
+  <compostoPorTrechos rdf:resource="#Trecho_Sintetico_15"/>
+  <compostoPorTrechos rdf:resource="#Trecho_Sintetico_10"/>
   <compostoPorTrechos rdf:resource="#Trecho_Sintetico_11"/>
   <compostoPorTrechos rdf:resource="#Trecho_Sintetico_5"/>
-  <compostoPorTrechos rdf:resource="#Trecho_Sintetico_7"/>
-  <compostoPorTrechos rdf:resource="#Trecho_Sintetico_13"/>
-  <compostoPorTrechos rdf:resource="#Trecho_Sintetico_10"/>
-  <compostoPorTrechos rdf:resource="#Trecho_Sintetico_12"/>
-  <compostoPorTrechos rdf:resource="#Trecho_Sintetico_14"/>
-  <compostoPorTrechos rdf:resource="#Trecho_Sintetico_4"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#atropelamentos">
@@ -416,659 +428,1921 @@
   <rdf:type rdf:resource="#TipoVegetacao"/>
 </owl:NamedIndividual>
 
+<owl:NamedIndividual rdf:about="#CorpoHidrico_Sintetico_1">
+  <rdf:type rdf:resource="#CorpoHidrico"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CorpoHidrico_Sintetico_2">
+  <rdf:type rdf:resource="#CorpoHidrico"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CorpoHidrico_Sintetico_3">
+  <rdf:type rdf:resource="#CorpoHidrico"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CorpoHidrico_Sintetico_4">
+  <rdf:type rdf:resource="#CorpoHidrico"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CorpoHidrico_Sintetico_5">
+  <rdf:type rdf:resource="#CorpoHidrico"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Passagem_Fauna_1">
+  <rdf:type rdf:resource="#MedidaMitigacao"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Passagem_Fauna_2">
+  <rdf:type rdf:resource="#MedidaMitigacao"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Passagem_Fauna_3">
+  <rdf:type rdf:resource="#MedidaMitigacao"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Velocidade_Excessiva_1">
+  <rdf:type rdf:resource="#FatorAntropico"/>
+  <mitigadoPor rdf:resource="#Passagem_Fauna_2"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Velocidade_Excessiva_2">
+  <rdf:type rdf:resource="#FatorAntropico"/>
+  <mitigadoPor rdf:resource="#Passagem_Fauna_2"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Velocidade_Excessiva_3">
+  <rdf:type rdf:resource="#FatorAntropico"/>
+  <mitigadoPor rdf:resource="#Passagem_Fauna_1"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Velocidade_Excessiva_4">
+  <rdf:type rdf:resource="#FatorAntropico"/>
+  <mitigadoPor rdf:resource="#Passagem_Fauna_2"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Velocidade_Excessiva_5">
+  <rdf:type rdf:resource="#FatorAntropico"/>
+  <mitigadoPor rdf:resource="#Passagem_Fauna_3"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Migracao_Sazonal_1">
+  <rdf:type rdf:resource="#FatorEcologico"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Migracao_Sazonal_2">
+  <rdf:type rdf:resource="#FatorEcologico"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Migracao_Sazonal_3">
+  <rdf:type rdf:resource="#FatorEcologico"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Migracao_Sazonal_4">
+  <rdf:type rdf:resource="#FatorEcologico"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Migracao_Sazonal_5">
+  <rdf:type rdf:resource="#FatorEcologico"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Especie_Ameacada_1">
+  <rdf:type rdf:resource="#EspecieAnimal"/>
+  <nomeCientifico rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sci name 1</nomeCientifico>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Common name 1</nomeComum>
+  <statusConservacao rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VU</statusConservacao>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Especie_Ameacada_2">
+  <rdf:type rdf:resource="#EspecieAnimal"/>
+  <nomeCientifico rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sci name 2</nomeCientifico>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Common name 2</nomeComum>
+  <statusConservacao rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VU</statusConservacao>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Especie_Ameacada_3">
+  <rdf:type rdf:resource="#EspecieAnimal"/>
+  <nomeCientifico rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sci name 3</nomeCientifico>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Common name 3</nomeComum>
+  <statusConservacao rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VU</statusConservacao>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Especie_Ameacada_4">
+  <rdf:type rdf:resource="#EspecieAnimal"/>
+  <nomeCientifico rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sci name 4</nomeCientifico>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Common name 4</nomeComum>
+  <statusConservacao rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VU</statusConservacao>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Especie_Ameacada_5">
+  <rdf:type rdf:resource="#EspecieAnimal"/>
+  <nomeCientifico rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sci name 5</nomeCientifico>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Common name 5</nomeComum>
+  <statusConservacao rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VU</statusConservacao>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Especie_Comum_1">
+  <rdf:type rdf:resource="#EspecieAnimal"/>
+  <nomeCientifico rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sci name LC 1</nomeCientifico>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Common name LC 1</nomeComum>
+  <statusConservacao rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LC</statusConservacao>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Especie_Comum_2">
+  <rdf:type rdf:resource="#EspecieAnimal"/>
+  <nomeCientifico rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sci name LC 2</nomeCientifico>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Common name LC 2</nomeComum>
+  <statusConservacao rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LC</statusConservacao>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Especie_Comum_3">
+  <rdf:type rdf:resource="#EspecieAnimal"/>
+  <nomeCientifico rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sci name LC 3</nomeCientifico>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Common name LC 3</nomeComum>
+  <statusConservacao rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LC</statusConservacao>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Especie_Comum_4">
+  <rdf:type rdf:resource="#EspecieAnimal"/>
+  <nomeCientifico rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sci name LC 4</nomeCientifico>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Common name LC 4</nomeComum>
+  <statusConservacao rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LC</statusConservacao>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Especie_Comum_5">
+  <rdf:type rdf:resource="#EspecieAnimal"/>
+  <nomeCientifico rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sci name LC 5</nomeCientifico>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Common name LC 5</nomeComum>
+  <statusConservacao rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LC</statusConservacao>
+</owl:NamedIndividual>
+
 <owl:NamedIndividual rdf:about="#Trecho_Sintetico_1">
   <rdf:type rdf:resource="#TrechoRodoviario"/>
-  <atravessaHabitat rdf:resource="#Vegetacao_Sintetica_7"/>
+  <atravessaHabitat rdf:resource="#Vegetacao_Sintetica_8"/>
+  <quilometragemInicial rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</quilometragemInicial>
+  <quilometragemFinal rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.2148024123512426</quilometragemFinal>
+  <velocidadeMaximaPermitida rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">80.0</velocidadeMaximaPermitida>
+  <larguraPista rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</larguraPista>
+  <volumeMedioTrafego rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1600</volumeMedioTrafego>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Trecho_Sintetico_2">
   <rdf:type rdf:resource="#TrechoRodoviario"/>
-  <atravessaHabitat rdf:resource="#Vegetacao_Sintetica_7"/>
+  <atravessaHabitat rdf:resource="#Vegetacao_Sintetica_10"/>
+  <quilometragemInicial rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.2148024123512426</quilometragemInicial>
+  <quilometragemFinal rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.88978439181329</quilometragemFinal>
+  <velocidadeMaximaPermitida rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60.0</velocidadeMaximaPermitida>
+  <larguraPista rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</larguraPista>
+  <volumeMedioTrafego rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</volumeMedioTrafego>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Trecho_Sintetico_3">
   <rdf:type rdf:resource="#TrechoRodoviario"/>
-  <atravessaHabitat rdf:resource="#Vegetacao_Sintetica_1"/>
+  <atravessaHabitat rdf:resource="#Vegetacao_Sintetica_5"/>
+  <quilometragemInicial rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.88978439181329</quilometragemInicial>
+  <quilometragemFinal rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.309021746713327</quilometragemFinal>
+  <velocidadeMaximaPermitida rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60.0</velocidadeMaximaPermitida>
+  <larguraPista rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</larguraPista>
+  <volumeMedioTrafego rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1600</volumeMedioTrafego>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Trecho_Sintetico_4">
   <rdf:type rdf:resource="#TrechoRodoviario"/>
-  <atravessaHabitat rdf:resource="#Vegetacao_Sintetica_5"/>
+  <atravessaHabitat rdf:resource="#CorpoHidrico_Sintetico_5"/>
+  <quilometragemInicial rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.309021746713327</quilometragemInicial>
+  <quilometragemFinal rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">13.906712648978909</quilometragemFinal>
+  <velocidadeMaximaPermitida rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100.0</velocidadeMaximaPermitida>
+  <larguraPista rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</larguraPista>
+  <volumeMedioTrafego rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</volumeMedioTrafego>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Trecho_Sintetico_5">
   <rdf:type rdf:resource="#TrechoRodoviario"/>
-  <atravessaHabitat rdf:resource="#Vegetacao_Sintetica_9"/>
+  <atravessaHabitat rdf:resource="#Vegetacao_Sintetica_5"/>
+  <quilometragemInicial rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">13.906712648978909</quilometragemInicial>
+  <quilometragemFinal rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.203002682956352</quilometragemFinal>
+  <velocidadeMaximaPermitida rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60.0</velocidadeMaximaPermitida>
+  <larguraPista rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</larguraPista>
+  <volumeMedioTrafego rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1600</volumeMedioTrafego>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Trecho_Sintetico_6">
   <rdf:type rdf:resource="#TrechoRodoviario"/>
   <atravessaHabitat rdf:resource="#Vegetacao_Sintetica_8"/>
+  <quilometragemInicial rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.203002682956352</quilometragemInicial>
+  <quilometragemFinal rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">19.882443720001053</quilometragemFinal>
+  <velocidadeMaximaPermitida rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">80.0</velocidadeMaximaPermitida>
+  <larguraPista rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</larguraPista>
+  <volumeMedioTrafego rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1600</volumeMedioTrafego>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Trecho_Sintetico_7">
   <rdf:type rdf:resource="#TrechoRodoviario"/>
-  <atravessaHabitat rdf:resource="#Vegetacao_Sintetica_7"/>
+  <atravessaHabitat rdf:resource="#Vegetacao_Sintetica_10"/>
+  <quilometragemInicial rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">19.882443720001053</quilometragemInicial>
+  <quilometragemFinal rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">23.803713924627324</quilometragemFinal>
+  <velocidadeMaximaPermitida rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60.0</velocidadeMaximaPermitida>
+  <larguraPista rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</larguraPista>
+  <volumeMedioTrafego rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1600</volumeMedioTrafego>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Trecho_Sintetico_8">
   <rdf:type rdf:resource="#TrechoRodoviario"/>
-  <atravessaHabitat rdf:resource="#Vegetacao_Sintetica_5"/>
+  <atravessaHabitat rdf:resource="#Vegetacao_Sintetica_8"/>
+  <quilometragemInicial rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">23.803713924627324</quilometragemInicial>
+  <quilometragemFinal rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">28.399643707942246</quilometragemFinal>
+  <velocidadeMaximaPermitida rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">80.0</velocidadeMaximaPermitida>
+  <larguraPista rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.0</larguraPista>
+  <volumeMedioTrafego rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</volumeMedioTrafego>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Trecho_Sintetico_9">
   <rdf:type rdf:resource="#TrechoRodoviario"/>
-  <atravessaHabitat rdf:resource="#Vegetacao_Sintetica_8"/>
+  <atravessaHabitat rdf:resource="#CorpoHidrico_Sintetico_5"/>
+  <quilometragemInicial rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">28.399643707942246</quilometragemInicial>
+  <quilometragemFinal rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30.441768808434304</quilometragemFinal>
+  <velocidadeMaximaPermitida rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100.0</velocidadeMaximaPermitida>
+  <larguraPista rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</larguraPista>
+  <volumeMedioTrafego rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</volumeMedioTrafego>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Trecho_Sintetico_10">
   <rdf:type rdf:resource="#TrechoRodoviario"/>
-  <atravessaHabitat rdf:resource="#Vegetacao_Sintetica_6"/>
+  <atravessaHabitat rdf:resource="#CorpoHidrico_Sintetico_4"/>
+  <quilometragemInicial rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30.441768808434304</quilometragemInicial>
+  <quilometragemFinal rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">34.79691208730473</quilometragemFinal>
+  <velocidadeMaximaPermitida rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100.0</velocidadeMaximaPermitida>
+  <larguraPista rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.0</larguraPista>
+  <volumeMedioTrafego rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</volumeMedioTrafego>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Trecho_Sintetico_11">
   <rdf:type rdf:resource="#TrechoRodoviario"/>
-  <atravessaHabitat rdf:resource="#Vegetacao_Sintetica_10"/>
+  <atravessaHabitat rdf:resource="#Vegetacao_Sintetica_8"/>
+  <quilometragemInicial rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">34.79691208730473</quilometragemInicial>
+  <quilometragemFinal rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">39.28110192251643</quilometragemFinal>
+  <velocidadeMaximaPermitida rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">80.0</velocidadeMaximaPermitida>
+  <larguraPista rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.0</larguraPista>
+  <volumeMedioTrafego rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</volumeMedioTrafego>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Trecho_Sintetico_12">
   <rdf:type rdf:resource="#TrechoRodoviario"/>
-  <atravessaHabitat rdf:resource="#Vegetacao_Sintetica_4"/>
+  <atravessaHabitat rdf:resource="#Vegetacao_Sintetica_6"/>
+  <quilometragemInicial rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">39.28110192251643</quilometragemInicial>
+  <quilometragemFinal rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">43.39202956101299</quilometragemFinal>
+  <velocidadeMaximaPermitida rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60.0</velocidadeMaximaPermitida>
+  <larguraPista rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.0</larguraPista>
+  <volumeMedioTrafego rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</volumeMedioTrafego>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Trecho_Sintetico_13">
   <rdf:type rdf:resource="#TrechoRodoviario"/>
-  <atravessaHabitat rdf:resource="#Vegetacao_Sintetica_9"/>
+  <atravessaHabitat rdf:resource="#Vegetacao_Sintetica_4"/>
+  <quilometragemInicial rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">43.39202956101299</quilometragemInicial>
+  <quilometragemFinal rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">46.10787734685865</quilometragemFinal>
+  <velocidadeMaximaPermitida rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60.0</velocidadeMaximaPermitida>
+  <larguraPista rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</larguraPista>
+  <volumeMedioTrafego rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1600</volumeMedioTrafego>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Trecho_Sintetico_14">
   <rdf:type rdf:resource="#TrechoRodoviario"/>
-  <atravessaHabitat rdf:resource="#Vegetacao_Sintetica_3"/>
+  <atravessaHabitat rdf:resource="#Vegetacao_Sintetica_2"/>
+  <quilometragemInicial rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">46.10787734685865</quilometragemInicial>
+  <quilometragemFinal rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">48.34921480251626</quilometragemFinal>
+  <velocidadeMaximaPermitida rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">80.0</velocidadeMaximaPermitida>
+  <larguraPista rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</larguraPista>
+  <volumeMedioTrafego rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1600</volumeMedioTrafego>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Trecho_Sintetico_15">
   <rdf:type rdf:resource="#TrechoRodoviario"/>
-  <atravessaHabitat rdf:resource="#Vegetacao_Sintetica_5"/>
+  <atravessaHabitat rdf:resource="#Vegetacao_Sintetica_2"/>
+  <quilometragemInicial rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">48.34921480251626</quilometragemInicial>
+  <quilometragemFinal rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">51.25355517887699</quilometragemFinal>
+  <velocidadeMaximaPermitida rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">80.0</velocidadeMaximaPermitida>
+  <larguraPista rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</larguraPista>
+  <volumeMedioTrafego rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</volumeMedioTrafego>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Mamifero_Sintetico_1">
   <rdf:type rdf:resource="#Mamifero"/>
-  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_3"/>
+  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_9"/>
+  <pertenceAEspecie rdf:resource="#Especie_Comum_1"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 1</nomeComum>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Mamifero_Sintetico_2">
   <rdf:type rdf:resource="#Mamifero"/>
-  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_2"/>
+  <possuiHabitat rdf:resource="#CorpoHidrico_Sintetico_4"/>
+  <pertenceAEspecie rdf:resource="#Especie_Comum_4"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 2</nomeComum>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Mamifero_Sintetico_3">
   <rdf:type rdf:resource="#Mamifero"/>
-  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_10"/>
+  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_4"/>
+  <pertenceAEspecie rdf:resource="#Especie_Comum_5"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 3</nomeComum>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Mamifero_Sintetico_4">
   <rdf:type rdf:resource="#Mamifero"/>
-  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_5"/>
+  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_9"/>
+  <pertenceAEspecie rdf:resource="#Especie_Comum_5"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 4</nomeComum>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Mamifero_Sintetico_5">
   <rdf:type rdf:resource="#Mamifero"/>
-  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_9"/>
+  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_5"/>
+  <pertenceAEspecie rdf:resource="#Especie_Comum_3"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 5</nomeComum>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Mamifero_Sintetico_6">
   <rdf:type rdf:resource="#Mamifero"/>
-  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_10"/>
+  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_2"/>
+  <pertenceAEspecie rdf:resource="#Especie_Comum_5"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 6</nomeComum>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Mamifero_Sintetico_7">
   <rdf:type rdf:resource="#Mamifero"/>
-  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_3"/>
+  <possuiHabitat rdf:resource="#CorpoHidrico_Sintetico_3"/>
+  <pertenceAEspecie rdf:resource="#Especie_Comum_2"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 7</nomeComum>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Mamifero_Sintetico_8">
   <rdf:type rdf:resource="#Mamifero"/>
-  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_5"/>
+  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_6"/>
+  <pertenceAEspecie rdf:resource="#Especie_Comum_5"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 8</nomeComum>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Mamifero_Sintetico_9">
   <rdf:type rdf:resource="#Mamifero"/>
-  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_2"/>
+  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_4"/>
+  <pertenceAEspecie rdf:resource="#Especie_Ameacada_5"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 9</nomeComum>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Mamifero_Sintetico_10">
   <rdf:type rdf:resource="#Mamifero"/>
-  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_2"/>
+  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_3"/>
+  <pertenceAEspecie rdf:resource="#Especie_Ameacada_4"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 10</nomeComum>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Mamifero_Sintetico_11">
   <rdf:type rdf:resource="#Mamifero"/>
-  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_6"/>
+  <possuiHabitat rdf:resource="#CorpoHidrico_Sintetico_4"/>
+  <pertenceAEspecie rdf:resource="#Especie_Ameacada_3"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 11</nomeComum>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Mamifero_Sintetico_12">
   <rdf:type rdf:resource="#Mamifero"/>
-  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_8"/>
+  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_1"/>
+  <pertenceAEspecie rdf:resource="#Especie_Comum_5"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 12</nomeComum>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Mamifero_Sintetico_13">
   <rdf:type rdf:resource="#Mamifero"/>
-  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_9"/>
+  <possuiHabitat rdf:resource="#CorpoHidrico_Sintetico_1"/>
+  <pertenceAEspecie rdf:resource="#Especie_Ameacada_5"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 13</nomeComum>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Mamifero_Sintetico_14">
   <rdf:type rdf:resource="#Mamifero"/>
-  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_2"/>
+  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_8"/>
+  <pertenceAEspecie rdf:resource="#Especie_Ameacada_2"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 14</nomeComum>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Mamifero_Sintetico_15">
   <rdf:type rdf:resource="#Mamifero"/>
-  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_6"/>
+  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_2"/>
+  <pertenceAEspecie rdf:resource="#Especie_Ameacada_3"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 15</nomeComum>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Mamifero_Sintetico_16">
   <rdf:type rdf:resource="#Mamifero"/>
-  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_7"/>
+  <possuiHabitat rdf:resource="#CorpoHidrico_Sintetico_5"/>
+  <pertenceAEspecie rdf:resource="#Especie_Ameacada_3"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 16</nomeComum>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Mamifero_Sintetico_17">
   <rdf:type rdf:resource="#Mamifero"/>
-  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_6"/>
+  <possuiHabitat rdf:resource="#CorpoHidrico_Sintetico_5"/>
+  <pertenceAEspecie rdf:resource="#Especie_Ameacada_1"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 17</nomeComum>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Mamifero_Sintetico_18">
   <rdf:type rdf:resource="#Mamifero"/>
-  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_10"/>
+  <possuiHabitat rdf:resource="#CorpoHidrico_Sintetico_4"/>
+  <pertenceAEspecie rdf:resource="#Especie_Ameacada_2"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 18</nomeComum>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Mamifero_Sintetico_19">
   <rdf:type rdf:resource="#Mamifero"/>
-  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_4"/>
+  <possuiHabitat rdf:resource="#CorpoHidrico_Sintetico_5"/>
+  <pertenceAEspecie rdf:resource="#Especie_Comum_4"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 19</nomeComum>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Mamifero_Sintetico_20">
   <rdf:type rdf:resource="#Mamifero"/>
-  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_9"/>
+  <possuiHabitat rdf:resource="#CorpoHidrico_Sintetico_1"/>
+  <pertenceAEspecie rdf:resource="#Especie_Comum_2"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 20</nomeComum>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Mamifero_Sintetico_21">
   <rdf:type rdf:resource="#Mamifero"/>
-  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_8"/>
+  <possuiHabitat rdf:resource="#CorpoHidrico_Sintetico_4"/>
+  <pertenceAEspecie rdf:resource="#Especie_Comum_4"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 21</nomeComum>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Mamifero_Sintetico_22">
   <rdf:type rdf:resource="#Mamifero"/>
-  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_8"/>
+  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_5"/>
+  <pertenceAEspecie rdf:resource="#Especie_Comum_4"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 22</nomeComum>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Mamifero_Sintetico_23">
   <rdf:type rdf:resource="#Mamifero"/>
-  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_9"/>
+  <possuiHabitat rdf:resource="#CorpoHidrico_Sintetico_3"/>
+  <pertenceAEspecie rdf:resource="#Especie_Ameacada_4"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 23</nomeComum>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Mamifero_Sintetico_24">
   <rdf:type rdf:resource="#Mamifero"/>
-  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_5"/>
+  <possuiHabitat rdf:resource="#CorpoHidrico_Sintetico_4"/>
+  <pertenceAEspecie rdf:resource="#Especie_Ameacada_4"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 24</nomeComum>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Mamifero_Sintetico_25">
   <rdf:type rdf:resource="#Mamifero"/>
-  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_1"/>
+  <possuiHabitat rdf:resource="#CorpoHidrico_Sintetico_5"/>
+  <pertenceAEspecie rdf:resource="#Especie_Comum_5"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 25</nomeComum>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Mamifero_Sintetico_26">
   <rdf:type rdf:resource="#Mamifero"/>
-  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_9"/>
+  <possuiHabitat rdf:resource="#CorpoHidrico_Sintetico_4"/>
+  <pertenceAEspecie rdf:resource="#Especie_Comum_2"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 26</nomeComum>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Mamifero_Sintetico_27">
   <rdf:type rdf:resource="#Mamifero"/>
-  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_1"/>
+  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_10"/>
+  <pertenceAEspecie rdf:resource="#Especie_Ameacada_5"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 27</nomeComum>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Mamifero_Sintetico_28">
   <rdf:type rdf:resource="#Mamifero"/>
-  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_2"/>
+  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_8"/>
+  <pertenceAEspecie rdf:resource="#Especie_Comum_3"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 28</nomeComum>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Mamifero_Sintetico_29">
   <rdf:type rdf:resource="#Mamifero"/>
-  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_7"/>
+  <possuiHabitat rdf:resource="#CorpoHidrico_Sintetico_1"/>
+  <pertenceAEspecie rdf:resource="#Especie_Comum_1"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 29</nomeComum>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Mamifero_Sintetico_30">
   <rdf:type rdf:resource="#Mamifero"/>
+  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_2"/>
+  <pertenceAEspecie rdf:resource="#Especie_Comum_1"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 30</nomeComum>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Reptil_Sintetico_31">
+  <rdf:type rdf:resource="#Reptil"/>
+  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_10"/>
+  <pertenceAEspecie rdf:resource="#Especie_Ameacada_2"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 31</nomeComum>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Reptil_Sintetico_32">
+  <rdf:type rdf:resource="#Reptil"/>
+  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_8"/>
+  <pertenceAEspecie rdf:resource="#Especie_Comum_5"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 32</nomeComum>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Reptil_Sintetico_33">
+  <rdf:type rdf:resource="#Reptil"/>
+  <possuiHabitat rdf:resource="#CorpoHidrico_Sintetico_1"/>
+  <pertenceAEspecie rdf:resource="#Especie_Comum_1"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 33</nomeComum>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Reptil_Sintetico_34">
+  <rdf:type rdf:resource="#Reptil"/>
+  <possuiHabitat rdf:resource="#CorpoHidrico_Sintetico_4"/>
+  <pertenceAEspecie rdf:resource="#Especie_Ameacada_4"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 34</nomeComum>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Reptil_Sintetico_35">
+  <rdf:type rdf:resource="#Reptil"/>
+  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_4"/>
+  <pertenceAEspecie rdf:resource="#Especie_Ameacada_1"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 35</nomeComum>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Reptil_Sintetico_36">
+  <rdf:type rdf:resource="#Reptil"/>
+  <possuiHabitat rdf:resource="#CorpoHidrico_Sintetico_2"/>
+  <pertenceAEspecie rdf:resource="#Especie_Ameacada_5"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 36</nomeComum>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Reptil_Sintetico_37">
+  <rdf:type rdf:resource="#Reptil"/>
+  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_2"/>
+  <pertenceAEspecie rdf:resource="#Especie_Ameacada_4"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 37</nomeComum>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Reptil_Sintetico_38">
+  <rdf:type rdf:resource="#Reptil"/>
+  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_6"/>
+  <pertenceAEspecie rdf:resource="#Especie_Ameacada_3"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 38</nomeComum>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Reptil_Sintetico_39">
+  <rdf:type rdf:resource="#Reptil"/>
+  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_6"/>
+  <pertenceAEspecie rdf:resource="#Especie_Comum_2"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 39</nomeComum>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Reptil_Sintetico_40">
+  <rdf:type rdf:resource="#Reptil"/>
+  <possuiHabitat rdf:resource="#CorpoHidrico_Sintetico_4"/>
+  <pertenceAEspecie rdf:resource="#Especie_Ameacada_1"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 40</nomeComum>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Reptil_Sintetico_41">
+  <rdf:type rdf:resource="#Reptil"/>
+  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_2"/>
+  <pertenceAEspecie rdf:resource="#Especie_Ameacada_3"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 41</nomeComum>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Reptil_Sintetico_42">
+  <rdf:type rdf:resource="#Reptil"/>
+  <possuiHabitat rdf:resource="#CorpoHidrico_Sintetico_4"/>
+  <pertenceAEspecie rdf:resource="#Especie_Ameacada_4"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 42</nomeComum>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Reptil_Sintetico_43">
+  <rdf:type rdf:resource="#Reptil"/>
   <possuiHabitat rdf:resource="#Vegetacao_Sintetica_1"/>
+  <pertenceAEspecie rdf:resource="#Especie_Comum_5"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 43</nomeComum>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#Reptil_Sintetico_1">
+<owl:NamedIndividual rdf:about="#Reptil_Sintetico_44">
+  <rdf:type rdf:resource="#Reptil"/>
+  <possuiHabitat rdf:resource="#CorpoHidrico_Sintetico_1"/>
+  <pertenceAEspecie rdf:resource="#Especie_Comum_4"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 44</nomeComum>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Reptil_Sintetico_45">
   <rdf:type rdf:resource="#Reptil"/>
   <possuiHabitat rdf:resource="#Vegetacao_Sintetica_10"/>
+  <pertenceAEspecie rdf:resource="#Especie_Ameacada_2"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 45</nomeComum>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#Reptil_Sintetico_2">
-  <rdf:type rdf:resource="#Reptil"/>
-  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_8"/>
+<owl:NamedIndividual rdf:about="#Ave_Sintetica_46">
+  <rdf:type rdf:resource="#Ave"/>
+  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_1"/>
+  <pertenceAEspecie rdf:resource="#Especie_Ameacada_2"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 46</nomeComum>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#Reptil_Sintetico_3">
-  <rdf:type rdf:resource="#Reptil"/>
-  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_6"/>
+<owl:NamedIndividual rdf:about="#Ave_Sintetica_47">
+  <rdf:type rdf:resource="#Ave"/>
+  <possuiHabitat rdf:resource="#CorpoHidrico_Sintetico_1"/>
+  <pertenceAEspecie rdf:resource="#Especie_Ameacada_4"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 47</nomeComum>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#Reptil_Sintetico_4">
-  <rdf:type rdf:resource="#Reptil"/>
-  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_4"/>
+<owl:NamedIndividual rdf:about="#Ave_Sintetica_48">
+  <rdf:type rdf:resource="#Ave"/>
+  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_10"/>
+  <pertenceAEspecie rdf:resource="#Especie_Comum_5"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 48</nomeComum>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#Reptil_Sintetico_5">
-  <rdf:type rdf:resource="#Reptil"/>
-  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_6"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#Reptil_Sintetico_6">
-  <rdf:type rdf:resource="#Reptil"/>
+<owl:NamedIndividual rdf:about="#Ave_Sintetica_49">
+  <rdf:type rdf:resource="#Ave"/>
   <possuiHabitat rdf:resource="#Vegetacao_Sintetica_2"/>
+  <pertenceAEspecie rdf:resource="#Especie_Comum_2"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 49</nomeComum>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#Reptil_Sintetico_7">
-  <rdf:type rdf:resource="#Reptil"/>
-  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_4"/>
+<owl:NamedIndividual rdf:about="#Ave_Sintetica_50">
+  <rdf:type rdf:resource="#Ave"/>
+  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_2"/>
+  <pertenceAEspecie rdf:resource="#Especie_Comum_1"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 50</nomeComum>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#Reptil_Sintetico_8">
-  <rdf:type rdf:resource="#Reptil"/>
-  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_10"/>
+<owl:NamedIndividual rdf:about="#Ave_Sintetica_51">
+  <rdf:type rdf:resource="#Ave"/>
+  <possuiHabitat rdf:resource="#CorpoHidrico_Sintetico_4"/>
+  <pertenceAEspecie rdf:resource="#Especie_Ameacada_2"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 51</nomeComum>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#Reptil_Sintetico_9">
-  <rdf:type rdf:resource="#Reptil"/>
-  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_4"/>
+<owl:NamedIndividual rdf:about="#Ave_Sintetica_52">
+  <rdf:type rdf:resource="#Ave"/>
+  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_1"/>
+  <pertenceAEspecie rdf:resource="#Especie_Comum_5"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 52</nomeComum>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#Reptil_Sintetico_10">
-  <rdf:type rdf:resource="#Reptil"/>
-  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_4"/>
+<owl:NamedIndividual rdf:about="#Ave_Sintetica_53">
+  <rdf:type rdf:resource="#Ave"/>
+  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_1"/>
+  <pertenceAEspecie rdf:resource="#Especie_Ameacada_4"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 53</nomeComum>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#Reptil_Sintetico_11">
-  <rdf:type rdf:resource="#Reptil"/>
+<owl:NamedIndividual rdf:about="#Ave_Sintetica_54">
+  <rdf:type rdf:resource="#Ave"/>
   <possuiHabitat rdf:resource="#Vegetacao_Sintetica_3"/>
+  <pertenceAEspecie rdf:resource="#Especie_Ameacada_2"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 54</nomeComum>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#Reptil_Sintetico_12">
-  <rdf:type rdf:resource="#Reptil"/>
-  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_9"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#Reptil_Sintetico_13">
-  <rdf:type rdf:resource="#Reptil"/>
-  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_8"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#Reptil_Sintetico_14">
-  <rdf:type rdf:resource="#Reptil"/>
-  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_2"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#Reptil_Sintetico_15">
-  <rdf:type rdf:resource="#Reptil"/>
-  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_2"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#Ave_Sintetica_1">
-  <rdf:type rdf:resource="#Ave"/>
-  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_6"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#Ave_Sintetica_2">
-  <rdf:type rdf:resource="#Ave"/>
-  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_9"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#Ave_Sintetica_3">
+<owl:NamedIndividual rdf:about="#Ave_Sintetica_55">
   <rdf:type rdf:resource="#Ave"/>
   <possuiHabitat rdf:resource="#Vegetacao_Sintetica_8"/>
+  <pertenceAEspecie rdf:resource="#Especie_Ameacada_4"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 55</nomeComum>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#Ave_Sintetica_4">
+<owl:NamedIndividual rdf:about="#Ave_Sintetica_56">
   <rdf:type rdf:resource="#Ave"/>
-  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_2"/>
+  <possuiHabitat rdf:resource="#CorpoHidrico_Sintetico_2"/>
+  <pertenceAEspecie rdf:resource="#Especie_Ameacada_1"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 56</nomeComum>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#Ave_Sintetica_5">
+<owl:NamedIndividual rdf:about="#Ave_Sintetica_57">
   <rdf:type rdf:resource="#Ave"/>
-  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_5"/>
+  <possuiHabitat rdf:resource="#CorpoHidrico_Sintetico_5"/>
+  <pertenceAEspecie rdf:resource="#Especie_Ameacada_1"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 57</nomeComum>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#Ave_Sintetica_6">
-  <rdf:type rdf:resource="#Ave"/>
-  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_9"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#Ave_Sintetica_7">
-  <rdf:type rdf:resource="#Ave"/>
-  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_5"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#Ave_Sintetica_8">
-  <rdf:type rdf:resource="#Ave"/>
-  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_2"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#Ave_Sintetica_9">
+<owl:NamedIndividual rdf:about="#Ave_Sintetica_58">
   <rdf:type rdf:resource="#Ave"/>
   <possuiHabitat rdf:resource="#Vegetacao_Sintetica_9"/>
+  <pertenceAEspecie rdf:resource="#Especie_Comum_2"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 58</nomeComum>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#Ave_Sintetica_10">
-  <rdf:type rdf:resource="#Ave"/>
-  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_6"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#Ave_Sintetica_11">
-  <rdf:type rdf:resource="#Ave"/>
-  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_9"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#Ave_Sintetica_12">
-  <rdf:type rdf:resource="#Ave"/>
-  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_4"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#Ave_Sintetica_13">
+<owl:NamedIndividual rdf:about="#Ave_Sintetica_59">
   <rdf:type rdf:resource="#Ave"/>
   <possuiHabitat rdf:resource="#Vegetacao_Sintetica_10"/>
+  <pertenceAEspecie rdf:resource="#Especie_Ameacada_2"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 59</nomeComum>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#Ave_Sintetica_14">
+<owl:NamedIndividual rdf:about="#Ave_Sintetica_60">
   <rdf:type rdf:resource="#Ave"/>
-  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_9"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#Ave_Sintetica_15">
-  <rdf:type rdf:resource="#Ave"/>
-  <possuiHabitat rdf:resource="#Vegetacao_Sintetica_10"/>
+  <possuiHabitat rdf:resource="#CorpoHidrico_Sintetico_4"/>
+  <pertenceAEspecie rdf:resource="#Especie_Ameacada_5"/>
+  <nomeComum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animal 60</nomeComum>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Evento_Atropelamento_Sintetico_1">
   <rdf:type rdf:resource="#EventoAtropelamento"/>
-  <envolveAnimal rdf:resource="#Mamifero_Sintetico_19"/>
+  <envolveAnimal rdf:resource="#Mamifero_Sintetico_5"/>
   <ocorreEmRodovia rdf:resource="#br_471"/>
-  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_8"/>
+  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_4"/>
+  <localizadoEm rdf:resource="#Loc_1"/>
+  <temCondicaoAmbiental rdf:resource="#Clima_1"/>
+  <temFatorRisco rdf:resource="#Migracao_Sazonal_2"/>
+  <ocorreDurantePeriodo rdf:resource="#Periodo_1"/>
+  <dataEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-02-21</dataEvento>
+  <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14:00</horaEvento>
+  <condicaoAnimalPosEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ferido</condicaoAnimalPosEvento>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Loc_1">
+  <rdf:type rdf:resource="#LocalizacaoGeografica"/>
+  <coordenadaLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-31.563931352046744</coordenadaLatitude>
+  <coordenadaLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-51.93895756078037</coordenadaLongitude>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Clima_1">
+  <rdf:type rdf:resource="#CondicaoClimatica"/>
+  <temperaturaRegistrada rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">24.342624550965233</temperaturaRegistrada>
+  <umidadeRelativa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">80.8769722918588</umidadeRelativa>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Periodo_1">
+  <rdf:type rdf:resource="#PeriodoTemporal"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Evento_Atropelamento_Sintetico_2">
   <rdf:type rdf:resource="#EventoAtropelamento"/>
-  <envolveAnimal rdf:resource="#Mamifero_Sintetico_6"/>
+  <envolveAnimal rdf:resource="#Mamifero_Sintetico_13"/>
   <ocorreEmRodovia rdf:resource="#br_471"/>
-  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_10"/>
+  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_5"/>
+  <localizadoEm rdf:resource="#Loc_2"/>
+  <temCondicaoAmbiental rdf:resource="#Clima_2"/>
+  <temFatorRisco rdf:resource="#Velocidade_Excessiva_3"/>
+  <ocorreDurantePeriodo rdf:resource="#Periodo_2"/>
+  <dataEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-06-24</dataEvento>
+  <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19:00</horaEvento>
+  <condicaoAnimalPosEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morto</condicaoAnimalPosEvento>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Loc_2">
+  <rdf:type rdf:resource="#LocalizacaoGeografica"/>
+  <coordenadaLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-31.30230292921781</coordenadaLatitude>
+  <coordenadaLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-51.79658531422504</coordenadaLongitude>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Clima_2">
+  <rdf:type rdf:resource="#CondicaoClimatica"/>
+  <temperaturaRegistrada rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30.346966841526466</temperaturaRegistrada>
+  <umidadeRelativa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">87.60269015034335</umidadeRelativa>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Periodo_2">
+  <rdf:type rdf:resource="#PeriodoTemporal"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Evento_Atropelamento_Sintetico_3">
   <rdf:type rdf:resource="#EventoAtropelamento"/>
-  <envolveAnimal rdf:resource="#Ave_Sintetica_7"/>
+  <envolveAnimal rdf:resource="#Ave_Sintetica_55"/>
   <ocorreEmRodovia rdf:resource="#br_471"/>
-  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_7"/>
+  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_3"/>
+  <localizadoEm rdf:resource="#Loc_3"/>
+  <temCondicaoAmbiental rdf:resource="#Clima_3"/>
+  <temFatorRisco rdf:resource="#Migracao_Sazonal_2"/>
+  <ocorreDurantePeriodo rdf:resource="#Periodo_3"/>
+  <dataEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-06-17</dataEvento>
+  <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14:00</horaEvento>
+  <condicaoAnimalPosEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morto</condicaoAnimalPosEvento>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Loc_3">
+  <rdf:type rdf:resource="#LocalizacaoGeografica"/>
+  <coordenadaLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-31.40320860653059</coordenadaLatitude>
+  <coordenadaLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-51.55768596630092</coordenadaLongitude>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Clima_3">
+  <rdf:type rdf:resource="#CondicaoClimatica"/>
+  <temperaturaRegistrada rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">18.496389689028824</temperaturaRegistrada>
+  <umidadeRelativa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">76.50688952837008</umidadeRelativa>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Periodo_3">
+  <rdf:type rdf:resource="#PeriodoTemporal"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Evento_Atropelamento_Sintetico_4">
   <rdf:type rdf:resource="#EventoAtropelamento"/>
-  <envolveAnimal rdf:resource="#Mamifero_Sintetico_21"/>
+  <envolveAnimal rdf:resource="#Ave_Sintetica_58"/>
   <ocorreEmRodovia rdf:resource="#br_471"/>
   <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_10"/>
+  <localizadoEm rdf:resource="#Loc_4"/>
+  <temCondicaoAmbiental rdf:resource="#Clima_4"/>
+  <temFatorRisco rdf:resource="#Velocidade_Excessiva_2"/>
+  <ocorreDurantePeriodo rdf:resource="#Periodo_4"/>
+  <dataEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-09-10</dataEvento>
+  <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14:00</horaEvento>
+  <condicaoAnimalPosEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ferido</condicaoAnimalPosEvento>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Loc_4">
+  <rdf:type rdf:resource="#LocalizacaoGeografica"/>
+  <coordenadaLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-31.16233882563102</coordenadaLatitude>
+  <coordenadaLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-51.74906733517786</coordenadaLongitude>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Clima_4">
+  <rdf:type rdf:resource="#CondicaoClimatica"/>
+  <temperaturaRegistrada rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">26.21200437707048</temperaturaRegistrada>
+  <umidadeRelativa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60.435271159026</umidadeRelativa>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Periodo_4">
+  <rdf:type rdf:resource="#PeriodoTemporal"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Evento_Atropelamento_Sintetico_5">
   <rdf:type rdf:resource="#EventoAtropelamento"/>
-  <envolveAnimal rdf:resource="#Mamifero_Sintetico_16"/>
+  <envolveAnimal rdf:resource="#Mamifero_Sintetico_22"/>
   <ocorreEmRodovia rdf:resource="#br_471"/>
-  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_5"/>
+  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_12"/>
+  <localizadoEm rdf:resource="#Loc_5"/>
+  <temCondicaoAmbiental rdf:resource="#Clima_5"/>
+  <temFatorRisco rdf:resource="#Migracao_Sazonal_1"/>
+  <ocorreDurantePeriodo rdf:resource="#Periodo_5"/>
+  <dataEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-01-18</dataEvento>
+  <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14:00</horaEvento>
+  <condicaoAnimalPosEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morto</condicaoAnimalPosEvento>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Loc_5">
+  <rdf:type rdf:resource="#LocalizacaoGeografica"/>
+  <coordenadaLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-31.759869592173647</coordenadaLatitude>
+  <coordenadaLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-51.0468706601722</coordenadaLongitude>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Clima_5">
+  <rdf:type rdf:resource="#CondicaoClimatica"/>
+  <temperaturaRegistrada rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">22.04451123031015</temperaturaRegistrada>
+  <umidadeRelativa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">70.075727019974</umidadeRelativa>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Periodo_5">
+  <rdf:type rdf:resource="#PeriodoTemporal"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Evento_Atropelamento_Sintetico_6">
   <rdf:type rdf:resource="#EventoAtropelamento"/>
-  <envolveAnimal rdf:resource="#Mamifero_Sintetico_12"/>
+  <envolveAnimal rdf:resource="#Reptil_Sintetico_38"/>
   <ocorreEmRodovia rdf:resource="#br_471"/>
-  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_4"/>
+  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_15"/>
+  <localizadoEm rdf:resource="#Loc_6"/>
+  <temCondicaoAmbiental rdf:resource="#Clima_6"/>
+  <temFatorRisco rdf:resource="#Velocidade_Excessiva_1"/>
+  <ocorreDurantePeriodo rdf:resource="#Periodo_6"/>
+  <dataEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-11-28</dataEvento>
+  <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22:00</horaEvento>
+  <condicaoAnimalPosEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morto</condicaoAnimalPosEvento>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Loc_6">
+  <rdf:type rdf:resource="#LocalizacaoGeografica"/>
+  <coordenadaLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-31.284380649698544</coordenadaLatitude>
+  <coordenadaLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-51.6119827646875</coordenadaLongitude>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Clima_6">
+  <rdf:type rdf:resource="#CondicaoClimatica"/>
+  <temperaturaRegistrada rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">23.288359765544946</temperaturaRegistrada>
+  <umidadeRelativa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">82.77915017921708</umidadeRelativa>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Periodo_6">
+  <rdf:type rdf:resource="#PeriodoTemporal"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Evento_Atropelamento_Sintetico_7">
   <rdf:type rdf:resource="#EventoAtropelamento"/>
-  <envolveAnimal rdf:resource="#Ave_Sintetica_8"/>
+  <envolveAnimal rdf:resource="#Reptil_Sintetico_39"/>
   <ocorreEmRodovia rdf:resource="#br_471"/>
-  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_3"/>
+  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_4"/>
+  <localizadoEm rdf:resource="#Loc_7"/>
+  <temCondicaoAmbiental rdf:resource="#Clima_7"/>
+  <temFatorRisco rdf:resource="#Migracao_Sazonal_2"/>
+  <ocorreDurantePeriodo rdf:resource="#Periodo_7"/>
+  <dataEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-12-11</dataEvento>
+  <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10:00</horaEvento>
+  <condicaoAnimalPosEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morto</condicaoAnimalPosEvento>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Loc_7">
+  <rdf:type rdf:resource="#LocalizacaoGeografica"/>
+  <coordenadaLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-31.77690217914135</coordenadaLatitude>
+  <coordenadaLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-51.551864673356356</coordenadaLongitude>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Clima_7">
+  <rdf:type rdf:resource="#CondicaoClimatica"/>
+  <temperaturaRegistrada rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">29.206999521765617</temperaturaRegistrada>
+  <umidadeRelativa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">83.58213201079741</umidadeRelativa>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Periodo_7">
+  <rdf:type rdf:resource="#PeriodoTemporal"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Evento_Atropelamento_Sintetico_8">
   <rdf:type rdf:resource="#EventoAtropelamento"/>
   <envolveAnimal rdf:resource="#Mamifero_Sintetico_3"/>
   <ocorreEmRodovia rdf:resource="#br_471"/>
-  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_10"/>
+  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_7"/>
+  <localizadoEm rdf:resource="#Loc_8"/>
+  <temCondicaoAmbiental rdf:resource="#Clima_8"/>
+  <temFatorRisco rdf:resource="#Migracao_Sazonal_3"/>
+  <ocorreDurantePeriodo rdf:resource="#Periodo_8"/>
+  <dataEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-12-19</dataEvento>
+  <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19:00</horaEvento>
+  <condicaoAnimalPosEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morto</condicaoAnimalPosEvento>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Loc_8">
+  <rdf:type rdf:resource="#LocalizacaoGeografica"/>
+  <coordenadaLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-31.83432502712792</coordenadaLatitude>
+  <coordenadaLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-51.93611369088868</coordenadaLongitude>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Clima_8">
+  <rdf:type rdf:resource="#CondicaoClimatica"/>
+  <temperaturaRegistrada rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">29.030323350084807</temperaturaRegistrada>
+  <umidadeRelativa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">75.62276492614343</umidadeRelativa>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Periodo_8">
+  <rdf:type rdf:resource="#PeriodoTemporal"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Evento_Atropelamento_Sintetico_9">
   <rdf:type rdf:resource="#EventoAtropelamento"/>
-  <envolveAnimal rdf:resource="#Reptil_Sintetico_13"/>
+  <envolveAnimal rdf:resource="#Ave_Sintetica_59"/>
   <ocorreEmRodovia rdf:resource="#br_471"/>
-  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_5"/>
+  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_9"/>
+  <localizadoEm rdf:resource="#Loc_9"/>
+  <temCondicaoAmbiental rdf:resource="#Clima_9"/>
+  <temFatorRisco rdf:resource="#Migracao_Sazonal_2"/>
+  <ocorreDurantePeriodo rdf:resource="#Periodo_9"/>
+  <dataEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-10-25</dataEvento>
+  <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">04:00</horaEvento>
+  <condicaoAnimalPosEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morto</condicaoAnimalPosEvento>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Loc_9">
+  <rdf:type rdf:resource="#LocalizacaoGeografica"/>
+  <coordenadaLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-31.505417329624713</coordenadaLatitude>
+  <coordenadaLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-51.687941753583125</coordenadaLongitude>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Clima_9">
+  <rdf:type rdf:resource="#CondicaoClimatica"/>
+  <temperaturaRegistrada rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">24.337844707050472</temperaturaRegistrada>
+  <umidadeRelativa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">88.31660500761268</umidadeRelativa>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Periodo_9">
+  <rdf:type rdf:resource="#PeriodoTemporal"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Evento_Atropelamento_Sintetico_10">
   <rdf:type rdf:resource="#EventoAtropelamento"/>
-  <envolveAnimal rdf:resource="#Reptil_Sintetico_1"/>
+  <envolveAnimal rdf:resource="#Mamifero_Sintetico_13"/>
   <ocorreEmRodovia rdf:resource="#br_471"/>
-  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_2"/>
+  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_9"/>
+  <localizadoEm rdf:resource="#Loc_10"/>
+  <temCondicaoAmbiental rdf:resource="#Clima_10"/>
+  <temFatorRisco rdf:resource="#Velocidade_Excessiva_1"/>
+  <ocorreDurantePeriodo rdf:resource="#Periodo_10"/>
+  <dataEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-11-03</dataEvento>
+  <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10:00</horaEvento>
+  <condicaoAnimalPosEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morto</condicaoAnimalPosEvento>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Loc_10">
+  <rdf:type rdf:resource="#LocalizacaoGeografica"/>
+  <coordenadaLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-31.598183177787455</coordenadaLatitude>
+  <coordenadaLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-51.32148499475803</coordenadaLongitude>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Clima_10">
+  <rdf:type rdf:resource="#CondicaoClimatica"/>
+  <temperaturaRegistrada rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">21.323542744426845</temperaturaRegistrada>
+  <umidadeRelativa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">67.47336317226436</umidadeRelativa>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Periodo_10">
+  <rdf:type rdf:resource="#PeriodoTemporal"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Evento_Atropelamento_Sintetico_11">
   <rdf:type rdf:resource="#EventoAtropelamento"/>
-  <envolveAnimal rdf:resource="#Mamifero_Sintetico_6"/>
+  <envolveAnimal rdf:resource="#Ave_Sintetica_53"/>
   <ocorreEmRodovia rdf:resource="#br_471"/>
   <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_11"/>
+  <localizadoEm rdf:resource="#Loc_11"/>
+  <temCondicaoAmbiental rdf:resource="#Clima_11"/>
+  <temFatorRisco rdf:resource="#Velocidade_Excessiva_3"/>
+  <ocorreDurantePeriodo rdf:resource="#Periodo_11"/>
+  <dataEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-09-20</dataEvento>
+  <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">04:00</horaEvento>
+  <condicaoAnimalPosEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morto</condicaoAnimalPosEvento>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Loc_11">
+  <rdf:type rdf:resource="#LocalizacaoGeografica"/>
+  <coordenadaLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-31.881096105215253</coordenadaLatitude>
+  <coordenadaLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-51.35073457510384</coordenadaLongitude>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Clima_11">
+  <rdf:type rdf:resource="#CondicaoClimatica"/>
+  <temperaturaRegistrada rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">32.473076478006845</temperaturaRegistrada>
+  <umidadeRelativa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">69.79939601644054</umidadeRelativa>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Periodo_11">
+  <rdf:type rdf:resource="#PeriodoTemporal"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Evento_Atropelamento_Sintetico_12">
   <rdf:type rdf:resource="#EventoAtropelamento"/>
-  <envolveAnimal rdf:resource="#Ave_Sintetica_4"/>
+  <envolveAnimal rdf:resource="#Mamifero_Sintetico_7"/>
   <ocorreEmRodovia rdf:resource="#br_471"/>
-  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_3"/>
+  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_8"/>
+  <localizadoEm rdf:resource="#Loc_12"/>
+  <temCondicaoAmbiental rdf:resource="#Clima_12"/>
+  <temFatorRisco rdf:resource="#Velocidade_Excessiva_3"/>
+  <ocorreDurantePeriodo rdf:resource="#Periodo_12"/>
+  <dataEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-07-21</dataEvento>
+  <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">04:00</horaEvento>
+  <condicaoAnimalPosEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morto</condicaoAnimalPosEvento>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Loc_12">
+  <rdf:type rdf:resource="#LocalizacaoGeografica"/>
+  <coordenadaLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-31.725286156580736</coordenadaLatitude>
+  <coordenadaLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-51.547021815182084</coordenadaLongitude>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Clima_12">
+  <rdf:type rdf:resource="#CondicaoClimatica"/>
+  <temperaturaRegistrada rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30.846830623713046</temperaturaRegistrada>
+  <umidadeRelativa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">90.14759662730327</umidadeRelativa>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Periodo_12">
+  <rdf:type rdf:resource="#PeriodoTemporal"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Evento_Atropelamento_Sintetico_13">
   <rdf:type rdf:resource="#EventoAtropelamento"/>
-  <envolveAnimal rdf:resource="#Ave_Sintetica_12"/>
+  <envolveAnimal rdf:resource="#Reptil_Sintetico_42"/>
   <ocorreEmRodovia rdf:resource="#br_471"/>
-  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_3"/>
+  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_9"/>
+  <localizadoEm rdf:resource="#Loc_13"/>
+  <temCondicaoAmbiental rdf:resource="#Clima_13"/>
+  <temFatorRisco rdf:resource="#Velocidade_Excessiva_5"/>
+  <ocorreDurantePeriodo rdf:resource="#Periodo_13"/>
+  <dataEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-11-21</dataEvento>
+  <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14:00</horaEvento>
+  <condicaoAnimalPosEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morto</condicaoAnimalPosEvento>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Loc_13">
+  <rdf:type rdf:resource="#LocalizacaoGeografica"/>
+  <coordenadaLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-31.128136164289415</coordenadaLatitude>
+  <coordenadaLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-51.721590184783636</coordenadaLongitude>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Clima_13">
+  <rdf:type rdf:resource="#CondicaoClimatica"/>
+  <temperaturaRegistrada rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15.371486550911904</temperaturaRegistrada>
+  <umidadeRelativa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">61.42321457863413</umidadeRelativa>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Periodo_13">
+  <rdf:type rdf:resource="#PeriodoTemporal"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Evento_Atropelamento_Sintetico_14">
   <rdf:type rdf:resource="#EventoAtropelamento"/>
-  <envolveAnimal rdf:resource="#Ave_Sintetica_15"/>
+  <envolveAnimal rdf:resource="#Reptil_Sintetico_36"/>
   <ocorreEmRodovia rdf:resource="#br_471"/>
-  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_1"/>
+  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_6"/>
+  <localizadoEm rdf:resource="#Loc_14"/>
+  <temCondicaoAmbiental rdf:resource="#Clima_14"/>
+  <temFatorRisco rdf:resource="#Migracao_Sazonal_4"/>
+  <ocorreDurantePeriodo rdf:resource="#Periodo_14"/>
+  <dataEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-06-19</dataEvento>
+  <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">04:00</horaEvento>
+  <condicaoAnimalPosEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ferido</condicaoAnimalPosEvento>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Loc_14">
+  <rdf:type rdf:resource="#LocalizacaoGeografica"/>
+  <coordenadaLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-31.287642347483757</coordenadaLatitude>
+  <coordenadaLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-51.09728984938067</coordenadaLongitude>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Clima_14">
+  <rdf:type rdf:resource="#CondicaoClimatica"/>
+  <temperaturaRegistrada rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">27.802823995864482</temperaturaRegistrada>
+  <umidadeRelativa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">73.03572420402895</umidadeRelativa>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Periodo_14">
+  <rdf:type rdf:resource="#PeriodoTemporal"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Evento_Atropelamento_Sintetico_15">
   <rdf:type rdf:resource="#EventoAtropelamento"/>
-  <envolveAnimal rdf:resource="#Ave_Sintetica_9"/>
+  <envolveAnimal rdf:resource="#Mamifero_Sintetico_12"/>
   <ocorreEmRodovia rdf:resource="#br_471"/>
-  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_2"/>
+  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_4"/>
+  <localizadoEm rdf:resource="#Loc_15"/>
+  <temCondicaoAmbiental rdf:resource="#Clima_15"/>
+  <temFatorRisco rdf:resource="#Velocidade_Excessiva_2"/>
+  <ocorreDurantePeriodo rdf:resource="#Periodo_15"/>
+  <dataEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-07-19</dataEvento>
+  <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14:00</horaEvento>
+  <condicaoAnimalPosEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morto</condicaoAnimalPosEvento>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Loc_15">
+  <rdf:type rdf:resource="#LocalizacaoGeografica"/>
+  <coordenadaLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-31.861543050773268</coordenadaLatitude>
+  <coordenadaLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-51.72862656911158</coordenadaLongitude>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Clima_15">
+  <rdf:type rdf:resource="#CondicaoClimatica"/>
+  <temperaturaRegistrada rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">21.750221370104427</temperaturaRegistrada>
+  <umidadeRelativa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">72.852051631715</umidadeRelativa>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Periodo_15">
+  <rdf:type rdf:resource="#PeriodoTemporal"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Evento_Atropelamento_Sintetico_16">
   <rdf:type rdf:resource="#EventoAtropelamento"/>
-  <envolveAnimal rdf:resource="#Ave_Sintetica_13"/>
+  <envolveAnimal rdf:resource="#Mamifero_Sintetico_22"/>
   <ocorreEmRodovia rdf:resource="#br_471"/>
-  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_12"/>
+  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_13"/>
+  <localizadoEm rdf:resource="#Loc_16"/>
+  <temCondicaoAmbiental rdf:resource="#Clima_16"/>
+  <temFatorRisco rdf:resource="#Migracao_Sazonal_4"/>
+  <ocorreDurantePeriodo rdf:resource="#Periodo_16"/>
+  <dataEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-10-02</dataEvento>
+  <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">04:00</horaEvento>
+  <condicaoAnimalPosEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ferido</condicaoAnimalPosEvento>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Loc_16">
+  <rdf:type rdf:resource="#LocalizacaoGeografica"/>
+  <coordenadaLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-31.836139454324424</coordenadaLatitude>
+  <coordenadaLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-51.018085929874694</coordenadaLongitude>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Clima_16">
+  <rdf:type rdf:resource="#CondicaoClimatica"/>
+  <temperaturaRegistrada rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20.79061707271734</temperaturaRegistrada>
+  <umidadeRelativa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">73.81771940459018</umidadeRelativa>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Periodo_16">
+  <rdf:type rdf:resource="#PeriodoTemporal"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Evento_Atropelamento_Sintetico_17">
   <rdf:type rdf:resource="#EventoAtropelamento"/>
-  <envolveAnimal rdf:resource="#Ave_Sintetica_15"/>
+  <envolveAnimal rdf:resource="#Mamifero_Sintetico_9"/>
   <ocorreEmRodovia rdf:resource="#br_471"/>
-  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_14"/>
+  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_5"/>
+  <localizadoEm rdf:resource="#Loc_17"/>
+  <temCondicaoAmbiental rdf:resource="#Clima_17"/>
+  <temFatorRisco rdf:resource="#Migracao_Sazonal_1"/>
+  <ocorreDurantePeriodo rdf:resource="#Periodo_17"/>
+  <dataEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-02-16</dataEvento>
+  <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10:00</horaEvento>
+  <condicaoAnimalPosEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morto</condicaoAnimalPosEvento>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Loc_17">
+  <rdf:type rdf:resource="#LocalizacaoGeografica"/>
+  <coordenadaLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-31.692120237800577</coordenadaLatitude>
+  <coordenadaLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-51.14296342042796</coordenadaLongitude>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Clima_17">
+  <rdf:type rdf:resource="#CondicaoClimatica"/>
+  <temperaturaRegistrada rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">29.573214958736727</temperaturaRegistrada>
+  <umidadeRelativa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">70.59347312235028</umidadeRelativa>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Periodo_17">
+  <rdf:type rdf:resource="#PeriodoTemporal"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Evento_Atropelamento_Sintetico_18">
   <rdf:type rdf:resource="#EventoAtropelamento"/>
-  <envolveAnimal rdf:resource="#Reptil_Sintetico_5"/>
+  <envolveAnimal rdf:resource="#Mamifero_Sintetico_20"/>
   <ocorreEmRodovia rdf:resource="#br_471"/>
-  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_11"/>
+  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_7"/>
+  <localizadoEm rdf:resource="#Loc_18"/>
+  <temCondicaoAmbiental rdf:resource="#Clima_18"/>
+  <temFatorRisco rdf:resource="#Migracao_Sazonal_3"/>
+  <ocorreDurantePeriodo rdf:resource="#Periodo_18"/>
+  <dataEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-02-04</dataEvento>
+  <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22:00</horaEvento>
+  <condicaoAnimalPosEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ferido</condicaoAnimalPosEvento>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Loc_18">
+  <rdf:type rdf:resource="#LocalizacaoGeografica"/>
+  <coordenadaLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-31.525995348862704</coordenadaLatitude>
+  <coordenadaLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-51.15915166737233</coordenadaLongitude>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Clima_18">
+  <rdf:type rdf:resource="#CondicaoClimatica"/>
+  <temperaturaRegistrada rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">34.524589152981136</temperaturaRegistrada>
+  <umidadeRelativa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">72.02780577802187</umidadeRelativa>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Periodo_18">
+  <rdf:type rdf:resource="#PeriodoTemporal"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Evento_Atropelamento_Sintetico_19">
   <rdf:type rdf:resource="#EventoAtropelamento"/>
-  <envolveAnimal rdf:resource="#Mamifero_Sintetico_26"/>
+  <envolveAnimal rdf:resource="#Mamifero_Sintetico_8"/>
   <ocorreEmRodovia rdf:resource="#br_471"/>
-  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_14"/>
+  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_12"/>
+  <localizadoEm rdf:resource="#Loc_19"/>
+  <temCondicaoAmbiental rdf:resource="#Clima_19"/>
+  <temFatorRisco rdf:resource="#Migracao_Sazonal_5"/>
+  <ocorreDurantePeriodo rdf:resource="#Periodo_19"/>
+  <dataEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-08-14</dataEvento>
+  <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">04:00</horaEvento>
+  <condicaoAnimalPosEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ferido</condicaoAnimalPosEvento>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Loc_19">
+  <rdf:type rdf:resource="#LocalizacaoGeografica"/>
+  <coordenadaLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-31.66491808939911</coordenadaLatitude>
+  <coordenadaLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-51.31288950968981</coordenadaLongitude>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Clima_19">
+  <rdf:type rdf:resource="#CondicaoClimatica"/>
+  <temperaturaRegistrada rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">18.113282012893087</temperaturaRegistrada>
+  <umidadeRelativa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">65.82946618598677</umidadeRelativa>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Periodo_19">
+  <rdf:type rdf:resource="#PeriodoTemporal"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Evento_Atropelamento_Sintetico_20">
   <rdf:type rdf:resource="#EventoAtropelamento"/>
-  <envolveAnimal rdf:resource="#Ave_Sintetica_1"/>
+  <envolveAnimal rdf:resource="#Mamifero_Sintetico_25"/>
   <ocorreEmRodovia rdf:resource="#br_471"/>
-  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_9"/>
+  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_13"/>
+  <localizadoEm rdf:resource="#Loc_20"/>
+  <temCondicaoAmbiental rdf:resource="#Clima_20"/>
+  <temFatorRisco rdf:resource="#Migracao_Sazonal_4"/>
+  <ocorreDurantePeriodo rdf:resource="#Periodo_20"/>
+  <dataEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-11-03</dataEvento>
+  <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">04:00</horaEvento>
+  <condicaoAnimalPosEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morto</condicaoAnimalPosEvento>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Loc_20">
+  <rdf:type rdf:resource="#LocalizacaoGeografica"/>
+  <coordenadaLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-31.801959717647215</coordenadaLatitude>
+  <coordenadaLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-51.7789412806842</coordenadaLongitude>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Clima_20">
+  <rdf:type rdf:resource="#CondicaoClimatica"/>
+  <temperaturaRegistrada rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">22.69623801229164</temperaturaRegistrada>
+  <umidadeRelativa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">63.43267786341368</umidadeRelativa>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Periodo_20">
+  <rdf:type rdf:resource="#PeriodoTemporal"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Evento_Atropelamento_Sintetico_21">
   <rdf:type rdf:resource="#EventoAtropelamento"/>
-  <envolveAnimal rdf:resource="#Mamifero_Sintetico_18"/>
+  <envolveAnimal rdf:resource="#Reptil_Sintetico_34"/>
   <ocorreEmRodovia rdf:resource="#br_471"/>
-  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_9"/>
+  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_5"/>
+  <localizadoEm rdf:resource="#Loc_21"/>
+  <temCondicaoAmbiental rdf:resource="#Clima_21"/>
+  <temFatorRisco rdf:resource="#Velocidade_Excessiva_3"/>
+  <ocorreDurantePeriodo rdf:resource="#Periodo_21"/>
+  <dataEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-08-16</dataEvento>
+  <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22:00</horaEvento>
+  <condicaoAnimalPosEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morto</condicaoAnimalPosEvento>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Loc_21">
+  <rdf:type rdf:resource="#LocalizacaoGeografica"/>
+  <coordenadaLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-31.576961926492576</coordenadaLatitude>
+  <coordenadaLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-51.631668543665576</coordenadaLongitude>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Clima_21">
+  <rdf:type rdf:resource="#CondicaoClimatica"/>
+  <temperaturaRegistrada rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">34.769181161985784</temperaturaRegistrada>
+  <umidadeRelativa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">69.13207874061897</umidadeRelativa>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Periodo_21">
+  <rdf:type rdf:resource="#PeriodoTemporal"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Evento_Atropelamento_Sintetico_22">
   <rdf:type rdf:resource="#EventoAtropelamento"/>
-  <envolveAnimal rdf:resource="#Ave_Sintetica_7"/>
+  <envolveAnimal rdf:resource="#Mamifero_Sintetico_28"/>
   <ocorreEmRodovia rdf:resource="#br_471"/>
   <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_4"/>
+  <localizadoEm rdf:resource="#Loc_22"/>
+  <temCondicaoAmbiental rdf:resource="#Clima_22"/>
+  <temFatorRisco rdf:resource="#Migracao_Sazonal_2"/>
+  <ocorreDurantePeriodo rdf:resource="#Periodo_22"/>
+  <dataEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-06-04</dataEvento>
+  <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">04:00</horaEvento>
+  <condicaoAnimalPosEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morto</condicaoAnimalPosEvento>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Loc_22">
+  <rdf:type rdf:resource="#LocalizacaoGeografica"/>
+  <coordenadaLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-31.096989292459075</coordenadaLatitude>
+  <coordenadaLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-51.54838820731313</coordenadaLongitude>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Clima_22">
+  <rdf:type rdf:resource="#CondicaoClimatica"/>
+  <temperaturaRegistrada rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">28.53841933633207</temperaturaRegistrada>
+  <umidadeRelativa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.16186002938495</umidadeRelativa>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Periodo_22">
+  <rdf:type rdf:resource="#PeriodoTemporal"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Evento_Atropelamento_Sintetico_23">
   <rdf:type rdf:resource="#EventoAtropelamento"/>
-  <envolveAnimal rdf:resource="#Ave_Sintetica_10"/>
+  <envolveAnimal rdf:resource="#Mamifero_Sintetico_17"/>
   <ocorreEmRodovia rdf:resource="#br_471"/>
   <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_4"/>
+  <localizadoEm rdf:resource="#Loc_23"/>
+  <temCondicaoAmbiental rdf:resource="#Clima_23"/>
+  <temFatorRisco rdf:resource="#Velocidade_Excessiva_2"/>
+  <ocorreDurantePeriodo rdf:resource="#Periodo_23"/>
+  <dataEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-11-02</dataEvento>
+  <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10:00</horaEvento>
+  <condicaoAnimalPosEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morto</condicaoAnimalPosEvento>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Loc_23">
+  <rdf:type rdf:resource="#LocalizacaoGeografica"/>
+  <coordenadaLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-31.895370310560093</coordenadaLatitude>
+  <coordenadaLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-51.54159195439494</coordenadaLongitude>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Clima_23">
+  <rdf:type rdf:resource="#CondicaoClimatica"/>
+  <temperaturaRegistrada rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">22.232841930745728</temperaturaRegistrada>
+  <umidadeRelativa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">88.94453063828277</umidadeRelativa>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Periodo_23">
+  <rdf:type rdf:resource="#PeriodoTemporal"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Evento_Atropelamento_Sintetico_24">
   <rdf:type rdf:resource="#EventoAtropelamento"/>
-  <envolveAnimal rdf:resource="#Ave_Sintetica_13"/>
+  <envolveAnimal rdf:resource="#Reptil_Sintetico_39"/>
   <ocorreEmRodovia rdf:resource="#br_471"/>
-  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_11"/>
+  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_8"/>
+  <localizadoEm rdf:resource="#Loc_24"/>
+  <temCondicaoAmbiental rdf:resource="#Clima_24"/>
+  <temFatorRisco rdf:resource="#Migracao_Sazonal_3"/>
+  <ocorreDurantePeriodo rdf:resource="#Periodo_24"/>
+  <dataEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-03-19</dataEvento>
+  <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19:00</horaEvento>
+  <condicaoAnimalPosEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ferido</condicaoAnimalPosEvento>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Loc_24">
+  <rdf:type rdf:resource="#LocalizacaoGeografica"/>
+  <coordenadaLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-31.122343417098904</coordenadaLatitude>
+  <coordenadaLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-51.50459407508881</coordenadaLongitude>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Clima_24">
+  <rdf:type rdf:resource="#CondicaoClimatica"/>
+  <temperaturaRegistrada rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">33.34093345519631</temperaturaRegistrada>
+  <umidadeRelativa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">71.28611102084571</umidadeRelativa>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Periodo_24">
+  <rdf:type rdf:resource="#PeriodoTemporal"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Evento_Atropelamento_Sintetico_25">
   <rdf:type rdf:resource="#EventoAtropelamento"/>
-  <envolveAnimal rdf:resource="#Reptil_Sintetico_8"/>
+  <envolveAnimal rdf:resource="#Reptil_Sintetico_32"/>
   <ocorreEmRodovia rdf:resource="#br_471"/>
-  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_14"/>
+  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_11"/>
+  <localizadoEm rdf:resource="#Loc_25"/>
+  <temCondicaoAmbiental rdf:resource="#Clima_25"/>
+  <temFatorRisco rdf:resource="#Migracao_Sazonal_1"/>
+  <ocorreDurantePeriodo rdf:resource="#Periodo_25"/>
+  <dataEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-11-28</dataEvento>
+  <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10:00</horaEvento>
+  <condicaoAnimalPosEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morto</condicaoAnimalPosEvento>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Loc_25">
+  <rdf:type rdf:resource="#LocalizacaoGeografica"/>
+  <coordenadaLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-31.990295340566185</coordenadaLatitude>
+  <coordenadaLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-51.29440626529927</coordenadaLongitude>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Clima_25">
+  <rdf:type rdf:resource="#CondicaoClimatica"/>
+  <temperaturaRegistrada rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">29.940777703971868</temperaturaRegistrada>
+  <umidadeRelativa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">71.13908036525655</umidadeRelativa>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Periodo_25">
+  <rdf:type rdf:resource="#PeriodoTemporal"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Evento_Atropelamento_Sintetico_26">
   <rdf:type rdf:resource="#EventoAtropelamento"/>
-  <envolveAnimal rdf:resource="#Mamifero_Sintetico_27"/>
+  <envolveAnimal rdf:resource="#Mamifero_Sintetico_3"/>
   <ocorreEmRodovia rdf:resource="#br_471"/>
-  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_10"/>
+  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_9"/>
+  <localizadoEm rdf:resource="#Loc_26"/>
+  <temCondicaoAmbiental rdf:resource="#Clima_26"/>
+  <temFatorRisco rdf:resource="#Velocidade_Excessiva_2"/>
+  <ocorreDurantePeriodo rdf:resource="#Periodo_26"/>
+  <dataEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-03-28</dataEvento>
+  <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14:00</horaEvento>
+  <condicaoAnimalPosEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morto</condicaoAnimalPosEvento>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Loc_26">
+  <rdf:type rdf:resource="#LocalizacaoGeografica"/>
+  <coordenadaLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-31.157666672922634</coordenadaLatitude>
+  <coordenadaLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-51.41705181975378</coordenadaLongitude>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Clima_26">
+  <rdf:type rdf:resource="#CondicaoClimatica"/>
+  <temperaturaRegistrada rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">29.36263303553659</temperaturaRegistrada>
+  <umidadeRelativa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">88.24693829912765</umidadeRelativa>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Periodo_26">
+  <rdf:type rdf:resource="#PeriodoTemporal"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Evento_Atropelamento_Sintetico_27">
   <rdf:type rdf:resource="#EventoAtropelamento"/>
-  <envolveAnimal rdf:resource="#Mamifero_Sintetico_18"/>
+  <envolveAnimal rdf:resource="#Ave_Sintetica_52"/>
   <ocorreEmRodovia rdf:resource="#br_471"/>
-  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_8"/>
+  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_2"/>
+  <localizadoEm rdf:resource="#Loc_27"/>
+  <temCondicaoAmbiental rdf:resource="#Clima_27"/>
+  <temFatorRisco rdf:resource="#Migracao_Sazonal_1"/>
+  <ocorreDurantePeriodo rdf:resource="#Periodo_27"/>
+  <dataEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-09-28</dataEvento>
+  <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">04:00</horaEvento>
+  <condicaoAnimalPosEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morto</condicaoAnimalPosEvento>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Loc_27">
+  <rdf:type rdf:resource="#LocalizacaoGeografica"/>
+  <coordenadaLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-31.774909346323504</coordenadaLatitude>
+  <coordenadaLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-51.9593679733541</coordenadaLongitude>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Clima_27">
+  <rdf:type rdf:resource="#CondicaoClimatica"/>
+  <temperaturaRegistrada rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15.305702799394536</temperaturaRegistrada>
+  <umidadeRelativa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">89.53841399923428</umidadeRelativa>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Periodo_27">
+  <rdf:type rdf:resource="#PeriodoTemporal"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Evento_Atropelamento_Sintetico_28">
   <rdf:type rdf:resource="#EventoAtropelamento"/>
-  <envolveAnimal rdf:resource="#Reptil_Sintetico_2"/>
+  <envolveAnimal rdf:resource="#Ave_Sintetica_56"/>
   <ocorreEmRodovia rdf:resource="#br_471"/>
-  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_11"/>
+  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_3"/>
+  <localizadoEm rdf:resource="#Loc_28"/>
+  <temCondicaoAmbiental rdf:resource="#Clima_28"/>
+  <temFatorRisco rdf:resource="#Migracao_Sazonal_4"/>
+  <ocorreDurantePeriodo rdf:resource="#Periodo_28"/>
+  <dataEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-03-28</dataEvento>
+  <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19:00</horaEvento>
+  <condicaoAnimalPosEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ferido</condicaoAnimalPosEvento>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Loc_28">
+  <rdf:type rdf:resource="#LocalizacaoGeografica"/>
+  <coordenadaLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-31.49500030739432</coordenadaLatitude>
+  <coordenadaLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-51.09890952311599</coordenadaLongitude>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Clima_28">
+  <rdf:type rdf:resource="#CondicaoClimatica"/>
+  <temperaturaRegistrada rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">25.04857197904855</temperaturaRegistrada>
+  <umidadeRelativa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">80.08553671220423</umidadeRelativa>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Periodo_28">
+  <rdf:type rdf:resource="#PeriodoTemporal"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Evento_Atropelamento_Sintetico_29">
   <rdf:type rdf:resource="#EventoAtropelamento"/>
-  <envolveAnimal rdf:resource="#Reptil_Sintetico_12"/>
+  <envolveAnimal rdf:resource="#Ave_Sintetica_49"/>
   <ocorreEmRodovia rdf:resource="#br_471"/>
-  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_12"/>
+  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_10"/>
+  <localizadoEm rdf:resource="#Loc_29"/>
+  <temCondicaoAmbiental rdf:resource="#Clima_29"/>
+  <temFatorRisco rdf:resource="#Migracao_Sazonal_2"/>
+  <ocorreDurantePeriodo rdf:resource="#Periodo_29"/>
+  <dataEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-02-24</dataEvento>
+  <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19:00</horaEvento>
+  <condicaoAnimalPosEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morto</condicaoAnimalPosEvento>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Loc_29">
+  <rdf:type rdf:resource="#LocalizacaoGeografica"/>
+  <coordenadaLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-31.710335861627637</coordenadaLatitude>
+  <coordenadaLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-51.09886128009398</coordenadaLongitude>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Clima_29">
+  <rdf:type rdf:resource="#CondicaoClimatica"/>
+  <temperaturaRegistrada rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">23.356813017382713</temperaturaRegistrada>
+  <umidadeRelativa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">94.03919787613657</umidadeRelativa>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Periodo_29">
+  <rdf:type rdf:resource="#PeriodoTemporal"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Evento_Atropelamento_Sintetico_30">
   <rdf:type rdf:resource="#EventoAtropelamento"/>
-  <envolveAnimal rdf:resource="#Ave_Sintetica_14"/>
+  <envolveAnimal rdf:resource="#Reptil_Sintetico_39"/>
   <ocorreEmRodovia rdf:resource="#br_471"/>
-  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_13"/>
+  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_10"/>
+  <localizadoEm rdf:resource="#Loc_30"/>
+  <temCondicaoAmbiental rdf:resource="#Clima_30"/>
+  <temFatorRisco rdf:resource="#Migracao_Sazonal_3"/>
+  <ocorreDurantePeriodo rdf:resource="#Periodo_30"/>
+  <dataEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-04-28</dataEvento>
+  <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">04:00</horaEvento>
+  <condicaoAnimalPosEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morto</condicaoAnimalPosEvento>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Loc_30">
+  <rdf:type rdf:resource="#LocalizacaoGeografica"/>
+  <coordenadaLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-31.259254595771665</coordenadaLatitude>
+  <coordenadaLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-51.697557952203915</coordenadaLongitude>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Clima_30">
+  <rdf:type rdf:resource="#CondicaoClimatica"/>
+  <temperaturaRegistrada rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">26.40533272243431</temperaturaRegistrada>
+  <umidadeRelativa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">71.64400348288365</umidadeRelativa>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Periodo_30">
+  <rdf:type rdf:resource="#PeriodoTemporal"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Evento_Atropelamento_Sintetico_31">
   <rdf:type rdf:resource="#EventoAtropelamento"/>
-  <envolveAnimal rdf:resource="#Mamifero_Sintetico_23"/>
+  <envolveAnimal rdf:resource="#Ave_Sintetica_56"/>
   <ocorreEmRodovia rdf:resource="#br_471"/>
-  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_2"/>
+  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_5"/>
+  <localizadoEm rdf:resource="#Loc_31"/>
+  <temCondicaoAmbiental rdf:resource="#Clima_31"/>
+  <temFatorRisco rdf:resource="#Velocidade_Excessiva_5"/>
+  <ocorreDurantePeriodo rdf:resource="#Periodo_31"/>
+  <dataEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-05-25</dataEvento>
+  <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19:00</horaEvento>
+  <condicaoAnimalPosEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ferido</condicaoAnimalPosEvento>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Loc_31">
+  <rdf:type rdf:resource="#LocalizacaoGeografica"/>
+  <coordenadaLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-31.189962466182713</coordenadaLatitude>
+  <coordenadaLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-51.937741241128776</coordenadaLongitude>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Clima_31">
+  <rdf:type rdf:resource="#CondicaoClimatica"/>
+  <temperaturaRegistrada rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">27.819697251249004</temperaturaRegistrada>
+  <umidadeRelativa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.45622845264755</umidadeRelativa>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Periodo_31">
+  <rdf:type rdf:resource="#PeriodoTemporal"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Evento_Atropelamento_Sintetico_32">
   <rdf:type rdf:resource="#EventoAtropelamento"/>
-  <envolveAnimal rdf:resource="#Mamifero_Sintetico_21"/>
+  <envolveAnimal rdf:resource="#Ave_Sintetica_47"/>
   <ocorreEmRodovia rdf:resource="#br_471"/>
-  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_10"/>
+  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_14"/>
+  <localizadoEm rdf:resource="#Loc_32"/>
+  <temCondicaoAmbiental rdf:resource="#Clima_32"/>
+  <temFatorRisco rdf:resource="#Velocidade_Excessiva_3"/>
+  <ocorreDurantePeriodo rdf:resource="#Periodo_32"/>
+  <dataEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-06-02</dataEvento>
+  <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">04:00</horaEvento>
+  <condicaoAnimalPosEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ferido</condicaoAnimalPosEvento>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Loc_32">
+  <rdf:type rdf:resource="#LocalizacaoGeografica"/>
+  <coordenadaLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-31.582133955203705</coordenadaLatitude>
+  <coordenadaLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-51.50816904090374</coordenadaLongitude>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Clima_32">
+  <rdf:type rdf:resource="#CondicaoClimatica"/>
+  <temperaturaRegistrada rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">32.26650366216401</temperaturaRegistrada>
+  <umidadeRelativa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">85.10160612208163</umidadeRelativa>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Periodo_32">
+  <rdf:type rdf:resource="#PeriodoTemporal"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Evento_Atropelamento_Sintetico_33">
   <rdf:type rdf:resource="#EventoAtropelamento"/>
-  <envolveAnimal rdf:resource="#Mamifero_Sintetico_8"/>
+  <envolveAnimal rdf:resource="#Ave_Sintetica_52"/>
   <ocorreEmRodovia rdf:resource="#br_471"/>
-  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_8"/>
+  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_6"/>
+  <localizadoEm rdf:resource="#Loc_33"/>
+  <temCondicaoAmbiental rdf:resource="#Clima_33"/>
+  <temFatorRisco rdf:resource="#Velocidade_Excessiva_1"/>
+  <ocorreDurantePeriodo rdf:resource="#Periodo_33"/>
+  <dataEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-07-02</dataEvento>
+  <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22:00</horaEvento>
+  <condicaoAnimalPosEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ferido</condicaoAnimalPosEvento>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Loc_33">
+  <rdf:type rdf:resource="#LocalizacaoGeografica"/>
+  <coordenadaLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-31.613316994466764</coordenadaLatitude>
+  <coordenadaLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-51.95296708418816</coordenadaLongitude>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Clima_33">
+  <rdf:type rdf:resource="#CondicaoClimatica"/>
+  <temperaturaRegistrada rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">24.417784180961306</temperaturaRegistrada>
+  <umidadeRelativa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">65.29787138631927</umidadeRelativa>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Periodo_33">
+  <rdf:type rdf:resource="#PeriodoTemporal"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Evento_Atropelamento_Sintetico_34">
   <rdf:type rdf:resource="#EventoAtropelamento"/>
-  <envolveAnimal rdf:resource="#Reptil_Sintetico_8"/>
+  <envolveAnimal rdf:resource="#Reptil_Sintetico_39"/>
   <ocorreEmRodovia rdf:resource="#br_471"/>
-  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_11"/>
+  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_10"/>
+  <localizadoEm rdf:resource="#Loc_34"/>
+  <temCondicaoAmbiental rdf:resource="#Clima_34"/>
+  <temFatorRisco rdf:resource="#Migracao_Sazonal_3"/>
+  <ocorreDurantePeriodo rdf:resource="#Periodo_34"/>
+  <dataEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-03-21</dataEvento>
+  <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14:00</horaEvento>
+  <condicaoAnimalPosEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morto</condicaoAnimalPosEvento>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Loc_34">
+  <rdf:type rdf:resource="#LocalizacaoGeografica"/>
+  <coordenadaLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-31.299920308968844</coordenadaLatitude>
+  <coordenadaLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-51.351007742087035</coordenadaLongitude>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Clima_34">
+  <rdf:type rdf:resource="#CondicaoClimatica"/>
+  <temperaturaRegistrada rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">18.899472412975737</temperaturaRegistrada>
+  <umidadeRelativa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">87.4195939464472</umidadeRelativa>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Periodo_34">
+  <rdf:type rdf:resource="#PeriodoTemporal"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Evento_Atropelamento_Sintetico_35">
   <rdf:type rdf:resource="#EventoAtropelamento"/>
-  <envolveAnimal rdf:resource="#Mamifero_Sintetico_22"/>
+  <envolveAnimal rdf:resource="#Mamifero_Sintetico_8"/>
   <ocorreEmRodovia rdf:resource="#br_471"/>
-  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_14"/>
+  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_15"/>
+  <localizadoEm rdf:resource="#Loc_35"/>
+  <temCondicaoAmbiental rdf:resource="#Clima_35"/>
+  <temFatorRisco rdf:resource="#Velocidade_Excessiva_3"/>
+  <ocorreDurantePeriodo rdf:resource="#Periodo_35"/>
+  <dataEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-01-20</dataEvento>
+  <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19:00</horaEvento>
+  <condicaoAnimalPosEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ferido</condicaoAnimalPosEvento>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Loc_35">
+  <rdf:type rdf:resource="#LocalizacaoGeografica"/>
+  <coordenadaLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-31.3495278200185</coordenadaLatitude>
+  <coordenadaLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-51.03051457790636</coordenadaLongitude>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Clima_35">
+  <rdf:type rdf:resource="#CondicaoClimatica"/>
+  <temperaturaRegistrada rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">29.272337797587728</temperaturaRegistrada>
+  <umidadeRelativa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">70.3735236272203</umidadeRelativa>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Periodo_35">
+  <rdf:type rdf:resource="#PeriodoTemporal"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Evento_Atropelamento_Sintetico_36">
   <rdf:type rdf:resource="#EventoAtropelamento"/>
-  <envolveAnimal rdf:resource="#Mamifero_Sintetico_13"/>
+  <envolveAnimal rdf:resource="#Ave_Sintetica_59"/>
   <ocorreEmRodovia rdf:resource="#br_471"/>
-  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_4"/>
+  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_7"/>
+  <localizadoEm rdf:resource="#Loc_36"/>
+  <temCondicaoAmbiental rdf:resource="#Clima_36"/>
+  <temFatorRisco rdf:resource="#Migracao_Sazonal_1"/>
+  <ocorreDurantePeriodo rdf:resource="#Periodo_36"/>
+  <dataEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-05-24</dataEvento>
+  <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">04:00</horaEvento>
+  <condicaoAnimalPosEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morto</condicaoAnimalPosEvento>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Loc_36">
+  <rdf:type rdf:resource="#LocalizacaoGeografica"/>
+  <coordenadaLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-31.961815589799627</coordenadaLatitude>
+  <coordenadaLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-51.607973609532564</coordenadaLongitude>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Clima_36">
+  <rdf:type rdf:resource="#CondicaoClimatica"/>
+  <temperaturaRegistrada rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">22.43163284012917</temperaturaRegistrada>
+  <umidadeRelativa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">66.66671463058485</umidadeRelativa>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Periodo_36">
+  <rdf:type rdf:resource="#PeriodoTemporal"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Evento_Atropelamento_Sintetico_37">
   <rdf:type rdf:resource="#EventoAtropelamento"/>
-  <envolveAnimal rdf:resource="#Mamifero_Sintetico_2"/>
+  <envolveAnimal rdf:resource="#Ave_Sintetica_51"/>
   <ocorreEmRodovia rdf:resource="#br_471"/>
-  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_12"/>
+  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_11"/>
+  <localizadoEm rdf:resource="#Loc_37"/>
+  <temCondicaoAmbiental rdf:resource="#Clima_37"/>
+  <temFatorRisco rdf:resource="#Velocidade_Excessiva_4"/>
+  <ocorreDurantePeriodo rdf:resource="#Periodo_37"/>
+  <dataEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-02-02</dataEvento>
+  <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">04:00</horaEvento>
+  <condicaoAnimalPosEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ferido</condicaoAnimalPosEvento>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Loc_37">
+  <rdf:type rdf:resource="#LocalizacaoGeografica"/>
+  <coordenadaLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-31.744613670549754</coordenadaLatitude>
+  <coordenadaLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-51.97334399860514</coordenadaLongitude>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Clima_37">
+  <rdf:type rdf:resource="#CondicaoClimatica"/>
+  <temperaturaRegistrada rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">25.401263634340637</temperaturaRegistrada>
+  <umidadeRelativa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">79.9239864946372</umidadeRelativa>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Periodo_37">
+  <rdf:type rdf:resource="#PeriodoTemporal"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Evento_Atropelamento_Sintetico_38">
   <rdf:type rdf:resource="#EventoAtropelamento"/>
-  <envolveAnimal rdf:resource="#Mamifero_Sintetico_18"/>
+  <envolveAnimal rdf:resource="#Mamifero_Sintetico_15"/>
   <ocorreEmRodovia rdf:resource="#br_471"/>
   <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_2"/>
+  <localizadoEm rdf:resource="#Loc_38"/>
+  <temCondicaoAmbiental rdf:resource="#Clima_38"/>
+  <temFatorRisco rdf:resource="#Migracao_Sazonal_2"/>
+  <ocorreDurantePeriodo rdf:resource="#Periodo_38"/>
+  <dataEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-11-25</dataEvento>
+  <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22:00</horaEvento>
+  <condicaoAnimalPosEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ferido</condicaoAnimalPosEvento>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Loc_38">
+  <rdf:type rdf:resource="#LocalizacaoGeografica"/>
+  <coordenadaLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-31.492893276324036</coordenadaLatitude>
+  <coordenadaLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-51.05451445196982</coordenadaLongitude>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Clima_38">
+  <rdf:type rdf:resource="#CondicaoClimatica"/>
+  <temperaturaRegistrada rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">17.913808439071513</temperaturaRegistrada>
+  <umidadeRelativa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">91.21447380490939</umidadeRelativa>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Periodo_38">
+  <rdf:type rdf:resource="#PeriodoTemporal"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Evento_Atropelamento_Sintetico_39">
   <rdf:type rdf:resource="#EventoAtropelamento"/>
-  <envolveAnimal rdf:resource="#Ave_Sintetica_1"/>
+  <envolveAnimal rdf:resource="#Ave_Sintetica_60"/>
   <ocorreEmRodovia rdf:resource="#br_471"/>
-  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_4"/>
+  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_2"/>
+  <localizadoEm rdf:resource="#Loc_39"/>
+  <temCondicaoAmbiental rdf:resource="#Clima_39"/>
+  <temFatorRisco rdf:resource="#Migracao_Sazonal_2"/>
+  <ocorreDurantePeriodo rdf:resource="#Periodo_39"/>
+  <dataEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-02-14</dataEvento>
+  <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">04:00</horaEvento>
+  <condicaoAnimalPosEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morto</condicaoAnimalPosEvento>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Loc_39">
+  <rdf:type rdf:resource="#LocalizacaoGeografica"/>
+  <coordenadaLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-31.584838548497714</coordenadaLatitude>
+  <coordenadaLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-51.843843029929104</coordenadaLongitude>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Clima_39">
+  <rdf:type rdf:resource="#CondicaoClimatica"/>
+  <temperaturaRegistrada rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">34.09107685546589</temperaturaRegistrada>
+  <umidadeRelativa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">87.69699976321422</umidadeRelativa>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Periodo_39">
+  <rdf:type rdf:resource="#PeriodoTemporal"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Evento_Atropelamento_Sintetico_40">
   <rdf:type rdf:resource="#EventoAtropelamento"/>
-  <envolveAnimal rdf:resource="#Mamifero_Sintetico_24"/>
+  <envolveAnimal rdf:resource="#Reptil_Sintetico_44"/>
   <ocorreEmRodovia rdf:resource="#br_471"/>
-  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_13"/>
+  <ocorreEmTrecho rdf:resource="#Trecho_Sintetico_7"/>
+  <localizadoEm rdf:resource="#Loc_40"/>
+  <temCondicaoAmbiental rdf:resource="#Clima_40"/>
+  <temFatorRisco rdf:resource="#Migracao_Sazonal_1"/>
+  <ocorreDurantePeriodo rdf:resource="#Periodo_40"/>
+  <dataEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-01-16</dataEvento>
+  <horaEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14:00</horaEvento>
+  <condicaoAnimalPosEvento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ferido</condicaoAnimalPosEvento>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Loc_40">
+  <rdf:type rdf:resource="#LocalizacaoGeografica"/>
+  <coordenadaLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-31.921461460348198</coordenadaLatitude>
+  <coordenadaLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-51.929670534123645</coordenadaLongitude>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Clima_40">
+  <rdf:type rdf:resource="#CondicaoClimatica"/>
+  <temperaturaRegistrada rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">22.185066296424736</temperaturaRegistrada>
+  <umidadeRelativa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">61.02821277149452</umidadeRelativa>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Periodo_40">
+  <rdf:type rdf:resource="#PeriodoTemporal"/>
 </owl:NamedIndividual>
 
 

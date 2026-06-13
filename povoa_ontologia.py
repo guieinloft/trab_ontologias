@@ -59,25 +59,65 @@ def povoar_ontologia():
 		rodovia_principal = onto.Rodovia("br_471")
 		
 		tipos_vegetacao = [onto.TipoVegetacao(f"Vegetacao_Sintetica_{i}") for i in range(1, 11)]
+		corpos_hidricos = [onto.CorpoHidrico(f"CorpoHidrico_Sintetico_{i}") for i in range(1, 6)]
+		habitats = tipos_vegetacao + corpos_hidricos
+		
+		medidas = [onto.MedidaMitigacao(f"Passagem_Fauna_{i}") for i in range(1, 4)]
+		fatores_antropicos = [onto.FatorAntropico(f"Velocidade_Excessiva_{i}", mitigadoPor=[random.choice(medidas)]) for i in range(1, 6)]
+		fatores_ecologicos = [onto.FatorEcologico(f"Migracao_Sazonal_{i}") for i in range(1, 6)]
+		fatores_risco = fatores_antropicos + fatores_ecologicos
+		
+		especies_ameacadas = [onto.EspecieAnimal(f"Especie_Ameacada_{i}", nomeCientifico=[f"Sci name {i}"], nomeComum=[f"Common name {i}"], statusConservacao=["VU"]) for i in range(1, 6)]
+		especies_comuns = [onto.EspecieAnimal(f"Especie_Comum_{i}", nomeCientifico=[f"Sci name LC {i}"], nomeComum=[f"Common name LC {i}"], statusConservacao=["LC"]) for i in range(1, 6)]
+		todas_especies = especies_ameacadas + especies_comuns
 		
 		trechos = []
+		km_atual = 0.0
 		for i in range(1, 16):
 			tr = onto.TrechoRodoviario(f"Trecho_Sintetico_{i}")
-			tr.atravessaHabitat.append(random.choice(tipos_vegetacao))
+			tr.atravessaHabitat.append(random.choice(habitats))
+			tr.quilometragemInicial.append(km_atual)
+			km_atual += random.uniform(2.0, 5.0)
+			tr.quilometragemFinal.append(km_atual)
+			tr.velocidadeMaximaPermitida.append(random.choice([60.0, 80.0, 100.0]))
+			tr.larguraPista.append(random.choice([7.0, 8.0, 10.0]))
+			tr.volumeMedioTrafego.append(random.choice([1000, 1600, 2000]))
 			trechos.append(tr)
 		
 		rodovia_principal.compostoPorTrechos = trechos
-		mamiferos = [onto.Mamifero(f"Mamifero_Sintetico_{i}", possuiHabitat=[random.choice(tipos_vegetacao)]) for i in range(1, 31)]
-		repteis = [onto.Reptil(f"Reptil_Sintetico_{i}", possuiHabitat=[random.choice(tipos_vegetacao)]) for i in range(1, 16)]
-		aves = [onto.Ave(f"Ave_Sintetica_{i}", possuiHabitat=[random.choice(tipos_vegetacao)]) for i in range(1, 16)]
 		
-		animais = mamiferos + repteis + aves
+		animais = []
+		for i in range(1, 61):
+			if i <= 30:
+				animal = onto.Mamifero(f"Mamifero_Sintetico_{i}")
+			elif i <= 45:
+				animal = onto.Reptil(f"Reptil_Sintetico_{i}")
+			else:
+				animal = onto.Ave(f"Ave_Sintetica_{i}")
+			animal.possuiHabitat.append(random.choice(habitats))
+			animal.nomeComum.append(f"Animal {i}")
+			animal.pertenceAEspecie.append(random.choice(todas_especies))
+			animais.append(animal)
 		
 		for i in range(1, 41):
 			evento = onto.EventoAtropelamento(f"Evento_Atropelamento_Sintetico_{i}")
 			evento.envolveAnimal.append(random.choice(animais))
 			evento.ocorreEmRodovia = rodovia_principal
 			evento.ocorreEmTrecho = random.choice(trechos)
+			evento.dataEvento.append(f"2023-{random.randint(1,12):02d}-{random.randint(1,28):02d}")
+			evento.horaEvento.append(f"{random.choice([4, 10, 14, 19, 22]):02d}:00")
+			evento.condicaoAnimalPosEvento.append(random.choice(["Morto", "Ferido"]))
+			
+			loc = onto.LocalizacaoGeografica(f"Loc_{i}", coordenadaLatitude=[-32.0 + random.random()], coordenadaLongitude=[-52.0 + random.random()])
+			evento.localizadoEm.append(loc)
+			
+			cond = onto.CondicaoClimatica(f"Clima_{i}", temperaturaRegistrada=[random.uniform(15.0, 35.0)], umidadeRelativa=[random.uniform(60.0, 95.0)])
+			evento.temCondicaoAmbiental.append(cond)
+			
+			evento.temFatorRisco.append(random.choice(fatores_risco))
+			
+			periodo = onto.PeriodoTemporal(f"Periodo_{i}")
+			evento.ocorreDurantePeriodo = periodo
 	output_file = "ontologia_taim_povoada.owl"
 	onto.save(output_file, format="rdfxml")
 	

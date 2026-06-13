@@ -10,7 +10,7 @@ PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl:   <http://www.w3.org/2002/07/owl#>
 PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
-PREFIX taim:  <http://www.semanticweb.org/ontologias/banhado-do-taim/atropelamento-fauna#>
+PREFIX taim:  <http://www.semanticweb.org/ontologias/banhado-do-taim/atropelamento-fauna.owl#>
 """.strip()
 																			  
 					   
@@ -192,8 +192,8 @@ CONSULTAS.append(ConsultaSPARQL(
 	),
 	resultado_esperado=(
 		"Tabela com colunas: ?evento, ?nomeAnimal, ?nomeCientifico, "
-		"?rodovia, ?trecho. Junção completa evento→animal→espécie + "
-		"evento→rodovia + evento→trecho."
+		"?rodovia, ?trecho. Junção completa evento->animal->espécie + "
+		"evento->rodovia + evento->trecho."
 	),
 	sparql=f"""
 {PREFIXOS}
@@ -215,7 +215,7 @@ CONSULTAS.append(ConsultaSPARQL(
 	categoria="B - Complexa",
 	titulo="Atropelamentos associados a habitats específicos via trecho",
 	descricao=(
-		"Cruza evento→trecho e trecho→habitat (atravessaHabitat) para "
+		"Cruza evento->trecho e trecho->habitat (atravessaHabitat) para "
 		"identificar em quais tipos de habitat (vegetação ou corpo hídrico) "
 		"os atropelamentos estão concentrados. Permite correlacionar a "
 		"ocorrência de atropelamentos com a paisagem lindeira."
@@ -269,7 +269,7 @@ CONSULTAS.append(ConsultaSPARQL(
 	categoria="B - Complexa",
 	titulo="Fatores de risco dos eventos e medidas de mitigação disponíveis",
 	descricao=(
-		"Cruza evento→fatorRisco e fatorRisco→mitigação para construir "
+		"Cruza evento->fatorRisco e fatorRisco->mitigação para construir "
 		"a cadeia completa: qual evento sofreu qual fator de risco e quais "
 		"medidas de mitigação poderiam atenuá-lo. Inclui o tipo do fator "
 		"(antrópico ou ecológico)."
@@ -294,7 +294,7 @@ ORDER BY ?evento ?tipoFator
 CONSULTAS.append(ConsultaSPARQL(
 	codigo="Q11",
 	categoria="B - Complexa",
-	titulo="Cadeia completa: evento → animal → espécie → habitat → trecho → localização",
+	titulo="Cadeia completa: evento -> animal -> espécie -> habitat -> trecho -> localização",
 	descricao=(
 		"Consulta de junção de 6 vias que reconstrói a cadeia semântica "
 		"completa do evento até a localização geográfica, cruzando todas "
@@ -328,8 +328,8 @@ CONSULTAS.append(ConsultaSPARQL(
 	categoria="B - Complexa",
 	titulo="Espécies ameaçadas atropeladas em trechos com alto volume de tráfego",
 	descricao=(
-		"Cruza evento→animal→espécie (filtro: status ≠ 'LC') com "
-		"evento→trecho (filtro: volumeMedioTrafego > 1500) para identificar "
+		"Cruza evento->animal->espécie (filtro: status ≠ 'LC') com "
+		"evento->trecho (filtro: volumeMedioTrafego > 1500) para identificar "
 		"casos críticos onde espécies não classificadas como 'Least Concern' "
 		"são atropeladas em trechos de alto fluxo veicular."
 	),
@@ -738,7 +738,7 @@ CONSULTAS.append(ConsultaSPARQL(
 		"redutores de velocidade. A consulta identifica trechos onde "
 		"atropelamentos tiveram fator de risco antrópico (ex: velocidade "
 		"excessiva) que pode ser mitigado por redutor de velocidade, "
-		"cruzando evento→fator→medida com evento→trecho."
+		"cruzando evento->fator->medida com evento->trecho."
 	),
 	resultado_esperado=(
 		"Tabela com colunas: ?trecho, ?kmInicio, ?kmFim, ?fator, ?medida, "
@@ -768,8 +768,8 @@ CONSULTAS.append(ConsultaSPARQL(
 		"Cenário: durante o planejamento de campanhas de monitoramento, "
 		"a equipe precisa saber quais espécies estão associadas a eventos "
 		"cujo fator de risco é a migração sazonal, para intensificar a "
-		"vigilância nos períodos migratórios. Cruza evento→animal→espécie "
-		"com evento→fator(migração)→período."
+		"vigilância nos períodos migratórios. Cruza evento->animal->espécie "
+		"com evento->fator(migração)->período."
 	),
 	resultado_esperado=(
 		"Tabela com colunas: ?especie, ?nomeCientifico, ?nomeComum, "
@@ -958,7 +958,7 @@ def executar_com_rdflib(owl_path: str = "ontologia_taim.owl") -> None:
 			results = g.query(q.sparql)
 			if results:
 				linhas = list(results)
-				print(f"  → {len(linhas)} resultado(s):\n")
+				print(f"  -> {len(linhas)} resultado(s):\n")
 				for row in linhas:
 					valores = []
 					for v in row:
@@ -972,7 +972,7 @@ def executar_com_rdflib(owl_path: str = "ontologia_taim.owl") -> None:
 							valores.append(s)
 					print(f"	{' | '.join(valores)}")
 			else:
-				print("  → 0 resultados (conjunto vazio)")
+				print("  -> 0 resultados (conjunto vazio)")
 		except Exception as e:
 			print(f"  ERRO Erro na execução: {e}")
 	print(f"\n  Execução concluída. {len(CONSULTAS)} consultas processadas.\n")
@@ -980,9 +980,9 @@ if __name__ == "__main__":
 	imprimir_consultas()
 														
 	import os
-	if os.path.exists("ontologia_taim.owl"):
-		executar_com_rdflib("ontologia_taim.owl")
+	if os.path.exists("ontologia_taim_povoada.owl"):
+		executar_com_rdflib("ontologia_taim_povoada.owl")
 	else:
-		print("\n  [i] Arquivo ontologia_taim.owl não encontrado.")
+		print("\n  [i] Arquivo ontologia_taim_povoada.owl não encontrado.")
 		print("	  Execute ontologia_taim.py primeiro para gerá-lo.\n")
 
