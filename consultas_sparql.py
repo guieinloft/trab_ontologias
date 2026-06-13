@@ -1,10 +1,6 @@
-					  
-					   
 import sys
 from dataclasses import dataclass
-																			  
-						
-																			  
+
 PREFIXOS = """
 PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
@@ -12,24 +8,18 @@ PREFIX owl:   <http://www.w3.org/2002/07/owl#>
 PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
 PREFIX taim:  <http://www.semanticweb.org/ontologias/banhado-do-taim/atropelamento-fauna.owl#>
 """.strip()
-																			  
-					   
-																			  
+
 @dataclass
 class ConsultaSPARQL:
-	codigo: str											
-	categoria: str								
-	titulo: str								
-	descricao: str										
-	resultado_esperado: str								
-	sparql: str							
-																			  
-							
-																			  
+	codigo: str
+	categoria: str
+	titulo: str
+	descricao: str
+	resultado_esperado: str
+	sparql: str
+
 CONSULTAS: list[ConsultaSPARQL] = []
-																			  
-															  
-																			  
+
 CONSULTAS.append(ConsultaSPARQL(
 	codigo="Q01",
 	categoria="A - Simples",
@@ -177,9 +167,7 @@ WHERE {{
 ORDER BY ?tipo ?habitat
 """
 ))
-																			  
-																
-																			  
+
 CONSULTAS.append(ConsultaSPARQL(
 	codigo="Q07",
 	categoria="B - Complexa",
@@ -355,9 +343,7 @@ WHERE {{
 ORDER BY ?status DESC(?volume)
 """
 ))
-																			  
-																  
-																			  
+
 CONSULTAS.append(ConsultaSPARQL(
 	codigo="Q13",
 	categoria="C - Filtros Operacionais",
@@ -534,9 +520,7 @@ WHERE {{
 ORDER BY ?temperatura
 """
 ))
-																			  
-											   
-																			  
+
 CONSULTAS.append(ConsultaSPARQL(
 	codigo="Q19",
 	categoria="D - Agregação",
@@ -694,9 +678,7 @@ GROUP BY ?animal ?nomeAnimal
 ORDER BY DESC(?qtdHabitats)
 """
 ))
-																			  
-															
-																			  
+
 CONSULTAS.append(ConsultaSPARQL(
 	codigo="Q25",
 	categoria="E - Cenário Operacional",
@@ -893,22 +875,20 @@ GROUP BY ?trecho ?kmInicio ?kmFim ?velMax
 ORDER BY DESC(?qtdEventos) DESC(?velMax)
 """
 ))
-																			  
-																
-																			  
+
 SEPARADOR = "-" * 78
 def imprimir_consultas() -> None:
 	categoria_atual = ""
 	print("\n=== CONSULTAS SPARQL - ONTOLOGIA DO BANHADO DO TAIM ===")
 	for i, q in enumerate(CONSULTAS, 1):
-								
+
 		if q.categoria != categoria_atual:
 			categoria_atual = q.categoria
 			print(f"\n### CATEGORIA: {categoria_atual.upper()} ###")
-							 
+
 		print(f"\n[{q.codigo}] {q.titulo}")
 		print(f"\n  DESCRIÇÃO:")
-												  
+
 		palavras = q.descricao.split()
 		linha = "	"
 		for p in palavras:
@@ -966,7 +946,7 @@ def executar_com_rdflib(owl_path: str = "ontologia_taim.owl") -> None:
 							valores.append("NULL")
 						else:
 							s = str(v)
-													 
+
 							if "#" in s:
 								s = s.split("#")[-1]
 							valores.append(s)
@@ -978,11 +958,12 @@ def executar_com_rdflib(owl_path: str = "ontologia_taim.owl") -> None:
 	print(f"\n  Execução concluída. {len(CONSULTAS)} consultas processadas.\n")
 if __name__ == "__main__":
 	imprimir_consultas()
-														
+
 	import os
 	if os.path.exists("ontologia_taim_povoada.owl"):
 		executar_com_rdflib("ontologia_taim_povoada.owl")
 	else:
 		print("\n  [i] Arquivo ontologia_taim_povoada.owl não encontrado.")
 		print("	  Execute ontologia_taim.py primeiro para gerá-lo.\n")
+
 
